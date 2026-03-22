@@ -1,3 +1,66 @@
+.app-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem 0;
+}
+
+.brand-mark,
+.topnav-link,
+.section-link,
+.project-links a {
+  text-decoration: none;
+}
+
+.brand-mark {
+  color: var(--heading);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.topnav-link,
+.section-link,
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--heading);
+  background: rgba(255, 255, 255, 0.42);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.topnav-link:hover,
+.section-link:hover,
+.project-links a:hover {
+  transform: translateY(-2px);
+}
+
+.topnav-link.is-active {
+  background: var(--button-bg);
+  border-color: var(--button-bg);
+  color: var(--button-text);
+}
+
 .site-shell {
   display: grid;
   gap: 1.5rem;
@@ -7,7 +70,8 @@
 .hero-panel,
 .section-grid,
 .about-panel,
-.contact-banner {
+.contact-banner,
+.soccer-panel {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border-strong);
@@ -22,6 +86,7 @@
   height: 160px;
   object-fit: cover;
   border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
 .hero-panel {
@@ -43,6 +108,13 @@
   z-index: 1;
 }
 
+.section-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   font-size: 0.8rem;
@@ -56,7 +128,8 @@
 .section-heading h2,
 .about-copy h2,
 .contact-banner h2,
-.info-card h3 {
+.info-card h3,
+.page-title {
   margin: 0;
   color: var(--heading);
 }
@@ -113,45 +186,6 @@
   transform: translateY(-2px);
 }
 
-.hero-metrics {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  max-width: 38rem;
-  margin: 2.5rem 0 0;
-}
-
-.hero-metrics div,
-.visual-note,
-.strengths-panel,
-.info-card {
-  border: 1px solid var(--border-soft);
-  background: var(--surface);
-  backdrop-filter: blur(12px);
-}
-
-.hero-metrics div {
-  padding: 1rem 1.1rem;
-  border-radius: 20px;
-}
-
-.hero-metrics dt,
-.card-kicker,
-.strengths-title,
-.visual-note span {
-  margin: 0 0 0.4rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted-strong);
-}
-
-.hero-metrics dd {
-  margin: 0;
-  color: var(--heading);
-}
-
 .hero-visual {
   display: flex;
   flex-direction: column;
@@ -177,19 +211,9 @@
   display: block;
 }
 
-.visual-note {
-  padding: 1rem 1.1rem;
-  border-radius: 20px;
-}
-
-.visual-note strong {
-  color: var(--heading);
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
 .section-grid,
-.about-panel {
+.about-panel,
+.soccer-panel {
   padding: 2.2rem;
 }
 
@@ -209,7 +233,17 @@
   margin-top: 2rem;
 }
 
+.hero-metrics div,
+.strengths-panel,
 .info-card {
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
   padding: 1.4rem;
   border-radius: 24px;
 }
@@ -217,6 +251,28 @@
 .info-card h3 {
   margin-bottom: 0.8rem;
   font-size: 1.45rem;
+}
+
+.card-kicker,
+.strengths-title {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-strong);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-links a {
+  min-height: 2.3rem;
+  padding: 0.55rem 0.9rem;
 }
 
 .about-panel {
@@ -228,6 +284,10 @@
 
 .about-copy p + p {
   margin-top: 1rem;
+}
+
+.section-actions {
+  margin-top: 1.5rem;
 }
 
 .strengths-panel {
@@ -250,6 +310,41 @@
 .strengths-panel li:first-child {
   border-top: 0;
   padding-top: 0.2rem;
+}
+
+.page-shell {
+  padding-top: 0.5rem;
+}
+
+.page-header {
+  padding: 2.4rem;
+}
+
+.page-title {
+  max-width: 12ch;
+  font-size: clamp(3rem, 7vw, 5.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.page-intro {
+  max-width: 42rem;
+  margin-top: 1.25rem;
+  font-size: 1.08rem;
+}
+
+.soccer-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+  gap: 1.5rem;
+}
+
+.soccer-points {
+  margin-top: 1.5rem;
+}
+
+.soccer-image-frame {
+  min-height: 32rem;
 }
 
 .contact-banner {
@@ -277,20 +372,31 @@
 @media (max-width: 980px) {
   .hero-panel,
   .about-panel,
-  .contact-banner {
+  .contact-banner,
+  .soccer-panel {
     grid-template-columns: 1fr;
+  }
+
+  .section-heading-row,
+  .contact-banner {
+    align-items: flex-start;
+  }
+
+  .topbar,
+  .section-heading-row {
+    flex-direction: column;
   }
 
   .card-grid {
     grid-template-columns: 1fr;
   }
-
-  .contact-banner {
-    align-items: flex-start;
-  }
 }
 
 @media (max-width: 720px) {
+  .topbar {
+    padding: 1rem 1rem 0;
+  }
+
   .site-shell {
     gap: 1rem;
     padding: 1rem;
@@ -299,7 +405,9 @@
   .hero-panel,
   .section-grid,
   .about-panel,
-  .contact-banner {
+  .contact-banner,
+  .page-header,
+  .soccer-panel {
     padding: 1.4rem;
     border-radius: 24px;
   }
@@ -311,15 +419,16 @@
   .hero-panel h1,
   .section-heading h2,
   .about-copy h2,
-  .contact-banner h2 {
+  .contact-banner h2,
+  .page-title {
     max-width: none;
-  }
-
-  .hero-metrics {
-    grid-template-columns: 1fr;
   }
 
   .image-frame {
     min-height: 18rem;
+  }
+
+  .soccer-image-frame {
+    min-height: 20rem;
   }
 }
