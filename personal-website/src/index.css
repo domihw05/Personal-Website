@@ -1,0 +1,86 @@
+:root {
+  --page-bg: #efe3d2;
+  --page-bg-alt: #f7f1e8;
+  --panel: rgba(251, 247, 241, 0.9);
+  --surface: rgba(255, 252, 247, 0.72);
+  --border-strong: rgba(41, 35, 29, 0.16);
+  --border-soft: rgba(41, 35, 29, 0.1);
+  --heading: #1f1913;
+  --text: #5e5147;
+  --muted-strong: #7a6657;
+  --accent: #9d3d16;
+  --button-bg: #173f31;
+  --button-text: #f8f1e7;
+  --panel-shadow: 0 22px 60px rgba(73, 47, 20, 0.12);
+  --sans:
+    "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --display:
+    "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia,
+    serif;
+
+  font-family: var(--sans);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.56), transparent 35rem),
+    linear-gradient(180deg, var(--page-bg-alt), var(--page-bg));
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 80%);
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 600;
+}
+
+#root {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 2rem;
+}
+
+@media (max-width: 720px) {
+  #root {
+    width: min(100%, calc(100% - 1rem));
+    padding: 0.5rem 0 1rem;
+  }
+}
