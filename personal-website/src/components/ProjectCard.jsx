@@ -1,6 +1,10 @@
 function ProjectCard({ project }) {
   return (
     <article className="info-card" key={project.title}>
+      <p className="card-kicker">{project.category}</p>
+      <h3>{project.title}</h3>
+      <p>{project.description}</p>
+
       {project.image && (
         <img
           src={project.image}
@@ -8,9 +12,6 @@ function ProjectCard({ project }) {
           className="project-preview"
         />
       )}
-      <p className="card-kicker">{project.category}</p>
-      <h3>{project.title}</h3>
-      <p>{project.description}</p>
 
       <div className="project-links">
         {project.githubURL && (

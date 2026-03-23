@@ -2,6 +2,8 @@ import ExperienceCard from '../components/ExperienceCard'
 import { experiences } from '../data/siteContent'
 
 function ExperiencePage() {
+  const sortedExperiences = [...experiences].sort((a, b) => b.sortOrder - a.sortOrder)
+
   return (
     <main className="site-shell page-shell">
       <section className="section-grid page-header">
@@ -14,9 +16,13 @@ function ExperiencePage() {
       </section>
 
       <section className="section-grid">
-        <div className="card-grid">
-          {experiences.map((experience) => (
-            <ExperienceCard experience={experience} key={experience.title} />
+        <div className="experience-timeline">
+          {sortedExperiences.map((experience) => (
+            <ExperienceCard
+              experience={experience}
+              key={experience.title}
+              showAttachmentPreview
+            />
           ))}
         </div>
       </section>

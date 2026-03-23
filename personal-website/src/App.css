@@ -86,6 +86,7 @@
   height: 160px;
   object-fit: cover;
   border-radius: 12px;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -282,9 +283,18 @@
   align-items: start;
 }
 
+.about-copy h2 + p {
+  margin-top: 0.75rem;
+}
+
 .about-copy p + p {
   margin-top: 1rem;
 }
+
+.about-copy h2 + p {
+  margin-top: 0.75rem;
+}
+
 
 .section-actions {
   margin-top: 1.5rem;
@@ -347,6 +357,187 @@
   min-height: 32rem;
 }
 
+.soccer-awards-section {
+  gap: 1.75rem;
+}
+
+.soccer-awards-intro {
+  margin-bottom: 0;
+}
+
+.soccer-awards-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0;
+}
+
+.soccer-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.soccer-gallery-frame {
+  min-height: 24rem;
+}
+
+.soccer-award-card {
+  gap: 1rem;
+}
+
+.soccer-award-card p {
+  margin: 0;
+}
+
+.soccer-award-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.soccer-award-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.soccer-award-logo {
+  flex: 0 0 4rem;
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px dashed var(--border-strong);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(242, 110, 55, 0.16), rgba(17, 61, 46, 0.12)),
+    var(--surface);
+  color: var(--muted-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.soccer-award-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-timeline {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+
+#experience .section-heading-row {
+  margin-bottom: 1.5rem;
+}
+
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 7rem;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--border-strong) 8%, var(--border-strong) 92%, transparent);
+}
+
+.timeline-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 1.15rem;
+  left: calc(6rem + 0.78rem);
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 3px solid var(--page-bg-alt);
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 1px var(--border-strong);
+}
+
+.timeline-side {
+  position: relative;
+  z-index: 1;
+  padding-top: 0.15rem;
+  display: grid;
+  justify-items: start;
+  gap: 0.85rem;
+}
+
+.timeline-side span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.35rem;
+  min-width: 5.75rem;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.timeline-content h3 {
+  margin-top: 0.2rem;
+}
+
+.timeline-card > p {
+  grid-column: 2;
+}
+
+.timeline-logo-wrap {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 0.1rem;
+}
+
+.timeline-logo {
+  width: 3.35rem;
+  height: 3.35rem;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border-soft);
+}
+
+.timeline-links {
+  grid-column: 2;
+  margin-top: 0;
+}
+
+.timeline-attachment-preview {
+  grid-column: 2;
+  width: 100%;
+  max-width: 22rem;
+  border-radius: 18px;
+  border: 1px solid var(--border-soft);
+  object-fit: cover;
+}
+
+.experience-timeline-compact .timeline-card {
+  padding: 1.2rem;
+}
+
 .contact-banner {
   display: flex;
   align-items: center;
@@ -389,6 +580,39 @@
 
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .soccer-awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .soccer-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-timeline::before {
+    left: 1rem;
+  }
+
+  .timeline-card {
+    grid-template-columns: 1fr;
+    padding-left: 2rem;
+  }
+
+  .timeline-card::before {
+    left: 0.62rem;
+  }
+
+  .timeline-card > p,
+  .timeline-logo-wrap,
+  .timeline-attachment-preview,
+  .timeline-links {
+    grid-column: 1;
+  }
+
+  .timeline-logo-wrap {
+    grid-row: auto;
+    padding-top: 0;
   }
 }
 

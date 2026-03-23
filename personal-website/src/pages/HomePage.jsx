@@ -9,6 +9,8 @@ import {
 } from '../data/siteContent'
 
 function HomePage() {
+  const sortedExperiences = [...experiences].sort((a, b) => b.sortOrder - a.sortOrder)
+
   return (
     <main className="site-shell">
       <section className="hero-panel">
@@ -70,8 +72,8 @@ function HomePage() {
           </Link>
         </div>
 
-        <div className="card-grid">
-          {experiences.slice(0, 3).map((experience) => (
+        <div className="experience-timeline experience-timeline-compact">
+          {sortedExperiences.slice(0, 3).map((experience) => (
             <ExperienceCard experience={experience} key={experience.title} />
           ))}
         </div>
