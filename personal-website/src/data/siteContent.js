@@ -6,7 +6,7 @@ import tartanLogo from '../assets/tartan_logo.png'
 import metaLogo from '../assets/meta_logo.png'
 import aramarkLogo from '../assets/aramarkLogo.png'
 import metaselfie from '../assets/metaselfie.jpeg'
-import nyu_soccer from '../assets/JumpNyu.jpg'
+import nyu_soccer from '../assets/JumpNyu.JPG'
 import soccercmu from '../assets/soccercmu.jpg'
 import NFLBigDataBowl from "../assets/NFLBigDataBowl.png"
 
