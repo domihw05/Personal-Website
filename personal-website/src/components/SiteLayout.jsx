@@ -11,9 +11,14 @@ function SiteLayout() {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <NavLink to="/" end className="brand-mark">
-          Dominic Hoar-Weiler
-        </NavLink>
+        <div className="brand-lockup">
+          <NavLink to="/" end className="brand-mark">
+            Dominic Hoar-Weiler
+          </NavLink>
+          <p className="brand-submark">
+            Statistics, machine learning, software, and high-performance teams
+          </p>
+        </div>
 
         <nav className="topnav" aria-label="Primary">
           {navLinks.map((link) => (
@@ -28,7 +33,10 @@ function SiteLayout() {
               {link.label}
             </NavLink>
           ))}
-          <a href="mailto:dominic.hoarweiler@gmail.com" className="topnav-link">
+          <a
+            href="mailto:dominic.hoarweiler@gmail.com"
+            className="topnav-link topnav-contact"
+          >
             Contact
           </a>
         </nav>
