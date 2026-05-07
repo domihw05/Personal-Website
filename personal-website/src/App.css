@@ -382,11 +382,112 @@
   white-space: nowrap;
 }
 
+.projects-home-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.project-carousel-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.project-carousel-button {
+  width: 2.9rem;
+  height: 2.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  color: var(--heading);
+  font: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.project-carousel-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(16, 34, 29, 0.08);
+}
+
+.project-carousel-status {
+  min-width: 3.2rem;
+  text-align: center;
+  color: var(--muted-strong);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   margin-top: 2.25rem;
+}
+
+.project-carousel {
+  margin-top: 2.25rem;
+  width: 100%;
+  max-width: none;
+}
+
+.project-carousel-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+}
+
+.project-carousel-copy {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.project-carousel-copy h3 {
+  margin: 0;
+  color: var(--heading);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+.project-carousel-copy p:last-of-type {
+  margin: 0;
+}
+
+.project-carousel-links {
+  padding-top: 0.4rem;
+}
+
+.project-carousel-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-carousel-image {
+  width: 100%;
+  height: 100%;
+  min-height: 20rem;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid var(--border-soft);
 }
 
 .home-snapshot-grid {
@@ -457,6 +558,63 @@
 .project-links a {
   min-height: 2.35rem;
   padding: 0.55rem 0.95rem;
+}
+
+.projects-list {
+  display: grid;
+}
+
+.project-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 2.5rem;
+  align-items: start;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(16, 34, 29, 0.1);
+}
+
+.project-feature:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.project-feature-copy {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  max-width: 42rem;
+}
+
+.project-feature-copy h2 {
+  margin: 0;
+  color: var(--heading);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+}
+
+.project-feature-copy p:last-of-type {
+  margin: 0;
+}
+
+.project-feature-links {
+  padding-top: 0.75rem;
+}
+
+.project-feature-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-feature-image {
+  width: 100%;
+  max-width: 34rem;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.58);
 }
 
 .about-panel {
@@ -724,6 +882,10 @@
   padding: 1.2rem;
 }
 
+.experience-timeline-compact::before {
+  content: none;
+}
+
 .contact-banner {
   display: flex;
   align-items: center;
@@ -742,6 +904,7 @@
 }
 
 .contact-banner .primary-link {
+  color: #f3f6f4;
   background: linear-gradient(135deg, #112520, #1b493c);
   border: 0;
   box-shadow: 0 16px 34px rgba(16, 34, 29, 0.18);
@@ -822,12 +985,32 @@
     flex-direction: column;
   }
 
+  .projects-home-actions {
+    justify-content: flex-start;
+  }
+
   .hero-metrics,
   .home-overview-grid,
   .card-grid,
   .soccer-awards-grid,
   .soccer-gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-feature {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-carousel-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .project-carousel-visual,
+  .project-feature-visual {
+    justify-content: flex-start;
   }
 
   .home-snapshot-grid {
@@ -912,7 +1095,6 @@
   .contact-banner .primary-link {
     width: 100%;
   }
-
   .image-frame {
     min-height: 18rem;
   }

@@ -15,9 +15,9 @@ function ProjectsPage() {
       </section>
 
       <section className="section-grid">
-        <div className="card-grid">
+        <div className="projects-list">
           {featuredProjects.map((project) => (
-            <ProjectCard project={project} key={project.title} />
+            <ProjectCard project={project} key={project.title} variant="feature" />
           ))}
         </div>
       </section>

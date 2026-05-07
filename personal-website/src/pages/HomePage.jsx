@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ExperienceCard from '../components/ExperienceCard'
 import ProjectCard from '../components/ProjectCard'
@@ -10,6 +11,7 @@ import {
 
 function HomePage() {
   const sortedExperiences = [...experiences].sort((a, b) => b.sortOrder - a.sortOrder)
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0)
   const heroMetrics = [
     { label: 'Focus', value: 'Stats + ML' },
     { label: 'Build', value: 'Software & analytics' },
@@ -52,6 +54,19 @@ function HomePage() {
         'Athletics has trained me to communicate clearly, stay accountable, and raise the standard around me.',
     },
   ]
+  const activeProject = featuredProjects[activeProjectIndex]
+
+  function showPreviousProject() {
+    setActiveProjectIndex((currentIndex) =>
+      currentIndex === 0 ? featuredProjects.length - 1 : currentIndex - 1,
+    )
+  }
+
+  function showNextProject() {
+    setActiveProjectIndex((currentIndex) =>
+      currentIndex === featuredProjects.length - 1 ? 0 : currentIndex + 1,
+    )
+  }
 
   return (
     <main className="site-shell">
@@ -155,15 +170,40 @@ function HomePage() {
             <p className="eyebrow">Projects</p>
             <h2>Featured Projects.</h2>
           </div>
-          <Link to="/projects" className="section-link">
-            View all projects
-          </Link>
+          <div className="projects-home-actions">
+            <div className="project-carousel-controls" aria-label="Featured project controls">
+              <button
+                type="button"
+                className="project-carousel-button"
+                onClick={showPreviousProject}
+                aria-label="Show previous featured project"
+              >
+                ←
+              </button>
+              <span className="project-carousel-status">
+                {activeProjectIndex + 1} / {featuredProjects.length}
+              </span>
+              <button
+                type="button"
+                className="project-carousel-button"
+                onClick={showNextProject}
+                aria-label="Show next featured project"
+              >
+                →
+              </button>
+            </div>
+            <Link to="/projects" className="section-link">
+              View all projects
+            </Link>
+          </div>
         </div>
 
-        <div className="card-grid">
-          {featuredProjects.map((project) => (
-            <ProjectCard project={project} key={project.title} />
-          ))}
+        <div className="project-carousel">
+          <ProjectCard
+            project={activeProject}
+            key={activeProject.title}
+            variant="carousel"
+          />
         </div>
       </section>
 
