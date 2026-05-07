@@ -11,8 +11,11 @@ import soccercmu from '../assets/soccercmu.jpg'
 import NFLBigDataBowl from "../assets/NFLBigDataBowl.png"
 import aramarkSelfies from '../assets/aramark_selfies.jpeg'
 import fightingIrishPreview from '../assets/fightingirish_preview.png'
+import readingImg from '../assets/hobbies/reading.jpeg'
+import travellingImg from '../assets/hobbies/travelling.jpeg'
+import watchingSoccerImg from '../assets/hobbies/watchingsoccer.jpeg'
 
-export { heroImg, nyu_soccer, soccercmu, aramarkSelfies, fightingIrishPreview }
+export { heroImg, nyu_soccer, soccercmu, aramarkSelfies, fightingIrishPreview}
 
 export const featuredProjects = [
   {
@@ -123,6 +126,27 @@ export const strengths = [
   'Machine Learning and Data Science',
   'Leadership',
   'Creative Problem Solving',
+]
+
+export const homeInterests = [
+  {
+    title: 'Travel',
+    caption: 'I love exploring new places, cultures, and cuisines.',
+    image: travellingImg,
+    imageAlt: 'Image of Dominic Hoar-Weiler traveling Spring Break 2026',
+  },
+  {
+    title: 'Soccer',
+    caption: 'I love playing and watching soccer. My favorite teams are the Portland Timbers and Bayern Munich.',
+    image: watchingSoccerImg,
+    imageAlt: 'Image of Dominic Hoar-Weiler watching soccer at Providence Park',
+  },
+  {
+    title: 'Reading',
+    caption: 'I love diving into books on a variety of topics, ranging from Murder Mystery to Life Philosophy.',
+    image: readingImg,
+    imageAlt: 'Image of Dominic Hoar-Weiler\'s book shelf',
+  },
 ]
 
 export const soccerHighlights = [
