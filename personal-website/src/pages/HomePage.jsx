@@ -39,11 +39,6 @@ function HomePage() {
             Student-athlete building at the intersection of machine learning,
             software engineering, and sports analytics.
           </p>
-          <p className="hero-text">
-            Student-athlete at Carnegie Mellon University, pursuing a major in
-            Statistics and Machine Learning with a minor in Computer Science.
-            Passionate about programming and uncovering data-driven insights.
-          </p>
 
           <div className="hero-actions">
             <Link to="/experience" className="secondary-link">
@@ -56,8 +51,11 @@ function HomePage() {
         </div>
 
         <div className="hero-visual">
-          <div className="image-frame">
+          <div className="image-frame hero-image-frame">
             <img src={heroImg} alt="Dominic Hoar-Weiler playing soccer" />
+          </div>
+          <div className="hero-visual-note">
+            Carnegie Mellon University
           </div>
         </div>
       </section>

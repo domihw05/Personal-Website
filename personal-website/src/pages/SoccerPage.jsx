@@ -1,6 +1,22 @@
-import { heroImg, nyu_soccer, soccerAwards, soccerHighlights, soccercmu } from '../data/siteContent'
+import { useState } from 'react'
+import { heroImg, soccerAwards, soccerGallery, soccerHighlights } from '../data/siteContent'
 
 function SoccerPage() {
+  const [activeGalleryIndex, setActiveGalleryIndex] = useState(0)
+  const activeGalleryImage = soccerGallery[activeGalleryIndex]
+
+  function showPreviousPhoto() {
+    setActiveGalleryIndex((currentIndex) =>
+      currentIndex === 0 ? soccerGallery.length - 1 : currentIndex - 1,
+    )
+  }
+
+  function showNextPhoto() {
+    setActiveGalleryIndex((currentIndex) =>
+      currentIndex === soccerGallery.length - 1 ? 0 : currentIndex + 1,
+    )
+  }
+
   return (
     <main className="site-shell page-shell">
       <section className="soccer-panel">
@@ -59,17 +75,36 @@ function SoccerPage() {
         <div className="section-heading">
           <p className="eyebrow">Photos</p>
           <h2>Moments from the field.</h2>
-          <p className="page-intro soccer-awards-intro">
+          <p className="page-intro soccer-gallery-intro">
             Some snippets from my soccer journey.
           </p>
         </div>
 
-        <div className="soccer-gallery-grid">
-          <div className="image-frame soccer-gallery-frame">
-            <img src={soccercmu} alt="Dominic Hoar-Weiler playing for Carnegie Mellon men's soccer" />
+        <div className="soccer-gallery-carousel">
+          <div className="project-carousel-controls soccer-gallery-controls" aria-label="Soccer photo controls">
+            <button
+              type="button"
+              className="project-carousel-button"
+              onClick={showPreviousPhoto}
+              aria-label="Show previous soccer photo"
+            >
+              ←
+            </button>
+            <span className="project-carousel-status">
+              {activeGalleryIndex + 1} / {soccerGallery.length}
+            </span>
+            <button
+              type="button"
+              className="project-carousel-button"
+              onClick={showNextPhoto}
+              aria-label="Show next soccer photo"
+            >
+              →
+            </button>
           </div>
+
           <div className="image-frame soccer-gallery-frame">
-            <img src={nyu_soccer} alt="Dominic Hoar-Weiler in a match against NYU" />
+            <img src={activeGalleryImage.image} alt={activeGalleryImage.imageAlt} />
           </div>
         </div>
       </section>

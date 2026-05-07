@@ -155,6 +155,17 @@ export const soccerHighlights = [
   'Strong interest in the overlap between athletics, analytics, and high-performance teams',
 ]
 
+export const soccerGallery = [
+  {
+    image: soccercmu,
+    imageAlt: "Dominic Hoar-Weiler playing for Carnegie Mellon men's soccer",
+  },
+  {
+    image: nyu_soccer,
+    imageAlt: 'Dominic Hoar-Weiler in a match against NYU',
+  },
+]
+
 export const soccerAwards = [
   {
     title: "UAA Honorable Mention ('23, '25)",

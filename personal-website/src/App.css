@@ -1,6 +1,6 @@
 .app-shell {
   display: grid;
-  gap: 1rem;
+  gap: 0;
 }
 
 .topbar {
@@ -8,7 +8,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 1.25rem 2rem 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 1rem 2rem 1.1rem;
+  border-bottom: 1px solid rgba(16, 34, 29, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04));
+  backdrop-filter: blur(10px);
 }
 
 .brand-lockup {
@@ -96,7 +102,7 @@
 .site-shell {
   display: grid;
   gap: 0;
-  padding: 1.75rem 2rem 2rem;
+  padding: 0.9rem 2rem 2rem;
 }
 
 .hero-panel,
@@ -123,10 +129,10 @@
 
 .hero-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
-  gap: 3rem;
-  padding: 2rem 0 4rem;
-  min-height: 40rem;
+  grid-template-columns: minmax(0, 1.18fr) minmax(340px, 0.82fr);
+  gap: 4.5rem;
+  padding: 1.6rem 0 4.5rem;
+  min-height: 41rem;
   background: none;
 }
 
@@ -141,6 +147,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 42rem;
 }
 
 .hero-status,
@@ -155,7 +162,8 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .hero-badge {
@@ -170,6 +178,12 @@
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+.hero-rule {
+  width: 4.5rem;
+  height: 1px;
+  background: rgba(16, 34, 29, 0.2);
 }
 
 .eyebrow {
@@ -199,22 +213,22 @@
 }
 
 .hero-panel h1 {
-  max-width: 11ch;
-  font-size: clamp(3.7rem, 8vw, 6.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.05em;
+  max-width: 10ch;
+  font-size: clamp(4.2rem, 8vw, 7rem);
+  line-height: 0.88;
+  letter-spacing: -0.06em;
   font-weight: 700;
-  margin-top: 0.2rem;
+  margin-top: 0;
 }
 
 .hero-lead {
   max-width: 34rem;
-  margin-top: 1.4rem;
+  margin-top: 1.6rem;
   color: var(--heading);
-  font-size: clamp(1.12rem, 2vw, 1.35rem);
-  line-height: 1.5;
+  font-size: clamp(1.18rem, 2vw, 1.42rem);
+  line-height: 1.55;
   font-weight: 600;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .hero-text,
@@ -228,16 +242,11 @@
   letter-spacing: -0.01em;
 }
 
-.hero-text {
-  max-width: 40rem;
-  margin-top: 1.35rem;
-}
-
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 2.6rem;
 }
 
 .primary-link,
@@ -306,36 +315,45 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 1.25rem;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .image-frame {
   position: relative;
   min-height: 24rem;
-  padding: 1.15rem;
+  padding: 0;
   border-radius: 30px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(224, 237, 231, 0.78)),
-    var(--surface);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
-}
-
-.image-frame::after {
-  content: '';
-  position: absolute;
-  inset: 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 24px;
-  pointer-events: none;
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
 }
 
 .image-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 22px;
+  border-radius: inherit;
   display: block;
+}
+
+.hero-image-frame {
+  min-height: 31rem;
+  border-radius: 34px;
+  box-shadow: 0 24px 60px rgba(16, 34, 29, 0.12);
+}
+
+.hero-image-frame img {
+  filter: saturate(1.02) contrast(1.02);
+}
+
+.hero-visual-note {
+  align-self: flex-end;
+  color: var(--muted-strong);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero-card {
@@ -782,8 +800,24 @@
   gap: 1.25rem;
 }
 
+.soccer-gallery-intro {
+  margin-bottom: 0;
+}
+
+.soccer-gallery-carousel {
+  display: grid;
+  gap: 1.4rem;
+  margin-top: 2.4rem;
+}
+
+.soccer-gallery-controls {
+  justify-content: flex-start;
+}
+
 .soccer-gallery-frame {
   min-height: 24rem;
+  width: 100%;
+  max-width: none;
 }
 
 .soccer-award-card {
@@ -1085,6 +1119,10 @@
     max-width: none;
   }
 
+  .hero-visual-note {
+    align-self: flex-start;
+  }
+
   .experience-timeline::before {
     left: 1rem;
   }
@@ -1114,11 +1152,12 @@
 @media (max-width: 720px) {
   .topbar {
     padding: 1rem 1rem 0;
+    border-bottom: 1px solid rgba(16, 34, 29, 0.08);
   }
 
   .site-shell {
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.75rem 1rem 1rem;
   }
 
   .hero-panel,
@@ -1148,6 +1187,10 @@
 
   .hero-status {
     align-items: flex-start;
+  }
+
+  .hero-rule {
+    width: 3rem;
   }
 
   .hero-actions {
