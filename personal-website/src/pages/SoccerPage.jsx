@@ -6,7 +6,7 @@ function SoccerPage() {
       <section className="soccer-panel">
         <div className="about-copy">
           <p className="eyebrow">Soccer</p>
-          <h1 className="page-title">Leadership, discipline, and team-first habits.</h1>
+          <h1 className="page-title">My Soccer Journey</h1>
           <p className="page-intro">
             Soccer has shaped how I lead, how I handle pressure, and how I work
             within high-performing teams. It is a major part of my identity and
@@ -44,7 +44,10 @@ function SoccerPage() {
                 <div className="soccer-award-logo">
                   {award.logo ? <img src={award.logo} alt={award.logoAlt || ''} /> : <span>Logo</span>}
                 </div>
-                <h3>{award.title}</h3>
+                <div className="soccer-award-copy">
+                  <p className="card-kicker soccer-award-kicker">Accolade</p>
+                  <h3>{award.title}</h3>
+                </div>
               </div>
               <p>{award.description}</p>
             </article>

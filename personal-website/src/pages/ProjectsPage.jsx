@@ -6,11 +6,11 @@ function ProjectsPage() {
     <main className="site-shell page-shell">
       <section className="section-grid page-header">
         <p className="eyebrow">Projects</p>
-        <h1 className="page-title">Project portfolio and technical work.</h1>
+        <h1 className="page-title">Project Portfolio</h1>
         <p className="page-intro">
-          A closer look at the analytics and engineering projects I have built,
-          including sports-focused work, data modeling, and public-facing
-          content.
+          A closer look at the projects I've built,
+          including sports data analysis, data modeling,
+          and software development.
         </p>
       </section>
 

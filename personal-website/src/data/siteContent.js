@@ -9,8 +9,10 @@ import metaselfie from '../assets/metaselfie.jpeg'
 import nyu_soccer from '../assets/JumpNyu.JPG'
 import soccercmu from '../assets/soccercmu.jpg'
 import NFLBigDataBowl from "../assets/NFLBigDataBowl.png"
+import aramarkSelfies from '../assets/aramark_selfies.jpeg'
+import fightingIrishPreview from '../assets/fightingirish_preview.png'
 
-export { heroImg, nyu_soccer, soccercmu }
+export { heroImg, nyu_soccer, soccercmu, aramarkSelfies, fightingIrishPreview }
 
 export const featuredProjects = [
   {
@@ -33,6 +35,21 @@ export const featuredProjects = [
     image: NFLBigDataBowl,
     imageAlt: 'Preview of the NFL Big Data Bowl project, showing a plot of model predictions versus actual outcomes.',
   },
+  {
+    title: 'Python Fighting Irish World Game',
+    category: 'Game Development',
+    description:
+    'This was my term project for 15-112 at Carnegie Mellon University and is\
+     called “Fighting Irish World.” It is a single player game similar to Super\
+      Mario Bros. Players will select one of three maps. They will then try to\
+       evade or kill enemies and collect pots of gold on the way to the finish\
+        line on the right side of the map. The game was programmed in Python.',
+    demo: 'https://youtube.com/watch?v=0J6zRpfWX_E',
+    githubURL: 'https://github.com/domihw05/Fighting-Irish-World-Game-Python-',
+    image: fightingIrishPreview,
+    imageAlt: 'Preview of the Fighting Irish World Game, showcasing\
+     the leprechaun running across the map.',
+  }
 ]
 
 export const experiences = [
@@ -42,7 +59,11 @@ export const experiences = [
     title: 'IT and Data Science Intern',
     category: 'Aramark',
     description:
-      'Analyzed relational databases in Excel to identify service trends, driving improvements in hospitality offerings.',
+      'Worked as a Technology and Data Science Intern for Aramark, who operates\
+       the hospitality services at the Nike World Headquarters. Helped build\
+        and analyze databases to identify trends to improve service. Assisted\
+         with the development and introduction of a mobile app for ordering\
+          services around the Nike campus.',
     image: aramarkLogo,
     imageAlt: 'Aramark Logo',
     attachment: '',
@@ -54,7 +75,10 @@ export const experiences = [
     title: 'Machine Learning Research Assistant',
     category: 'CMU Cognitive Neuroscience Lab (CAOs)',
     description:
-      'Develop machine learning models using functional MRI data to predict semantic brain encodings, providing insights into how the brain processes visual stimuli.',
+      'Developed machine learning models using brain data to further\
+       neuroscience discoveries in the Cognitive Neuroscience Lab (CAOs)\
+        at CMU. Modeled brain associations to specific words using\
+         functional MRI data.',
     image: cmuLogo,
     imageAlt: 'Carnegie Mellon University Logo',
     attachment: '',
@@ -66,19 +90,27 @@ export const experiences = [
     title: 'AI Specialist and Data Science Intern',
     category: 'Aramark Headquarters',
     description:
-      "Engineered and deployed Aramark's AI assistant Sage to automate PTO and vacation requests by integrating NLP, Kronos and calendar APIs, and Aisera's conversational interface.",
+      "Engineered and deployed Aramark’s AI assistant “Sage” ability to\
+       dynamically submit PTO/vacation requests—integrating natural language\
+        processing, Kronos and calendar APIs, and Aisera’s AI platform to\
+         eliminate manual HR steps. Built agentic AI data interfaces in \
+         Snowflake and Aisera–leveraging LLM-driven capabilities to enable \
+         non-technical users to query hospitality metrics via natural language.\
+          Developed and maintained Workflow and Hyperflow modules in Aisera’s\
+           AI Platform to orchestrate end-to-end decision flows—automating\
+            service processes and reducing manual handoffs.",
     image: aramarkLogo,
     imageAlt: 'Aramark Logo',
-    attachment: '',
-    attachmentLabel: '',
+    attachment: aramarkSelfies,
+    attachmentLabel: 'Aramark Selfie',
   },
   {
-    period: 'Upcoming Summer 2026',
+    period: 'Summer 2026',
     sortOrder: 2026.5,
     title: 'Software Engineering Intern',
     category: 'Meta',
     description:
-      'Incoming Software Engineering Intern for Summer 2026 in Seattle, Washington.',
+      'Incoming Software Engineering Intern on the Marketplace Growth Team for Summer 2026 in Seattle, Washington.',
     image: metaLogo,
     imageAlt: 'Meta Logo',
     attachment: metaselfie,
