@@ -57,8 +57,13 @@ function HomePage() {
         </div>
 
         <div className="projects-list home-projects-list">
-          {featuredProjects.map((project) => (
-            <ProjectCard project={project} key={project.title} variant="feature" />
+          {featuredProjects.slice(0, 3).map((project) => (
+            <ProjectCard
+              project={project}
+              key={project.title}
+              variant="feature"
+              useSummary
+            />
           ))}
         </div>
       </section>

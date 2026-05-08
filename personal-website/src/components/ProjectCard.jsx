@@ -1,11 +1,14 @@
-function ProjectCard({ project, variant = 'card' }) {
+function ProjectCard({ project, variant = 'card', useSummary = false }) {
+  const projectDescription =
+    useSummary && project.summary ? project.summary : project.description
+
   if (variant === 'carousel') {
     return (
       <article className="project-carousel-card" key={project.title}>
         <div className="project-carousel-copy">
           <p className="card-kicker">{project.category}</p>
           <h3>{project.title}</h3>
-          <p>{project.description}</p>
+          <p>{projectDescription}</p>
 
           <div className="project-links project-carousel-links">
             {project.githubURL && (
@@ -40,7 +43,7 @@ function ProjectCard({ project, variant = 'card' }) {
         <div className="project-feature-copy">
           <p className="card-kicker">{project.category}</p>
           <h2>{project.title}</h2>
-          <p>{project.description}</p>
+          <p>{projectDescription}</p>
 
           <div className="project-links project-feature-links">
             {project.githubURL && (
@@ -73,7 +76,7 @@ function ProjectCard({ project, variant = 'card' }) {
     <article className="info-card" key={project.title}>
       <p className="card-kicker">{project.category}</p>
       <h3>{project.title}</h3>
-      <p>{project.description}</p>
+      <p>{projectDescription}</p>
 
       {project.image && (
         <img

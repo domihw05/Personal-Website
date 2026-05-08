@@ -6,23 +6,42 @@ import tartanLogo from '../assets/tartan_logo.png'
 import metaLogo from '../assets/meta_logo.png'
 import aramarkLogo from '../assets/aramarkLogo.png'
 import metaselfie from '../assets/metaselfie.jpeg'
-import nyu_soccer from '../assets/JumpNyu.JPG'
-import soccercmu from '../assets/soccercmu.jpg'
 import NFLBigDataBowl from "../assets/NFLBigDataBowl.png"
 import aramarkSelfies from '../assets/aramark_selfies.jpeg'
 import fightingIrishPreview from '../assets/fightingirish_preview.png'
 import readingImg from '../assets/hobbies/reading.jpeg'
 import travellingImg from '../assets/hobbies/travelling.jpeg'
 import watchingSoccerImg from '../assets/hobbies/watchingsoccer.jpeg'
+import handwritten_digits from '../assets/handwritten_digits.png'
 
-export { heroImg, nyu_soccer, soccercmu, aramarkSelfies, fightingIrishPreview}
+const soccerGalleryImages = import.meta.glob(
+  '../assets/Soccer Gallery/*.{jpg,jpeg,JPG,JPEG,png,webp}',
+  {
+    eager: true,
+    import: 'default',
+    query: '?url',
+  },
+)
+
+function formatGalleryImageAlt(path) {
+  const fileName = path.split('/').pop().replace(/\.[^.]+$/, '')
+  const readableName = fileName
+    .replace(/[_-]+/g, ' ')
+    .replace(/\b\w/g, (letter) => letter.toUpperCase())
+
+  return `Dominic Hoar-Weiler soccer gallery photo: ${readableName}`
+}
+
+export { heroImg, aramarkSelfies, fightingIrishPreview}
 
 export const featuredProjects = [
   {
     title: 'TotalTimbers',
     category: 'Sports Analytics',
+    summary:
+      'Built a Portland Timbers analytics account with 3K+ followers.',
     description:
-      'Built a sports analytics social media following with more than 3K followers, dedicated to the Portland Timbers of the MLS.',
+      'Built and grew TotalTimbers, a Portland Timbers sports analytics account with more than 3K followers. The project combines soccer analysis, data-informed storytelling, and social media strategy to make MLS performance trends more accessible to fans.',
     demo: 'https://www.instagram.com/totaltimbers/',
     githubURL: '',
     image: timbersPreview,
@@ -31,8 +50,10 @@ export const featuredProjects = [
   {
     title: 'NFL Big Data Bowl',
     category: 'Sports Analytics',
+    summary:
+      'Modeled pre-snap NFL tracking data to predict passing play outcomes.',
     description:
-      'Analyzed NFL player tracking data and encoded multinomial and neural network models in R to predict passing play outcomes given pre-snap predictor variables such as play clock, down, and yards to go.',
+      'Analyzed NFL player tracking data and built multinomial and neural network models in R to predict passing play outcomes from pre-snap variables such as play clock, down, yards to go, player alignment, and game context. The project focused on extracting useful predictive signals from noisy football tracking data.',
     demo: nflDataBowlPdf,
     githubURL: 'https://github.com/domihw05/NFL-Big-Data-Bowl',
     image: NFLBigDataBowl,
@@ -41,18 +62,29 @@ export const featuredProjects = [
   {
     title: 'Python Fighting Irish World Game',
     category: 'Game Development',
+    summary:
+      'Created a Python platformer with maps, enemies, collectibles, and win states.',
     description:
-    'This was my term project for 15-112 at Carnegie Mellon University and is\
-     called “Fighting Irish World.” It is a single player game similar to Super\
-      Mario Bros. Players will select one of three maps. They will then try to\
-       evade or kill enemies and collect pots of gold on the way to the finish\
-        line on the right side of the map. The game was programmed in Python.',
+    'Created Fighting Irish World as my 15-112 term project at Carnegie Mellon. The game is a single-player Python platformer inspired by Super Mario Bros., with selectable maps, enemy behavior, collision handling, collectibles, and a finish-line objective. Players choose one of three maps, avoid or defeat enemies, collect pots of gold, and progress to the end of the level.',
     demo: 'https://youtube.com/watch?v=0J6zRpfWX_E',
     githubURL: 'https://github.com/domihw05/Fighting-Irish-World-Game-Python-',
     image: fightingIrishPreview,
     imageAlt: 'Preview of the Fighting Irish World Game, showcasing\
      the leprechaun running across the map.',
+  },
+  {
+    title: 'Handwritten Digit Recognition',
+    category: 'Machine Learning',
+    summary:
+      'Trained a neural network to classify handwritten digits from MNIST images.',
+    description:
+      'Implemented a neural network classifier for recognizing handwritten digits from 0-9 using TensorFlow/Keras. The model is trained on the MNIST dataset of 28x28 grayscale images and demonstrates a complete machine learning workflow, including preprocessing, model training, evaluation, and prediction.',
+    demo: '',
+    githubURL: 'https://github.com/domihw05/Handwriting-Classification-Neural-Network',
+    image: handwritten_digits,
+    imageAlt: 'Preview of the Handwritten Digit Recognition project, showing a sample of recognized digits.',
   }
+
 ]
 
 export const experiences = [
@@ -155,16 +187,12 @@ export const soccerHighlights = [
   'Strong interest in the overlap between athletics, analytics, and high-performance teams',
 ]
 
-export const soccerGallery = [
-  {
-    image: soccercmu,
-    imageAlt: "Dominic Hoar-Weiler playing for Carnegie Mellon men's soccer",
-  },
-  {
-    image: nyu_soccer,
-    imageAlt: 'Dominic Hoar-Weiler in a match against NYU',
-  },
-]
+export const soccerGallery = Object.entries(soccerGalleryImages)
+  .sort(([firstPath], [secondPath]) => firstPath.localeCompare(secondPath))
+  .map(([path, image]) => ({
+    image,
+    imageAlt: formatGalleryImageAlt(path),
+  }))
 
 export const soccerAwards = [
   {
