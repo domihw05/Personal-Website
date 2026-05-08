@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ExperienceCard from '../components/ExperienceCard'
 import ProjectCard from '../components/ProjectCard'
@@ -12,32 +11,18 @@ import {
 
 function HomePage() {
   const sortedExperiences = [...experiences].sort((a, b) => b.sortOrder - a.sortOrder)
-  const [activeProjectIndex, setActiveProjectIndex] = useState(0)
-  const activeProject = featuredProjects[activeProjectIndex]
-
-  function showPreviousProject() {
-    setActiveProjectIndex((currentIndex) =>
-      currentIndex === 0 ? featuredProjects.length - 1 : currentIndex - 1,
-    )
-  }
-
-  function showNextProject() {
-    setActiveProjectIndex((currentIndex) =>
-      currentIndex === featuredProjects.length - 1 ? 0 : currentIndex + 1,
-    )
-  }
 
   return (
     <main className="site-shell">
       <section className="hero-panel">
         <div className="hero-copy">
           <div className="hero-status">
-            <p className="eyebrow">Personal Website</p>
+            <p className="eyebrow">Student-athlete / software / data</p>
           </div>
           <h1>Dominic Hoar-Weiler</h1>
           <p className="hero-lead">
-            Student-athlete building at the intersection of machine learning,
-            software engineering, and sports analytics.
+            I build software and data tools across machine learning, sports
+            analytics, and product teams.
           </p>
 
           <div className="hero-actions">
@@ -55,7 +40,7 @@ function HomePage() {
             <img src={heroImg} alt="Dominic Hoar-Weiler playing soccer" />
           </div>
           <div className="hero-visual-note">
-            Carnegie Mellon University
+            Carnegie Mellon University / Varsity soccer
           </div>
         </div>
       </section>
@@ -64,42 +49,17 @@ function HomePage() {
         <div className="section-heading section-heading-row">
           <div>
             <p className="eyebrow">Projects</p>
-            <h2>Featured Projects.</h2>
+            <h2>Selected work.</h2>
           </div>
-          <div className="projects-home-actions">
-            <div className="project-carousel-controls" aria-label="Featured project controls">
-              <button
-                type="button"
-                className="project-carousel-button"
-                onClick={showPreviousProject}
-                aria-label="Show previous featured project"
-              >
-                ←
-              </button>
-              <span className="project-carousel-status">
-                {activeProjectIndex + 1} / {featuredProjects.length}
-              </span>
-              <button
-                type="button"
-                className="project-carousel-button"
-                onClick={showNextProject}
-                aria-label="Show next featured project"
-              >
-                →
-              </button>
-            </div>
-            <Link to="/projects" className="section-link">
-              View all projects
-            </Link>
-          </div>
+          <Link to="/projects" className="section-link">
+            View all projects
+          </Link>
         </div>
 
-        <div className="project-carousel">
-          <ProjectCard
-            project={activeProject}
-            key={activeProject.title}
-            variant="carousel"
-          />
+        <div className="projects-list home-projects-list">
+          {featuredProjects.map((project) => (
+            <ProjectCard project={project} key={project.title} variant="feature" />
+          ))}
         </div>
       </section>
 
@@ -107,7 +67,7 @@ function HomePage() {
         <div className="section-heading section-heading-row">
           <div>
             <p className="eyebrow">Experience</p>
-            <h2>Internships and Jobs.</h2>
+            <h2>Recent roles.</h2>
           </div>
           <Link to="/experience" className="section-link">
             Full experience
@@ -124,21 +84,12 @@ function HomePage() {
       <section className="about-panel" id="about">
         <div className="about-copy">
           <p className="eyebrow">About</p>
-          <h2>How I approach work.</h2>
+          <h2>Measured, technical, competitive.</h2>
           <p>
-            I am a student-athlete at Carnegie Mellon University, serving as the
-            team captain of the Varsity Men&apos;s Soccer team. I am pursuing a
-            major in Statistics and Machine Learning with a minor in Computer
-            Science. My passion lies in programming and uncovering data-driven
-            insights that help shape decisions and drive innovation.
-          </p>
-          <p>
-            With a strong interest in Data Science, Software Engineering, and
-            Sports Analytics, I am eager to apply my analytical skills and
-            technical expertise to real-world challenges. I am actively seeking
-            opportunities that allow me to leverage my problem-solving
-            abilities and leadership experience to make meaningful
-            contributions in these fields.
+            I study Statistics and Machine Learning at Carnegie Mellon with a
+            minor in Computer Science, and I captain the varsity men&apos;s soccer
+            team. My work sits where analytical rigor, production software, and
+            team performance overlap.
           </p>
 
           <div className="section-actions">
@@ -158,18 +109,22 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section-grid home-interests-section">
-        <div className="section-heading">
-          <p className="eyebrow">Interests</p>
-          <h2>Passions and Hobbies.</h2>
+      <section className="section-grid home-hobbies-section">
+        <div className="section-heading section-heading-row">
+          <div>
+            <p className="eyebrow">Outside the work</p>
+            <h2>What keeps me curious.</h2>
+          </div>
         </div>
 
-        <div className="home-interests-grid">
+        <div className="home-hobbies-list">
           {homeInterests.map((interest) => (
-            <article className="interest-tile" key={interest.title}>
-              <img src={interest.image} alt={interest.imageAlt} />
-              <div className="interest-caption">
-                <p className="interest-title">{interest.title}</p>
+            <article className="home-hobby" key={interest.title}>
+              <div className="home-hobby-image">
+                <img src={interest.image} alt={interest.imageAlt} />
+              </div>
+              <div className="home-hobby-copy">
+                <p className="card-kicker">{interest.title}</p>
                 <p>{interest.caption}</p>
               </div>
             </article>
@@ -180,7 +135,7 @@ function HomePage() {
       <section className="contact-banner" id="contact">
         <div>
           <p className="eyebrow">Next Step</p>
-          <h2>Interested in building something serious?</h2>
+          <h2>Let&apos;s build something useful.</h2>
         </div>
 
         <a href="mailto:dominic.hoarweiler@gmail.com" className="primary-link">
