@@ -1,11 +1,18 @@
-function ExperienceCard({ experience, showAttachmentPreview = false }) {
+import { Link } from 'react-router-dom'
+
+function ExperienceCard({
+  experience,
+  id,
+  linkTo,
+  showAttachmentPreview = false,
+}) {
   const canPreviewAttachment =
     showAttachmentPreview &&
     experience.attachment &&
     /\.(png|jpe?g|gif|webp|svg)$/i.test(experience.attachment)
 
-  return (
-    <article className="info-card timeline-card">
+  const card = (
+    <article className="info-card timeline-card" id={id}>
       <div className="timeline-side">
         <span>{experience.period}</span>
       </div>
@@ -36,6 +43,20 @@ function ExperienceCard({ experience, showAttachmentPreview = false }) {
       ) : null}
     </article>
   )
+
+  if (linkTo) {
+    return (
+      <Link
+        to={linkTo}
+        className="timeline-card-link"
+        aria-label={`View ${experience.title} on the Experience page`}
+      >
+        {card}
+      </Link>
+    )
+  }
+
+  return card
 }
 
 export default ExperienceCard

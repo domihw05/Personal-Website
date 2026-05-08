@@ -81,30 +81,29 @@ function SoccerPage() {
         </div>
 
         <div className="soccer-gallery-carousel">
-          <div className="project-carousel-controls soccer-gallery-controls" aria-label="Soccer photo controls">
-            <button
-              type="button"
-              className="project-carousel-button"
-              onClick={showPreviousPhoto}
-              aria-label="Show previous soccer photo"
-            >
-              ←
-            </button>
-            <span className="project-carousel-status">
-              {activeGalleryIndex + 1} / {soccerGallery.length}
-            </span>
-            <button
-              type="button"
-              className="project-carousel-button"
-              onClick={showNextPhoto}
-              aria-label="Show next soccer photo"
-            >
-              →
-            </button>
-          </div>
-
           <div className="image-frame soccer-gallery-frame">
             <img src={activeGalleryImage.image} alt={activeGalleryImage.imageAlt} />
+            <div className="project-carousel-controls soccer-gallery-controls" aria-label="Soccer photo controls">
+              <button
+                type="button"
+                className="project-carousel-button"
+                onClick={showPreviousPhoto}
+                aria-label="Show previous soccer photo"
+              >
+                ←
+              </button>
+              <span className="project-carousel-status soccer-gallery-status">
+                {activeGalleryIndex + 1} / {soccerGallery.length}
+              </span>
+              <button
+                type="button"
+                className="project-carousel-button"
+                onClick={showNextPhoto}
+                aria-label="Show next soccer photo"
+              >
+                →
+              </button>
+            </div>
           </div>
         </div>
       </section>

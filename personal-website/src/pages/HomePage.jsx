@@ -4,6 +4,7 @@ import ProjectCard from '../components/ProjectCard'
 import {
   experiences,
   featuredProjects,
+  getExperienceId,
   heroImg,
   homeInterests,
   strengths,
@@ -17,7 +18,7 @@ function HomePage() {
       <section className="hero-panel">
         <div className="hero-copy">
           <div className="hero-status">
-            <p className="eyebrow">Student-athlete / software / data</p>
+            <p className="eyebrow">Student-athlete</p>
           </div>
           <h1>Dominic Hoar-Weiler</h1>
           <p className="hero-lead">
@@ -79,9 +80,13 @@ function HomePage() {
           </Link>
         </div>
 
-        <div className="experience-timeline experience-timeline-compact">
+        <div className="experience-timeline">
           {sortedExperiences.slice(0, 3).map((experience) => (
-            <ExperienceCard experience={experience} key={experience.title} />
+            <ExperienceCard
+              experience={experience}
+              key={experience.title}
+              linkTo={`/experience#${getExperienceId(experience)}`}
+            />
           ))}
         </div>
       </section>
@@ -118,7 +123,7 @@ function HomePage() {
         <div className="section-heading section-heading-row">
           <div>
             <p className="eyebrow">Outside the work</p>
-            <h2>What keeps me curious.</h2>
+            <h2>Hobbies and Passions.</h2>
           </div>
         </div>
 
@@ -140,7 +145,7 @@ function HomePage() {
       <section className="contact-banner" id="contact">
         <div>
           <p className="eyebrow">Next Step</p>
-          <h2>Let&apos;s build something useful.</h2>
+          <h2>Contact Me.</h2>
         </div>
 
         <a href="mailto:dominic.hoarweiler@gmail.com" className="primary-link">

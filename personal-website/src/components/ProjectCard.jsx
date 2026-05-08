@@ -1,6 +1,33 @@
+const repoContactHref =
+  'mailto:dominic.hoarweiler@gmail.com?subject=Repo%20access%20request'
+
+function ProjectLinks({ project, className = '' }) {
+  const linkClassName = ['project-links', className].filter(Boolean).join(' ')
+
+  return (
+    <div className={linkClassName}>
+      {project.githubURL && (
+        <a href={project.githubURL} target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+      )}
+      {!project.githubURL && project.contactForRepo && (
+        <a href={repoContactHref}>Contact Me for Repository</a>
+      )}
+      {project.demo && (
+        <a href={project.demo} target="_blank" rel="noreferrer">
+          Project Link
+        </a>
+      )}
+    </div>
+  )
+}
+
 function ProjectCard({ project, variant = 'card', useSummary = false }) {
   const projectDescription =
     useSummary && project.summary ? project.summary : project.description
+  const imageFitClassName =
+    project.imageFit === 'contain' ? 'project-image-contain' : ''
 
   if (variant === 'carousel') {
     return (
@@ -10,18 +37,7 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
           <h3>{project.title}</h3>
           <p>{projectDescription}</p>
 
-          <div className="project-links project-carousel-links">
-            {project.githubURL && (
-              <a href={project.githubURL} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            )}
-            {project.demo && (
-              <a href={project.demo} target="_blank" rel="noreferrer">
-                Project Link
-              </a>
-            )}
-          </div>
+          <ProjectLinks project={project} className="project-carousel-links" />
         </div>
 
         {project.image && (
@@ -29,7 +45,9 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
             <img
               src={project.image}
               alt={project.imageAlt}
-              className="project-carousel-image"
+              className={['project-carousel-image', imageFitClassName]
+                .filter(Boolean)
+                .join(' ')}
             />
           </div>
         )}
@@ -45,18 +63,7 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
           <h2>{project.title}</h2>
           <p>{projectDescription}</p>
 
-          <div className="project-links project-feature-links">
-            {project.githubURL && (
-              <a href={project.githubURL} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            )}
-            {project.demo && (
-              <a href={project.demo} target="_blank" rel="noreferrer">
-                Project Link
-              </a>
-            )}
-          </div>
+          <ProjectLinks project={project} className="project-feature-links" />
         </div>
 
         {project.image && (
@@ -64,7 +71,9 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
             <img
               src={project.image}
               alt={project.imageAlt}
-              className="project-feature-image"
+              className={['project-feature-image', imageFitClassName]
+                .filter(Boolean)
+                .join(' ')}
             />
           </div>
         )}
@@ -82,22 +91,13 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
         <img
           src={project.image}
           alt={project.imageAlt}
-          className="project-preview"
+          className={['project-preview', imageFitClassName]
+            .filter(Boolean)
+            .join(' ')}
         />
       )}
 
-      <div className="project-links">
-        {project.githubURL && (
-          <a href={project.githubURL} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        )}
-        {project.demo && (
-          <a href={project.demo} target="_blank" rel="noreferrer">
-            Project Link
-          </a>
-        )}
-      </div>
+      <ProjectLinks project={project} />
     </article>
   )
 }

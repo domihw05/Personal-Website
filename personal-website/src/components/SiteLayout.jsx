@@ -16,7 +16,7 @@ function SiteLayout() {
             Dominic Hoar-Weiler
           </NavLink>
           <p className="brand-submark">
-            Statistics, machine learning, software, and high-performance teams
+            Machine learning, software, and sports.
           </p>
         </div>
 

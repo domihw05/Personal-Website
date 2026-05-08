@@ -13,6 +13,8 @@ import readingImg from '../assets/hobbies/reading.jpeg'
 import travellingImg from '../assets/hobbies/travelling.jpeg'
 import watchingSoccerImg from '../assets/hobbies/watchingsoccer.jpeg'
 import handwritten_digits from '../assets/handwritten_digits.png'
+import deeplearning_transformer from '../assets/deeplearning_img.png'
+import player_visualizer from '../assets/player_visualization.png'
 
 const soccerGalleryImages = import.meta.glob(
   '../assets/Soccer Gallery/*.{jpg,jpeg,JPG,JPEG,png,webp}',
@@ -33,6 +35,13 @@ function formatGalleryImageAlt(path) {
 }
 
 export { heroImg, aramarkSelfies, fightingIrishPreview}
+
+export function getExperienceId(experience) {
+  return `experience-${experience.title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')}`
+}
 
 export const featuredProjects = [
   {
@@ -83,6 +92,42 @@ export const featuredProjects = [
     githubURL: 'https://github.com/domihw05/Handwriting-Classification-Neural-Network',
     image: handwritten_digits,
     imageAlt: 'Preview of the Handwritten Digit Recognition project, showing a sample of recognized digits.',
+  },
+  {
+    title: 'Deeplearning Transformer',
+    category: 'Machine Learning',
+    summary:
+      'Built an end-to-end Transformer deep learning pipeline for causal language modeling and speech recognition, including custom attention layers, datasets, training loops, decoding, and local test integration.',
+    description:
+      'This project implements core components of a Transformer-based deep\
+       learning system from scratch for CMU’s Introduction to Deep Learning\
+        HW4. The codebase includes a decoder-only Transformer for causal\
+         language modeling, an encoder-decoder Transformer for automatic\
+          speech recognition, reusable model components such as positional\
+           encodings, masks, encoder/decoder layers, and sublayers, as well\
+            as custom MyTorch implementations of scaled dot-product attention\
+             and multi-head attention. The project also includes dataset\
+              loaders, tokenization utilities, sequence generation,\
+               optimizer/scheduler setup, trainer classes, and a local test\
+                suite designed to support modular development and validation\
+                 before running larger-scale experiments on GPU resources.',
+    demo: '',
+    githubURL: '',
+    contactForRepo: true,
+    image: deeplearning_transformer,
+    imageAlt: 'Preview of the Deep Learning Transformer project, \
+    showing the architecture of the transformer model.',
+  },
+  {
+    title: 'Shot Chart Visualizer App',
+    category: 'Sports Analytics',
+    summary: 'Built a Python shot chart visualizer that scrapes Understat player shot data and generates interactive or saved visualizations with player-level shooting statistics.',
+    description: 'This project scrapes player shot data from Understat and converts it into shot chart visualizations with supporting statistical summaries. The app version opens a local window where users can enter an Understat player ID and filter by season, while the script version prompts for a player ID in the terminal and saves the player’s career shot chart as player_visualization.png. The project combines web scraping, data processing, soccer analytics, and visualization to make player shooting profiles easier to explore and compare.',
+    demo: '',
+    githubURL: 'https://github.com/domihw05/Shot-Chart-App-Visualizer',
+    image: player_visualizer,
+    imageFit: 'contain',
+    imageAlt: 'Preview of the Shot Chart Visualizer App, showing a shot chart for Michael Olise with different colored dots representing shot locations and outcomes.',
   }
 
 ]
@@ -182,9 +227,9 @@ export const homeInterests = [
 ]
 
 export const soccerHighlights = [
-  "Varsity Men's Soccer captain at Carnegie Mellon University",
-  'Leadership experience built through communication, accountability, and consistency',
-  'Strong interest in the overlap between athletics, analytics, and high-performance teams',
+  'Experience performing in high-pressure situations across ECNL, NCAA DIII, and USL League Two.',
+  'Leadership experience as a 3-year captain at CMU.',
+  'Personal growth experience overcoming adversity and injury setbacks.',
 ]
 
 export const soccerGallery = Object.entries(soccerGalleryImages)
