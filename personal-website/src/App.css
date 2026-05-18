@@ -1368,6 +1368,9 @@
 @media (max-width: 720px) {
   .topbar {
     gap: 0.85rem;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     padding: 0.9rem 1rem 0.75rem;
     border-bottom: 1px solid rgba(16, 34, 29, 0.08);
     backdrop-filter: blur(10px);
@@ -1390,25 +1393,23 @@
 
   .topnav {
     width: 100%;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex-wrap: initial;
     justify-content: flex-start;
-    gap: 0.45rem;
-    overflow-x: auto;
-    padding: 0 0 0.15rem;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .topnav::-webkit-scrollbar {
-    display: none;
+    gap: 0.5rem;
+    overflow: visible;
+    padding: 0;
   }
 
   .topnav-link {
-    flex: 0 0 auto;
+    min-width: 0;
     min-height: 2.45rem;
-    padding: 0.6rem 0.85rem;
+    padding: 0.58rem 0.7rem;
     backdrop-filter: none;
-    font-size: 0.86rem;
+    font-size: 0.84rem;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .topnav-link::after {
@@ -1420,6 +1421,7 @@
   .site-shell {
     gap: 1rem;
     padding: 0.75rem 1rem 1rem;
+    min-width: 0;
   }
 
   .hero-panel,
@@ -1437,6 +1439,13 @@
     min-height: auto;
     padding-top: 1rem;
     padding-bottom: 2.5rem;
+    overflow: hidden;
+  }
+
+  .hero-copy,
+  .hero-lead,
+  .hero-actions {
+    min-width: 0;
   }
 
   .hero-panel h1,
@@ -1445,6 +1454,18 @@
   .contact-banner h2,
   .page-title {
     max-width: none;
+  }
+
+  .hero-panel h1 {
+    font-size: clamp(3.1rem, 16vw, 4.35rem);
+    line-height: 0.94;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-lead {
+    font-size: clamp(1rem, 5vw, 1.18rem);
+    line-height: 1.55;
+    overflow-wrap: break-word;
   }
 
   .hero-status {
