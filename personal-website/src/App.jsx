@@ -24,10 +24,6 @@ function MotionEffects() {
       '.about-panel',
       '.contact-banner',
       '.soccer-panel',
-      '.project-carousel-card',
-      '.project-feature',
-      '.timeline-card',
-      '.info-card',
     ].join(',')
 
     const elements = Array.from(document.querySelectorAll(revealSelector))
