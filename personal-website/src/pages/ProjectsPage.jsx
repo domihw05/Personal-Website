@@ -5,12 +5,11 @@ function ProjectsPage() {
   return (
     <main className="site-shell page-shell">
       <section className="section-grid page-header">
-        <p className="eyebrow">Projects</p>
-        <h1 className="page-title">Project Portfolio</h1>
+        <p className="eyebrow">Selected work</p>
+        <h1 className="page-title">Things I&apos;ve built.</h1>
         <p className="page-intro">
-          A closer look at the projects I've built,
-          including sports data analysis, data modeling,
-          and software development.
+          Sports analytics, machine learning, and software projects built to
+          answer real questions and make complex ideas easier to use.
         </p>
       </section>
 

@@ -1,5 +1,19 @@
 const repoContactHref =
-  'mailto:dominic.hoarweiler@gmail.com?subject=Repo%20access%20request'
+  'mailto:dhoarwei@andrew.cmu.edu?subject=Repo%20access%20request'
+
+function ProjectSkills({ skills = [] }) {
+  if (!skills.length) {
+    return null
+  }
+
+  return (
+    <ul className="project-skills" aria-label="Skills and technologies">
+      {skills.map((skill) => (
+        <li key={skill}>{skill}</li>
+      ))}
+    </ul>
+  )
+}
 
 function ProjectLinks({ project, className = '' }) {
   const linkClassName = ['project-links', className].filter(Boolean).join(' ')
@@ -36,6 +50,7 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
           <p className="card-kicker">{project.category}</p>
           <h3>{project.title}</h3>
           <p>{projectDescription}</p>
+          <ProjectSkills skills={project.skills} />
 
           <ProjectLinks project={project} className="project-carousel-links" />
         </div>
@@ -45,6 +60,8 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
             <img
               src={project.image}
               alt={project.imageAlt}
+              loading="lazy"
+              decoding="async"
               className={['project-carousel-image', imageFitClassName]
                 .filter(Boolean)
                 .join(' ')}
@@ -62,6 +79,7 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
           <p className="card-kicker">{project.category}</p>
           <h2>{project.title}</h2>
           <p>{projectDescription}</p>
+          <ProjectSkills skills={project.skills} />
 
           <ProjectLinks project={project} className="project-feature-links" />
         </div>
@@ -71,6 +89,8 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
             <img
               src={project.image}
               alt={project.imageAlt}
+              loading="lazy"
+              decoding="async"
               className={['project-feature-image', imageFitClassName]
                 .filter(Boolean)
                 .join(' ')}
@@ -86,11 +106,14 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
       <p className="card-kicker">{project.category}</p>
       <h3>{project.title}</h3>
       <p>{projectDescription}</p>
+      <ProjectSkills skills={project.skills} />
 
       {project.image && (
         <img
           src={project.image}
           alt={project.imageAlt}
+          loading="lazy"
+          decoding="async"
           className={['project-preview', imageFitClassName]
             .filter(Boolean)
             .join(' ')}

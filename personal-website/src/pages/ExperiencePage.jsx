@@ -22,7 +22,7 @@ function ExperiencePage() {
   return (
     <main className="site-shell page-shell">
       <section className="section-grid page-header">
-        <p className="eyebrow">Internships, research, and applied work.</p>
+        <p className="eyebrow">Where I&apos;ve worked</p>
         <h1 className="page-title">Experience</h1>
         <p className="page-intro">
           Roles across data science, machine learning research, and software

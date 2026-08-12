@@ -1,6 +1,6 @@
-import heroImg from '../assets/Dom_SoccerPhoto.png'
+import heroImg from '../assets/optimized/dom-soccer-hero.jpg'
 import nflDataBowlPdf from '../assets/NFLDataBowlExplor.pdf'
-import timbersPreview from '../assets/TotalTimbers_Preview.png'
+import timbersPreview from '../assets/optimized/total-timbers-preview.jpg'
 import cmuLogo from '../assets/cmu_logo.png'
 import tartanLogo from '../assets/tartan_logo.png'
 import metaLogo from '../assets/meta_logo.png'
@@ -8,31 +8,22 @@ import aramarkLogo from '../assets/aramarkLogo.png'
 import metaselfie from '../assets/metaselfie.jpeg'
 import NFLBigDataBowl from "../assets/NFLBigDataBowl.png"
 import aramarkSelfies from '../assets/aramark_selfies.jpeg'
-import fightingIrishPreview from '../assets/fightingirish_preview.png'
+import fightingIrishPreview from '../assets/optimized/fighting-irish-preview.jpg'
 import readingImg from '../assets/hobbies/reading.jpeg'
 import travellingImg from '../assets/hobbies/travelling.jpeg'
 import watchingSoccerImg from '../assets/hobbies/watchingsoccer.jpeg'
 import handwritten_digits from '../assets/handwritten_digits.png'
 import deeplearning_transformer from '../assets/deeplearning_img.png'
-import player_visualizer from '../assets/player_visualization.png'
+import player_visualizer from '../assets/optimized/player-visualization.jpg'
 
 const soccerGalleryImages = import.meta.glob(
-  '../assets/Soccer Gallery/*.{jpg,jpeg,JPG,JPEG,png,webp}',
+  '../assets/Soccer Gallery Optimized/*.jpg',
   {
     eager: true,
     import: 'default',
     query: '?url',
   },
 )
-
-function formatGalleryImageAlt(path) {
-  const fileName = path.split('/').pop().replace(/\.[^.]+$/, '')
-  const readableName = fileName
-    .replace(/[_-]+/g, ' ')
-    .replace(/\b\w/g, (letter) => letter.toUpperCase())
-
-  return `Dominic Hoar-Weiler soccer gallery photo: ${readableName}`
-}
 
 export { heroImg, aramarkSelfies, fightingIrishPreview}
 
@@ -53,6 +44,7 @@ export const featuredProjects = [
       'Built and grew TotalTimbers, a Portland Timbers sports analytics account with more than 3K followers. The project combines soccer analysis, data-informed storytelling, and social media strategy to make MLS performance trends more accessible to fans.',
     demo: 'https://www.instagram.com/totaltimbers/',
     githubURL: '',
+    skills: ['Python', 'R', 'Sports analytics', 'Data visualization'],
     image: timbersPreview,
     imageAlt: 'Preview of the TotalTimbers Instagram profile',
   },
@@ -65,6 +57,7 @@ export const featuredProjects = [
       'Analyzed NFL player tracking data and built multinomial and neural network models in R to predict passing play outcomes from pre-snap variables such as play clock, down, yards to go, player alignment, and game context. The project focused on extracting useful predictive signals from noisy football tracking data.',
     demo: nflDataBowlPdf,
     githubURL: 'https://github.com/domihw05/NFL-Big-Data-Bowl',
+    skills: ['R', 'Neural networks', 'Tracking data', 'Statistical modeling'],
     image: NFLBigDataBowl,
     imageAlt: 'Preview of the NFL Big Data Bowl project, showing a plot of model predictions versus actual outcomes.',
   },
@@ -77,6 +70,7 @@ export const featuredProjects = [
     'Created Fighting Irish World as my 15-112 term project at Carnegie Mellon. The game is a single-player Python platformer inspired by Super Mario Bros., with selectable maps, enemy behavior, collision handling, collectibles, and a finish-line objective. Players choose one of three maps, avoid or defeat enemies, collect pots of gold, and progress to the end of the level.',
     demo: 'https://youtube.com/watch?v=0J6zRpfWX_E',
     githubURL: 'https://github.com/domihw05/Fighting-Irish-World-Game-Python-',
+    skills: ['Python', 'Game development', 'Collision systems', 'UI design'],
     image: fightingIrishPreview,
     imageAlt: 'Preview of the Fighting Irish World Game, showcasing\
      the leprechaun running across the map.',
@@ -90,6 +84,7 @@ export const featuredProjects = [
       'Implemented a neural network classifier for recognizing handwritten digits from 0-9 using TensorFlow/Keras. The model is trained on the MNIST dataset of 28x28 grayscale images and demonstrates a complete machine learning workflow, including preprocessing, model training, evaluation, and prediction.',
     demo: '',
     githubURL: 'https://github.com/domihw05/Handwriting-Classification-Neural-Network',
+    skills: ['Python', 'TensorFlow', 'Keras', 'Neural networks'],
     image: handwritten_digits,
     imageAlt: 'Preview of the Handwritten Digit Recognition project, showing a sample of recognized digits.',
   },
@@ -114,6 +109,7 @@ export const featuredProjects = [
     demo: '',
     githubURL: '',
     contactForRepo: true,
+    skills: ['Python', 'PyTorch', 'Transformers', 'NLP', 'Speech recognition'],
     image: deeplearning_transformer,
     imageAlt: 'Preview of the Deep Learning Transformer project, \
     showing the architecture of the transformer model.',
@@ -125,6 +121,7 @@ export const featuredProjects = [
     description: 'This project scrapes player shot data from Understat and converts it into shot chart visualizations with supporting statistical summaries. The app version opens a local window where users can enter an Understat player ID and filter by season, while the script version prompts for a player ID in the terminal and saves the player’s career shot chart as player_visualization.png. The project combines web scraping, data processing, soccer analytics, and visualization to make player shooting profiles easier to explore and compare.',
     demo: '',
     githubURL: 'https://github.com/domihw05/Shot-Chart-App-Visualizer',
+    skills: ['Python', 'Web scraping', 'Data visualization', 'Soccer analytics'],
     image: player_visualizer,
     imageFit: 'contain',
     imageAlt: 'Preview of the Shot Chart Visualizer App, showing a shot chart for Michael Olise with different colored dots representing shot locations and outcomes.',
@@ -234,9 +231,9 @@ export const soccerHighlights = [
 
 export const soccerGallery = Object.entries(soccerGalleryImages)
   .sort(([firstPath], [secondPath]) => firstPath.localeCompare(secondPath))
-  .map(([path, image]) => ({
+  .map(([, image], index) => ({
     image,
-    imageAlt: formatGalleryImageAlt(path),
+    imageAlt: `Dominic Hoar-Weiler playing for Carnegie Mellon men's soccer, photo ${index + 1}`,
   }))
 
 export const soccerAwards = [

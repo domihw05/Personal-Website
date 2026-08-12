@@ -12,18 +12,32 @@ function MotionEffects() {
   const location = useLocation()
 
   useEffect(() => {
+    if (!location.hash) {
+      window.scrollTo(0, 0)
+    }
+
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 
     if (reduceMotion.matches) {
       return undefined
     }
 
+    document.documentElement.classList.add('motion-ready')
+
     const revealSelector = [
-      '.hero-panel',
-      '.section-grid',
-      '.about-panel',
-      '.contact-banner',
-      '.soccer-panel',
+      '.hero-copy > *',
+      '.hero-visual',
+      '.section-heading',
+      '.project-feature',
+      '.timeline-card-link',
+      '.about-copy > *',
+      '.strengths-panel',
+      '.home-hobby',
+      '.contact-banner > *',
+      '.page-header > *',
+      '.soccer-panel > *',
+      '.soccer-award-card',
+      '.soccer-gallery-carousel',
     ].join(',')
 
     const elements = Array.from(document.querySelectorAll(revealSelector))
@@ -41,14 +55,14 @@ function MotionEffects() {
           })
         },
         {
-          rootMargin: '0px 0px -8% 0px',
-          threshold: 0.14,
+          rootMargin: '0px 0px -6% 0px',
+          threshold: 0.08,
         },
       )
 
       elements.forEach((element, index) => {
         element.classList.add('motion-reveal')
-        element.style.setProperty('--motion-delay', `${Math.min(index * 35, 180)}ms`)
+        element.style.setProperty('--motion-delay', `${Math.min((index % 4) * 55, 165)}ms`)
         observer.observe(element)
       })
     })
@@ -57,7 +71,7 @@ function MotionEffects() {
       window.cancelAnimationFrame(animationFrame)
       observer?.disconnect()
     }
-  }, [location.pathname])
+  }, [location.hash, location.pathname])
 
   return null
 }

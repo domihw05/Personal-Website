@@ -1,9 +1,25 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { heroImg, soccerAwards, soccerGallery, soccerHighlights } from '../data/siteContent'
 
 function SoccerPage() {
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0)
   const activeGalleryImage = soccerGallery[activeGalleryIndex]
+
+  useEffect(() => {
+    const neighboringIndexes = [
+      activeGalleryIndex === 0
+        ? soccerGallery.length - 1
+        : activeGalleryIndex - 1,
+      activeGalleryIndex === soccerGallery.length - 1
+        ? 0
+        : activeGalleryIndex + 1,
+    ]
+
+    neighboringIndexes.forEach((index) => {
+      const image = new Image()
+      image.src = soccerGallery[index].image
+    })
+  }, [activeGalleryIndex])
 
   function showPreviousPhoto() {
     setActiveGalleryIndex((currentIndex) =>
@@ -22,7 +38,7 @@ function SoccerPage() {
       <section className="soccer-panel">
         <div className="about-copy">
           <p className="eyebrow">Soccer</p>
-          <h1 className="page-title">My Soccer Journey</h1>
+          <h1 className="page-title">The game shaped me.</h1>
           <p className="page-intro">
             Soccer has shaped how I lead, how I handle pressure, and how I work
             within high-performing teams. It is a major part of my identity and
@@ -40,7 +56,12 @@ function SoccerPage() {
         </div>
 
         <div className="image-frame soccer-image-frame">
-          <img src={heroImg} alt="Dominic Hoar-Weiler in a varsity soccer match" />
+          <img
+            src={heroImg}
+            alt="Dominic Hoar-Weiler in a varsity soccer match"
+            fetchPriority="high"
+            decoding="async"
+          />
         </div>
       </section>
 
@@ -58,7 +79,16 @@ function SoccerPage() {
             <article className="info-card soccer-award-card" key={award.title}>
               <div className="soccer-award-header">
                 <div className="soccer-award-logo">
-                  {award.logo ? <img src={award.logo} alt={award.logoAlt || ''} /> : <span>Logo</span>}
+                  {award.logo ? (
+                    <img
+                      src={award.logo}
+                      alt={award.logoAlt || ''}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <span>Logo</span>
+                  )}
                 </div>
                 <div className="soccer-award-copy">
                   <p className="card-kicker soccer-award-kicker">Accolade</p>
@@ -82,7 +112,11 @@ function SoccerPage() {
 
         <div className="soccer-gallery-carousel">
           <div className="image-frame soccer-gallery-frame">
-            <img src={activeGalleryImage.image} alt={activeGalleryImage.imageAlt} />
+            <img
+              src={activeGalleryImage.image}
+              alt={activeGalleryImage.imageAlt}
+              decoding="async"
+            />
             <div className="project-carousel-controls soccer-gallery-controls" aria-label="Soccer photo controls">
               <button
                 type="button"

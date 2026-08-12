@@ -1,29 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap');
 
 :root {
-  --page-bg: #f7f4ee;
-  --page-bg-alt: #ede8df;
-  --panel: rgba(255, 255, 255, 0.7);
-  --surface: rgba(255, 255, 255, 0.64);
-  --surface-strong: rgba(255, 255, 255, 0.9);
-  --border-strong: rgba(22, 22, 20, 0.16);
-  --border-soft: rgba(22, 22, 20, 0.08);
-  --heading: #151512;
-  --text: #4e4b45;
-  --muted-strong: #706b62;
-  --accent: #9f4d2f;
-  --accent-bright: #c4653f;
-  --button-bg: #151512;
-  --button-text: #f8f5ef;
-  --panel-shadow: 0 24px 60px rgba(22, 22, 20, 0.08);
-  --sans:
-    'Manrope', 'Avenir Next', 'Segoe UI', 'Helvetica Neue', Helvetica,
-    Arial, sans-serif;
-  --display: var(--sans);
+  --page-bg: #f4f1e9;
+  --surface: #ece8de;
+  --surface-strong: #fffdf8;
+  --border-strong: rgba(28, 29, 25, 0.24);
+  --border-soft: rgba(28, 29, 25, 0.12);
+  --heading: #1c1d19;
+  --text: #4f514a;
+  --muted-strong: #74766d;
+  --accent: #9b3f27;
+  --accent-bright: #bb4d30;
+  --button-bg: #1c1d19;
+  --button-text: #f8f5ed;
+  --sans: 'DM Sans', 'Avenir Next', 'Segoe UI', sans-serif;
+  --display: 'Newsreader', Georgia, serif;
 
   font-family: var(--sans);
-  line-height: 1.5;
-  font-weight: 400;
   color: var(--text);
   background: var(--page-bg);
   font-synthesis: none;
@@ -46,10 +39,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background:
-    linear-gradient(90deg, rgba(21, 21, 18, 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, var(--page-bg-alt) 0%, var(--page-bg) 38%, #fbfaf7 100%);
-  background-size: 88px 88px, auto;
+  background: var(--page-bg);
 }
 
 a {
@@ -63,19 +53,26 @@ p {
 h1,
 h2,
 h3 {
-  font-family: var(--display);
-  font-weight: 800;
+  color: var(--heading);
 }
 
 #root {
-  width: min(1260px, calc(100% - 3rem));
+  width: min(1280px, calc(100% - 4rem));
   margin: 0 auto;
-  padding: 0 0 3rem;
+}
+
+::selection {
+  color: #fffaf3;
+  background: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 @media (max-width: 720px) {
   #root {
-    width: min(100%, calc(100% - 1rem));
-    padding: 0 0 1.25rem;
+    width: 100%;
   }
 }

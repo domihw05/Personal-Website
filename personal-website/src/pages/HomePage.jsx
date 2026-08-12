@@ -38,7 +38,12 @@ function HomePage() {
 
         <div className="hero-visual">
           <div className="image-frame hero-image-frame">
-            <img src={heroImg} alt="Dominic Hoar-Weiler playing soccer" />
+            <img
+              src={heroImg}
+              alt="Dominic Hoar-Weiler playing soccer"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
           <div className="hero-visual-note">
             Carnegie Mellon University / Varsity soccer
@@ -93,8 +98,8 @@ function HomePage() {
 
       <section className="about-panel" id="about">
         <div className="about-copy">
-          <p className="eyebrow">About</p>
-          <h2>Measured, technical, competitive.</h2>
+          <p className="eyebrow">A little more context</p>
+          <h2>I like hard problems and high standards.</h2>
           <p>
             I study Statistics and Machine Learning at Carnegie Mellon with a
             minor in Computer Science, and I captain the varsity men&apos;s soccer
@@ -122,8 +127,8 @@ function HomePage() {
       <section className="section-grid home-hobbies-section">
         <div className="section-heading section-heading-row">
           <div>
-            <p className="eyebrow">Outside the work</p>
-            <h2>Hobbies and Passions.</h2>
+            <p className="eyebrow">Away from the keyboard</p>
+            <h2>What keeps me curious.</h2>
           </div>
         </div>
 
@@ -131,7 +136,12 @@ function HomePage() {
           {homeInterests.map((interest) => (
             <article className="home-hobby" key={interest.title}>
               <div className="home-hobby-image">
-                <img src={interest.image} alt={interest.imageAlt} />
+                <img
+                  src={interest.image}
+                  alt={interest.imageAlt}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div className="home-hobby-copy">
                 <p className="card-kicker">{interest.title}</p>
@@ -144,12 +154,12 @@ function HomePage() {
 
       <section className="contact-banner" id="contact">
         <div>
-          <p className="eyebrow">Next Step</p>
-          <h2>Contact Me.</h2>
+          <p className="eyebrow">Get in touch</p>
+          <h2>Let&apos;s talk.</h2>
         </div>
 
-        <a href="mailto:dominic.hoarweiler@gmail.com" className="primary-link">
-          dominic.hoarweiler@gmail.com
+        <a href="mailto:dhoarwei@andrew.cmu.edu" className="primary-link">
+          dhoarwei@andrew.cmu.edu
         </a>
       </section>
     </main>

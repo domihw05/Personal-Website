@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 
 const navLinks = [
   { to: '/', label: 'Home', end: true },
@@ -8,8 +8,13 @@ const navLinks = [
 ]
 
 function SiteLayout() {
+  const location = useLocation()
+
   return (
     <div className="app-shell">
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <header className="topbar">
         <div className="brand-lockup">
           <NavLink to="/" end className="brand-mark">
@@ -34,7 +39,7 @@ function SiteLayout() {
             </NavLink>
           ))}
           <a
-            href="mailto:dominic.hoarweiler@gmail.com"
+            href="mailto:dhoarwei@andrew.cmu.edu"
             className="topnav-link topnav-contact"
           >
             Contact
@@ -42,7 +47,52 @@ function SiteLayout() {
         </nav>
       </header>
 
-      <Outlet />
+      <div className="route-view" id="main-content" key={location.pathname}>
+        <Outlet />
+      </div>
+
+      <footer className="site-footer">
+        <div className="footer-main">
+          <div className="footer-intro">
+            <p className="eyebrow">Dominic Hoar-Weiler</p>
+            <h2>Software, data, and sport.</h2>
+            <p>
+              Statistics and Machine Learning at Carnegie Mellon University,
+              with a minor in Computer Science. Graduating May 2027.
+            </p>
+          </div>
+
+          <nav className="footer-links" aria-label="Professional links">
+            <a href="mailto:dhoarwei@andrew.cmu.edu">Email</a>
+            <a
+              href="https://linkedin.com/in/dominichoarweiler"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/domihw05"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://dominichoarweiler.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Website
+            </a>
+          </nav>
+        </div>
+
+        <div className="footer-meta">
+          <span>Pittsburgh, PA</span>
+          <span>© 2026 Dominic Hoar-Weiler</span>
+        </div>
+      </footer>
     </div>
   )
 }

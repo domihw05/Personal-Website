@@ -30,6 +30,8 @@ function ExperienceCard({
             src={experience.image}
             alt={experience.imageAlt || ''}
             className="timeline-logo"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       ) : null}
@@ -39,6 +41,8 @@ function ExperienceCard({
           src={experience.attachment}
           alt={experience.attachmentLabel || `${experience.title} attachment`}
           className="timeline-attachment-preview"
+          loading="lazy"
+          decoding="async"
         />
       ) : null}
     </article>
