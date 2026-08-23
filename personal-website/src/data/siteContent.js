@@ -182,12 +182,12 @@ export const experiences = [
     attachmentLabel: 'Aramark Selfie',
   },
   {
-    period: 'Summer 2026',
+    period: 'May-Aug 2026',
     sortOrder: 2026.5,
     title: 'Software Engineering Intern',
     category: 'Meta',
     description:
-      'Incoming Software Engineering Intern on the Marketplace Growth Team for Summer 2026 in Seattle, Washington.',
+      'Shipped five Facebook Marketplace desktop features through 100+ production code changes, closing mobile-web parity gaps and launching A/B tests to hundreds of thousands of users. Built an AI-powered parity agent to automate mobile-to-web feature porting, projected to save 1,300 engineering hours across the summer, and created a dashboard to surface features and trigger headless FaaS runs of the agent.',
     image: metaLogo,
     imageAlt: 'Meta Logo',
     attachment: metaselfie,
