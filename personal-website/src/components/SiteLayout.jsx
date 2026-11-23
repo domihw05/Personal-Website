@@ -5,6 +5,7 @@ const navLinks = [
   { to: '/projects', label: 'Projects' },
   { to: '/experience', label: 'Experience' },
   { to: '/soccer', label: 'Soccer' },
+  { to: '/interests', label: 'Interests' },
 ]
 
 function SiteLayout() {

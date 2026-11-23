@@ -9,7 +9,7 @@ import metaselfie from '../assets/metaselfie.jpeg'
 import NFLBigDataBowl from "../assets/NFLBigDataBowl.png"
 import aramarkSelfies from '../assets/aramark_selfies.jpeg'
 import fightingIrishPreview from '../assets/optimized/fighting-irish-preview.jpg'
-import readingImg from '../assets/hobbies/reading.jpeg'
+import coffeeBooksFilm from '../assets/hobbies/coffee-books-film.jpg'
 import travellingImg from '../assets/hobbies/travelling.jpeg'
 import watchingSoccerImg from '../assets/hobbies/watchingsoccer.jpeg'
 import handwritten_digits from '../assets/handwritten_digits.png'
@@ -204,22 +204,24 @@ export const strengths = [
 
 export const homeInterests = [
   {
-    title: 'Travel',
-    caption: 'I love exploring new places, cultures, and cuisines.',
+    title: 'Coffee, books & movies',
+    description: 'A cup of coffee, a mystery novel, or a movie I’m still thinking about the next morning.',
+    image: coffeeBooksFilm,
+    imageAlt: 'A cup of coffee, an open book, and a strip of film on a wooden table',
+  },
+  {
+    title: 'Places I’m drawn to',
+    entries: ['Chicago', 'Germany', 'Portland', 'Pittsburgh'],
     image: travellingImg,
-    imageAlt: 'Image of Dominic Hoar-Weiler traveling Spring Break 2026',
+    imageAlt: 'Dominic and friends posing in front of the Sagrada Família in Barcelona',
+    photoCredit: 'Barcelona · From my travel photos',
   },
   {
-    title: 'Soccer',
-    caption: 'I love playing and watching soccer. My favorite teams are the Portland Timbers and Bayern Munich.',
+    title: 'Teams I follow',
+    entries: ['Bayern Munich', 'Portland Timbers', 'Portland Trail Blazers', 'Chicago Bears'],
     image: watchingSoccerImg,
-    imageAlt: 'Image of Dominic Hoar-Weiler watching soccer at Providence Park',
-  },
-  {
-    title: 'Reading',
-    caption: 'I love diving into books on a variety of topics, ranging from Murder Mystery to Life Philosophy.',
-    image: readingImg,
-    imageAlt: 'Image of Dominic Hoar-Weiler\'s book shelf',
+    imageAlt: 'A Portland Timbers match seen from the stands at Providence Park',
+    photoCredit: 'Providence Park · Portland, Oregon',
   },
 ]
 
@@ -237,6 +239,14 @@ export const soccerGallery = Object.entries(soccerGalleryImages)
   }))
 
 export const soccerAwards = [
+  {
+    title: 'UAA First Team All-Conference (2026)',
+    description: 'Named to the 2026 UAA Men’s Soccer All-Association First Team as a defender for Carnegie Mellon.',
+    logo: tartanLogo,
+    logoAlt: 'Tartan Athletics Logo',
+    source: 'https://uaasports.info/documents/2026/11/16//26_MSoc_All_Assoc.pdf?id=1216',
+    sourceLabel: '2026 UAA honors (PDF)',
+  },
   {
     title: "UAA Honorable Mention ('23, '25)",
     description:

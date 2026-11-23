@@ -1,5 +1,14 @@
 # React + Vite
 
+## Interests page artwork
+
+The Top picks shelf highlights curated titles from the imported library and displays their logged ratings. To change the picks, update `src/components/InterestHighlights.jsx` and add the corresponding artwork in `src/assets/interests/`.
+
+- Posters: [The Odyssey — Universal Pictures](https://www.universalpicturesathome.com/movies/the-odyssey-2026), [Interstellar — Paramount](https://www.paramount.com/movies/interstellar), [The Green Mile — Letterboxd](https://letterboxd.com/film/the-green-mile/).
+- Covers: [The Ghostwriter — Sourcebooks via NetGalley](https://www.netgalley.com/catalog/book/495724), [A Flicker in the Dark — Macmillan](https://us.macmillan.com/books/9781250803825/aflickerinthedark/), [The Last Devil to Die — Penguin](https://cdn.penguin.co.uk/dam-assets/books/9780241512449/9780241512449-jacket-large.jpg).
+
+The yearly film ranking keeps small local copies of the initial posters and can use poster URLs from the public Letterboxd feed for newly ranked films.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

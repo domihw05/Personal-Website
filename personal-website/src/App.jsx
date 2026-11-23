@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react'
 import SiteLayout from './components/SiteLayout'
 import ExperiencePage from './pages/ExperiencePage'
 import HomePage from './pages/HomePage'
+import InterestsPage from './pages/InterestsPage'
 import ProjectsPage from './pages/ProjectsPage'
 import SoccerPage from './pages/SoccerPage'
 
@@ -18,21 +19,18 @@ function MotionEffects() {
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 
-    if (reduceMotion.matches) {
+    if (location.pathname === '/' || reduceMotion.matches || !('IntersectionObserver' in window)) {
       return undefined
     }
 
     document.documentElement.classList.add('motion-ready')
 
     const revealSelector = [
-      '.hero-copy > *',
-      '.hero-visual',
       '.section-heading',
       '.project-feature',
       '.timeline-card-link',
       '.about-copy > *',
       '.strengths-panel',
-      '.home-hobby',
       '.contact-banner > *',
       '.page-header > *',
       '.soccer-panel > *',
@@ -87,6 +85,7 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/soccer" element={<SoccerPage />} />
+          <Route path="/interests" element={<InterestsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

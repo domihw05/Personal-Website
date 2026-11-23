@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import SoccerJourney from '../components/SoccerJourney'
 import { heroImg, soccerAwards, soccerGallery, soccerHighlights } from '../data/siteContent'
 
 function SoccerPage() {
@@ -65,6 +66,8 @@ function SoccerPage() {
         </div>
       </section>
 
+      <SoccerJourney />
+
       <section className="section-grid soccer-awards-section">
         <div className="section-heading">
           <p className="eyebrow">Awards</p>
@@ -96,6 +99,11 @@ function SoccerPage() {
                 </div>
               </div>
               <p>{award.description}</p>
+              {award.source && (
+                <a className="section-link soccer-award-source" href={award.source}>
+                  {award.sourceLabel}
+                </a>
+              )}
             </article>
           ))}
         </div>

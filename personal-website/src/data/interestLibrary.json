@@ -1,0 +1,2325 @@
+{
+  "films": [
+    {
+      "title": "Knives Out",
+      "year": 2019,
+      "url": "https://boxd.it/jWEA",
+      "rating": 4.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "The Batman",
+      "year": 2022,
+      "url": "https://boxd.it/eDGs",
+      "rating": 4.0,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Spider-Man: No Way Home",
+      "year": 2021,
+      "url": "https://boxd.it/nwRw",
+      "rating": 3.0,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "The Wolf of Wall Street",
+      "year": 2013,
+      "url": "https://boxd.it/3C1m",
+      "rating": 3.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Avengers: Infinity War",
+      "year": 2018,
+      "url": "https://boxd.it/9vEe",
+      "rating": 4.0,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "The Truman Show",
+      "year": 1998,
+      "url": "https://boxd.it/18U8",
+      "rating": 2.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Avengers: Endgame",
+      "year": 2019,
+      "url": "https://boxd.it/9vE4",
+      "rating": 4.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Black Panther",
+      "year": 2018,
+      "url": "https://boxd.it/8MHs",
+      "rating": 4.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Forrest Gump",
+      "year": 1994,
+      "url": "https://boxd.it/728",
+      "rating": 4.0,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "The Godfather",
+      "year": 1972,
+      "url": "https://boxd.it/2aNK",
+      "rating": 4.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Guardians of the Galaxy",
+      "year": 2014,
+      "url": "https://boxd.it/3VH2",
+      "rating": 3.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Hereditary",
+      "year": 2018,
+      "url": "https://boxd.it/hNVe",
+      "rating": 3.0,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Thor: Ragnarok",
+      "year": 2017,
+      "url": "https://boxd.it/8MHi",
+      "rating": 4.0,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Glass Onion",
+      "year": 2022,
+      "url": "https://boxd.it/oCkK",
+      "rating": 3.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Spider-Man: Homecoming",
+      "year": 2017,
+      "url": "https://boxd.it/aboM",
+      "rating": 3.0,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "1917",
+      "year": 2019,
+      "url": "https://boxd.it/jj4y",
+      "rating": 4.0,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Soul",
+      "year": 2020,
+      "url": "https://boxd.it/ioLA",
+      "rating": 2.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Coco",
+      "year": 2017,
+      "url": "https://boxd.it/bYJQ",
+      "rating": 3.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Ratatouille",
+      "year": 2007,
+      "url": "https://boxd.it/27ww",
+      "rating": 4.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Deadpool",
+      "year": 2016,
+      "url": "https://boxd.it/9fOC",
+      "rating": 3.5,
+      "ratedOn": "2023-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Spider-Man: Across the Spider-Verse",
+      "year": 2023,
+      "url": "https://boxd.it/kSz4",
+      "rating": 4.0,
+      "ratedOn": "2023-06-11",
+      "watchedOn": null
+    },
+    {
+      "title": "Paper Towns",
+      "year": 2015,
+      "url": "https://boxd.it/8T5g",
+      "rating": 4.0,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Air",
+      "year": 2023,
+      "url": "https://boxd.it/Arlc",
+      "rating": 4.5,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "10 Things I Hate About You",
+      "year": 1999,
+      "url": "https://boxd.it/23AO",
+      "rating": 3.0,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Legally Blonde",
+      "year": 2001,
+      "url": "https://boxd.it/1ZNa",
+      "rating": 4.5,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "The Princess Diaries",
+      "year": 2001,
+      "url": "https://boxd.it/1XCO",
+      "rating": 4.0,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Crazy Rich Asians",
+      "year": 2018,
+      "url": "https://boxd.it/gfnK",
+      "rating": 4.0,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Spirited Away",
+      "year": 2001,
+      "url": "https://boxd.it/2b4m",
+      "rating": 3.5,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "The Lion King",
+      "year": 1994,
+      "url": "https://boxd.it/201Q",
+      "rating": 4.0,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Puss in Boots: The Last Wish",
+      "year": 2022,
+      "url": "https://boxd.it/aaie",
+      "rating": 4.5,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "WALL·E",
+      "year": 2008,
+      "url": "https://boxd.it/1VEo",
+      "rating": 3.5,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Toy Story",
+      "year": 1995,
+      "url": "https://boxd.it/29qA",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Up",
+      "year": 2009,
+      "url": "https://boxd.it/1OEc",
+      "rating": 4.5,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "The Incredibles",
+      "year": 2004,
+      "url": "https://boxd.it/1XLm",
+      "rating": 3.5,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Monsters, Inc.",
+      "year": 2001,
+      "url": "https://boxd.it/2a46",
+      "rating": 4.0,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Mulan",
+      "year": 1998,
+      "url": "https://boxd.it/1VFw",
+      "rating": 3.5,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Finding Nemo",
+      "year": 2003,
+      "url": "https://boxd.it/72i",
+      "rating": 3.0,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Shrek",
+      "year": 2001,
+      "url": "https://boxd.it/29zi",
+      "rating": 4.0,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Toy Story 3",
+      "year": 2010,
+      "url": "https://boxd.it/1WRe",
+      "rating": 3.0,
+      "ratedOn": "2023-06-21",
+      "watchedOn": null
+    },
+    {
+      "title": "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan",
+      "year": 2006,
+      "url": "https://boxd.it/2agQ",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Dictator",
+      "year": 2012,
+      "url": "https://boxd.it/2DEW",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Neighbors",
+      "year": 2014,
+      "url": "https://boxd.it/5Txe",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Lights Out",
+      "year": 2016,
+      "url": "https://boxd.it/bAHc",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "War Dogs",
+      "year": 2016,
+      "url": "https://boxd.it/9SlO",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Iron Man",
+      "year": 2008,
+      "url": "https://boxd.it/28dA",
+      "rating": 4.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Iron Man 2",
+      "year": 2010,
+      "url": "https://boxd.it/1WZM",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Iron Man 3",
+      "year": 2013,
+      "url": "https://boxd.it/2cBQ",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Avatar",
+      "year": 2009,
+      "url": "https://boxd.it/1Efm",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Avatar: The Way of Water",
+      "year": 2022,
+      "url": "https://boxd.it/2E2E",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "High School Musical",
+      "year": 2006,
+      "url": "https://boxd.it/1V0y",
+      "rating": 4.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "High School Musical 2",
+      "year": 2007,
+      "url": "https://boxd.it/1PIu",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "High School Musical 3: Senior Year",
+      "year": 2008,
+      "url": "https://boxd.it/1SR0",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Inside Out",
+      "year": 2015,
+      "url": "https://boxd.it/4KHC",
+      "rating": 2.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Moana",
+      "year": 2016,
+      "url": "https://boxd.it/8tfY",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Descendants",
+      "year": 2015,
+      "url": "https://boxd.it/8rMm",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Descendants 2",
+      "year": 2017,
+      "url": "https://boxd.it/eJMG",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Descendants 3",
+      "year": 2019,
+      "url": "https://boxd.it/ijcg",
+      "rating": 2.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Encanto",
+      "year": 2021,
+      "url": "https://boxd.it/kPRu",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "url": "https://boxd.it/1WYO",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Tangled",
+      "year": 2010,
+      "url": "https://boxd.it/15gO",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Luca",
+      "year": 2021,
+      "url": "https://boxd.it/ipjC",
+      "rating": 2.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Frozen",
+      "year": 2013,
+      "url": "https://boxd.it/3GNa",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Incredibles 2",
+      "year": 2018,
+      "url": "https://boxd.it/7IPg",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Turning Red",
+      "year": 2022,
+      "url": "https://boxd.it/ipkq",
+      "rating": 2.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Cars",
+      "year": 2006,
+      "url": "https://boxd.it/29ho",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Cars 2",
+      "year": 2011,
+      "url": "https://boxd.it/H4Y",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Cars 3",
+      "year": 2017,
+      "url": "https://boxd.it/7IPq",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Hercules",
+      "year": 1997,
+      "url": "https://boxd.it/1SDW",
+      "rating": 5.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Finding Dory",
+      "year": 2016,
+      "url": "https://boxd.it/4aAA",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Mission: Impossible – Fallout",
+      "year": 2018,
+      "url": "https://boxd.it/bSVc",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Maze Runner",
+      "year": 2014,
+      "url": "https://boxd.it/5YPM",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Monsters University",
+      "year": 2013,
+      "url": "https://boxd.it/bQm",
+      "rating": 4.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Wreck-It Ralph",
+      "year": 2012,
+      "url": "https://boxd.it/2TTS",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Brave",
+      "year": 2012,
+      "url": "https://boxd.it/bVG",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Toy Story 2",
+      "year": 1999,
+      "url": "https://boxd.it/29qq",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Toy Story 4",
+      "year": 2019,
+      "url": "https://boxd.it/9ALu",
+      "rating": 2.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Big Hero 6",
+      "year": 2014,
+      "url": "https://boxd.it/5rje",
+      "rating": 2.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Pee-wee's Big Adventure",
+      "year": 1985,
+      "url": "https://boxd.it/22Lw",
+      "rating": 4.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Princess and the Frog",
+      "year": 2009,
+      "url": "https://boxd.it/1WQq",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Good Dinosaur",
+      "year": 2015,
+      "url": "https://boxd.it/3AD4",
+      "rating": 1.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Onward",
+      "year": 2020,
+      "url": "https://boxd.it/io92",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Lilo & Stitch",
+      "year": 2002,
+      "url": "https://boxd.it/1TAY",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "A Bug's Life",
+      "year": 1998,
+      "url": "https://boxd.it/1Yyy",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Ice Age",
+      "year": 2002,
+      "url": "https://boxd.it/2apS",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Ice Age: The Meltdown",
+      "year": 2006,
+      "url": "https://boxd.it/2wRk",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Ice Age: Dawn of the Dinosaurs",
+      "year": 2009,
+      "url": "https://boxd.it/20iC",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Ice Age: Continental Drift",
+      "year": 2012,
+      "url": "https://boxd.it/lQ2",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Ice Age: Collision Course",
+      "year": 2016,
+      "url": "https://boxd.it/8upq",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Raya and the Last Dragon",
+      "year": 2021,
+      "url": "https://boxd.it/jbkI",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "url": "https://boxd.it/1XhG",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Bolt",
+      "year": 2008,
+      "url": "https://boxd.it/1QXg",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Emperor's New Groove",
+      "year": 2000,
+      "url": "https://boxd.it/1Tey",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Kronk's New Groove",
+      "year": 2005,
+      "url": "https://boxd.it/1Qd8",
+      "rating": 4.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Aladdin",
+      "year": 2019,
+      "url": "https://boxd.it/eSjy",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Aladdin",
+      "year": 1992,
+      "url": "https://boxd.it/29yE",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Alvin and the Chipmunks",
+      "year": 2007,
+      "url": "https://boxd.it/21E0",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Chicken Little",
+      "year": 2005,
+      "url": "https://boxd.it/1Xnu",
+      "rating": 2.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Snow White and the Seven Dwarfs",
+      "year": 1937,
+      "url": "https://boxd.it/2arO",
+      "rating": 2.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Cinderella",
+      "year": 1950,
+      "url": "https://boxd.it/1Uki",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Diary of a Wimpy Kid",
+      "year": 2010,
+      "url": "https://boxd.it/1fUa",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Diary of a Wimpy Kid: Rodrick Rules",
+      "year": 2011,
+      "url": "https://boxd.it/gm2",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Diary of a Wimpy Kid: Dog Days",
+      "year": 2012,
+      "url": "https://boxd.it/2TG0",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Diary of a Wimpy Kid: The Long Haul",
+      "year": 2017,
+      "url": "https://boxd.it/eL00",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Peter Pan",
+      "year": 1953,
+      "url": "https://boxd.it/1VCC",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Mrs. Doubtfire",
+      "year": 1993,
+      "url": "https://boxd.it/29Cw",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Amadeus",
+      "year": 1984,
+      "url": "https://boxd.it/2aH8",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Jumanji",
+      "year": 1995,
+      "url": "https://boxd.it/1ZLI",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Night at the Museum",
+      "year": 2006,
+      "url": "https://boxd.it/28wi",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Hook",
+      "year": 1991,
+      "url": "https://boxd.it/29nQ",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Happy Feet",
+      "year": 2006,
+      "url": "https://boxd.it/1XH0",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Night at the Museum: Battle of the Smithsonian",
+      "year": 2009,
+      "url": "https://boxd.it/1H7U",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Night at the Museum: Secret of the Tomb",
+      "year": 2014,
+      "url": "https://boxd.it/5x3m",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "RV",
+      "year": 2006,
+      "url": "https://boxd.it/1YrW",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Dumb and Dumber",
+      "year": 1994,
+      "url": "https://boxd.it/206m",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "How the Grinch Stole Christmas",
+      "year": 2000,
+      "url": "https://boxd.it/1ZHQ",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Bruce Almighty",
+      "year": 2003,
+      "url": "https://boxd.it/2aCC",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Ace Ventura: Pet Detective",
+      "year": 1994,
+      "url": "https://boxd.it/25RW",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Liar Liar",
+      "year": 1997,
+      "url": "https://boxd.it/28sg",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Horton Hears a Who!",
+      "year": 2008,
+      "url": "https://boxd.it/1SfA",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Ace Ventura: When Nature Calls",
+      "year": 1995,
+      "url": "https://boxd.it/1Z66",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "How to Train Your Dragon",
+      "year": 2010,
+      "url": "https://boxd.it/1WRy",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "How to Train Your Dragon 2",
+      "year": 2014,
+      "url": "https://boxd.it/2TRW",
+      "rating": 4.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "How to Train Your Dragon: The Hidden World",
+      "year": 2019,
+      "url": "https://boxd.it/5a9w",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Hunchback of Notre Dame",
+      "year": 1996,
+      "url": "https://boxd.it/1VZQ",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Ice Age Adventures of Buck Wild",
+      "year": 2022,
+      "url": "https://boxd.it/t7Ou",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Sleeping Beauty",
+      "year": 1959,
+      "url": "https://boxd.it/1V9A",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Jungle Book",
+      "year": 1967,
+      "url": "https://boxd.it/1YY2",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Meet the Robinsons",
+      "year": 2007,
+      "url": "https://boxd.it/28Ym",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Parent Trap",
+      "year": 1998,
+      "url": "https://boxd.it/1XJq",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Planes",
+      "year": 2013,
+      "url": "https://boxd.it/4Na2",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Zootopia",
+      "year": 2016,
+      "url": "https://boxd.it/84xS",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Princess Bride",
+      "year": 1987,
+      "url": "https://boxd.it/26EY",
+      "rating": 4.5,
+      "ratedOn": "2023-07-17",
+      "watchedOn": null
+    },
+    {
+      "title": "Troy",
+      "year": 2004,
+      "url": "https://boxd.it/29TW",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Gladiator",
+      "year": 2000,
+      "url": "https://boxd.it/2b9m",
+      "rating": 4.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": "2025-01-29"
+    },
+    {
+      "title": "The Conjuring",
+      "year": 2013,
+      "url": "https://boxd.it/4sr2",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Conjuring 2",
+      "year": 2016,
+      "url": "https://boxd.it/7GJg",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Conjuring: The Devil Made Me Do It",
+      "year": 2021,
+      "url": "https://boxd.it/eXZY",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Ouija",
+      "year": 2014,
+      "url": "https://boxd.it/77SM",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Ouija: Origin of Evil",
+      "year": 2016,
+      "url": "https://boxd.it/b5EG",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "It",
+      "year": 2017,
+      "url": "https://boxd.it/bC8e",
+      "rating": 3.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Jumanji: Welcome to the Jungle",
+      "year": 2017,
+      "url": "https://boxd.it/bUeE",
+      "rating": 4.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Jungle Cruise",
+      "year": 2021,
+      "url": "https://boxd.it/g4YK",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Tooth Fairy",
+      "year": 2010,
+      "url": "https://boxd.it/1zKE",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Bedtime Stories",
+      "year": 2008,
+      "url": "https://boxd.it/1WPM",
+      "rating": 4.0,
+      "ratedOn": "2023-07-17",
+      "watchedOn": null
+    },
+    {
+      "title": "Maleficent",
+      "year": 2014,
+      "url": "https://boxd.it/3v1u",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "The Terminator",
+      "year": 1984,
+      "url": "https://boxd.it/2aQY",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Kindergarten Cop",
+      "year": 1990,
+      "url": "https://boxd.it/29dm",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Daddy Day Care",
+      "year": 2003,
+      "url": "https://boxd.it/1VAw",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Titanic",
+      "year": 1997,
+      "url": "https://boxd.it/2a2k",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Midway",
+      "year": 1976,
+      "url": "https://boxd.it/1TSy",
+      "rating": 3.5,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Midway",
+      "year": 2019,
+      "url": "https://boxd.it/iX4w",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "12 Angry Men",
+      "year": 1957,
+      "url": "https://boxd.it/2auI",
+      "rating": 4.0,
+      "ratedOn": "2023-06-27",
+      "watchedOn": null
+    },
+    {
+      "title": "Kubo and the Two Strings",
+      "year": 2016,
+      "url": "https://boxd.it/a4wE",
+      "rating": 3.5,
+      "ratedOn": "2023-06-30",
+      "watchedOn": null
+    },
+    {
+      "title": "Sing",
+      "year": 2016,
+      "url": "https://boxd.it/b5EQ",
+      "rating": 4.0,
+      "ratedOn": "2023-06-30",
+      "watchedOn": null
+    },
+    {
+      "title": "Sing 2",
+      "year": 2021,
+      "url": "https://boxd.it/fAnE",
+      "rating": 3.0,
+      "ratedOn": "2023-06-30",
+      "watchedOn": null
+    },
+    {
+      "title": "Lyle, Lyle, Crocodile",
+      "year": 2022,
+      "url": "https://boxd.it/vkfm",
+      "rating": 2.0,
+      "ratedOn": "2023-06-30",
+      "watchedOn": null
+    },
+    {
+      "title": "Prom Night",
+      "year": 2008,
+      "url": "https://boxd.it/201c",
+      "rating": 2.5,
+      "ratedOn": "2023-07-17",
+      "watchedOn": null
+    },
+    {
+      "title": "Indiana Jones and the Dial of Destiny",
+      "year": 2023,
+      "url": "https://boxd.it/b8vM",
+      "rating": 3.5,
+      "ratedOn": "2023-07-17",
+      "watchedOn": null
+    },
+    {
+      "title": "Mission: Impossible – Dead Reckoning",
+      "year": 2023,
+      "url": "https://boxd.it/l7zS",
+      "rating": 4.0,
+      "ratedOn": "2023-07-17",
+      "watchedOn": null
+    },
+    {
+      "title": "The Girl on the Train",
+      "year": 2016,
+      "url": "https://boxd.it/bCJY",
+      "rating": 4.0,
+      "ratedOn": "2023-07-30",
+      "watchedOn": null
+    },
+    {
+      "title": "A Simple Favor",
+      "year": 2018,
+      "url": "https://boxd.it/hq92",
+      "rating": 3.5,
+      "ratedOn": "2023-07-30",
+      "watchedOn": null
+    },
+    {
+      "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+      "year": 2023,
+      "url": "https://boxd.it/pZCY",
+      "rating": 4.5,
+      "ratedOn": "2024-01-02",
+      "watchedOn": null
+    },
+    {
+      "title": "Rebel Moon – Part One: A Child of Fire",
+      "year": 2023,
+      "url": "https://boxd.it/w0qc",
+      "rating": 4.0,
+      "ratedOn": "2024-01-04",
+      "watchedOn": null
+    },
+    {
+      "title": "Aquaman and the Lost Kingdom",
+      "year": 2023,
+      "url": "https://boxd.it/l1LS",
+      "rating": 3.0,
+      "ratedOn": "2024-01-04",
+      "watchedOn": null
+    },
+    {
+      "title": "Morbius",
+      "year": 2022,
+      "url": "https://boxd.it/j978",
+      "rating": 3.5,
+      "ratedOn": "2024-01-05",
+      "watchedOn": null
+    },
+    {
+      "title": "La La Land",
+      "year": 2016,
+      "url": "https://boxd.it/a5fa",
+      "rating": 4.5,
+      "ratedOn": "2024-01-06",
+      "watchedOn": null
+    },
+    {
+      "title": "Ted",
+      "year": 2012,
+      "url": "https://boxd.it/2pgc",
+      "rating": 4.0,
+      "ratedOn": "2024-01-06",
+      "watchedOn": null
+    },
+    {
+      "title": "Wonka",
+      "year": 2023,
+      "url": "https://boxd.it/tCQm",
+      "rating": 4.5,
+      "ratedOn": "2024-01-06",
+      "watchedOn": null
+    },
+    {
+      "title": "Idiocracy",
+      "year": 2006,
+      "url": "https://boxd.it/20RW",
+      "rating": 1.5,
+      "ratedOn": "2024-01-09",
+      "watchedOn": null
+    },
+    {
+      "title": "Whiplash",
+      "year": 2014,
+      "url": "https://boxd.it/7bQA",
+      "rating": 4.5,
+      "ratedOn": "2024-01-12",
+      "watchedOn": null
+    },
+    {
+      "title": "Jujutsu Kaisen 0",
+      "year": 2021,
+      "url": "https://boxd.it/uvFS",
+      "rating": 3.5,
+      "ratedOn": "2024-02-19",
+      "watchedOn": null
+    },
+    {
+      "title": "Interstellar",
+      "year": 2014,
+      "url": "https://boxd.it/4VZ8",
+      "rating": 5.0,
+      "ratedOn": "2024-02-19",
+      "watchedOn": null
+    },
+    {
+      "title": "The Silence of the Lambs",
+      "year": 1991,
+      "url": "https://boxd.it/2aHW",
+      "rating": 4.0,
+      "ratedOn": "2024-04-07",
+      "watchedOn": null
+    },
+    {
+      "title": "Dune",
+      "year": 2021,
+      "url": "https://boxd.it/fA7G",
+      "rating": 2.0,
+      "ratedOn": "2024-04-07",
+      "watchedOn": null
+    },
+    {
+      "title": "Dune: Part Two",
+      "year": 2024,
+      "url": "https://boxd.it/pUfA",
+      "rating": 4.5,
+      "ratedOn": "2024-05-19",
+      "watchedOn": null
+    },
+    {
+      "title": "Damsel",
+      "year": 2024,
+      "url": "https://boxd.it/sFY2",
+      "rating": 3.5,
+      "ratedOn": "2024-04-07",
+      "watchedOn": null
+    },
+    {
+      "title": "Making 'The Shining'",
+      "year": 1980,
+      "url": "https://boxd.it/1G9A",
+      "rating": 4.0,
+      "ratedOn": "2024-05-19",
+      "watchedOn": null
+    },
+    {
+      "title": "Lift",
+      "year": 2024,
+      "url": "https://boxd.it/A5s6",
+      "rating": 4.0,
+      "ratedOn": "2024-04-07",
+      "watchedOn": null
+    },
+    {
+      "title": "Yesterday",
+      "year": 2019,
+      "url": "https://boxd.it/iF7M",
+      "rating": 3.5,
+      "ratedOn": "2024-05-19",
+      "watchedOn": null
+    },
+    {
+      "title": "The Equalizer",
+      "year": 2014,
+      "url": "https://boxd.it/4TUK",
+      "rating": 3.5,
+      "ratedOn": "2024-05-19",
+      "watchedOn": null
+    },
+    {
+      "title": "Tag",
+      "year": 2018,
+      "url": "https://boxd.it/gh7Y",
+      "rating": 3.5,
+      "ratedOn": "2024-06-02",
+      "watchedOn": null
+    },
+    {
+      "title": "Rebel Moon – Part Two: The Scargiver",
+      "year": 2024,
+      "url": "https://boxd.it/zdta",
+      "rating": 3.5,
+      "ratedOn": "2024-06-19",
+      "watchedOn": null
+    },
+    {
+      "title": "See How They Run",
+      "year": 2022,
+      "url": "https://boxd.it/sNVq",
+      "rating": 2.5,
+      "ratedOn": "2024-07-14",
+      "watchedOn": null
+    },
+    {
+      "title": "Deadpool & Wolverine",
+      "year": 2024,
+      "url": "https://boxd.it/jq8s",
+      "rating": 4.0,
+      "ratedOn": "2024-07-30",
+      "watchedOn": "2024-07-29"
+    },
+    {
+      "title": "Challengers",
+      "year": 2024,
+      "url": "https://boxd.it/zld0",
+      "rating": 3.5,
+      "ratedOn": "2024-08-01",
+      "watchedOn": "2024-07-31"
+    },
+    {
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": 2001,
+      "url": "https://boxd.it/2b5O",
+      "rating": 4.0,
+      "ratedOn": "2024-10-18",
+      "watchedOn": null
+    },
+    {
+      "title": "The Lord of the Rings: The Two Towers",
+      "year": 2002,
+      "url": "https://boxd.it/2b5E",
+      "rating": 4.0,
+      "ratedOn": "2024-10-18",
+      "watchedOn": null
+    },
+    {
+      "title": "The Departed",
+      "year": 2006,
+      "url": "https://boxd.it/28MA",
+      "rating": 3.5,
+      "ratedOn": "2024-10-18",
+      "watchedOn": null
+    },
+    {
+      "title": "Wicked",
+      "year": 2024,
+      "url": "https://boxd.it/e8ME",
+      "rating": 3.5,
+      "ratedOn": "2024-11-26",
+      "watchedOn": null
+    },
+    {
+      "title": "Tarot",
+      "year": 2024,
+      "url": "https://boxd.it/qWMy",
+      "rating": 3.5,
+      "ratedOn": "2024-11-26",
+      "watchedOn": null
+    },
+    {
+      "title": "Twisters",
+      "year": 2024,
+      "url": "https://boxd.it/qV7a",
+      "rating": 4.0,
+      "ratedOn": "2024-11-26",
+      "watchedOn": null
+    },
+    {
+      "title": "Gladiator II",
+      "year": 2024,
+      "url": "https://boxd.it/kqQQ",
+      "rating": 4.5,
+      "ratedOn": "2024-12-01",
+      "watchedOn": null
+    },
+    {
+      "title": "Molly's Game",
+      "year": 2017,
+      "url": "https://boxd.it/dSl8",
+      "rating": 4.5,
+      "ratedOn": "2024-12-26",
+      "watchedOn": null
+    },
+    {
+      "title": "Army of Thieves",
+      "year": 2021,
+      "url": "https://boxd.it/tYai",
+      "rating": 3.5,
+      "ratedOn": "2024-12-31",
+      "watchedOn": null
+    },
+    {
+      "title": "The Lincoln Lawyer",
+      "year": 2011,
+      "url": "https://boxd.it/DRM",
+      "rating": 4.0,
+      "ratedOn": "2025-01-02",
+      "watchedOn": null
+    },
+    {
+      "title": "The Illusionist",
+      "year": 2006,
+      "url": "https://boxd.it/28H6",
+      "rating": 4.5,
+      "ratedOn": "2025-01-11",
+      "watchedOn": "2025-01-08"
+    },
+    {
+      "title": "Good Will Hunting",
+      "year": 1997,
+      "url": "https://boxd.it/2ahY",
+      "rating": 4.0,
+      "ratedOn": "2025-01-11",
+      "watchedOn": "2025-01-10"
+    },
+    {
+      "title": "The Gentlemen",
+      "year": 2019,
+      "url": "https://boxd.it/iYBQ",
+      "rating": 4.0,
+      "ratedOn": "2025-01-12",
+      "watchedOn": "2025-01-12"
+    },
+    {
+      "title": "Shutter Island",
+      "year": 2010,
+      "url": "https://boxd.it/1U82",
+      "rating": 4.5,
+      "ratedOn": "2025-01-30",
+      "watchedOn": "2025-01-30"
+    },
+    {
+      "title": "Memento",
+      "year": 2000,
+      "url": "https://boxd.it/2bcK",
+      "rating": 3.5,
+      "ratedOn": "2025-02-01",
+      "watchedOn": "2025-01-31"
+    },
+    {
+      "title": "Captain America: Brave New World",
+      "year": 2025,
+      "url": "https://boxd.it/uYDm",
+      "rating": 3.0,
+      "ratedOn": "2025-02-22",
+      "watchedOn": "2025-02-22"
+    },
+    {
+      "title": "Thomas Müller - One of a Kind",
+      "year": 2025,
+      "url": "https://boxd.it/R7as",
+      "rating": 4.5,
+      "ratedOn": "2025-03-07",
+      "watchedOn": "2025-03-06"
+    },
+    {
+      "title": "Se7en",
+      "year": 1995,
+      "url": "https://boxd.it/29zs",
+      "rating": 4.0,
+      "ratedOn": "2025-03-08",
+      "watchedOn": "2025-03-07"
+    },
+    {
+      "title": "The Ministry of Ungentlemanly Warfare",
+      "year": 2024,
+      "url": "https://boxd.it/u5zu",
+      "rating": 4.0,
+      "ratedOn": "2025-04-10",
+      "watchedOn": "2025-04-09"
+    },
+    {
+      "title": "Guy Ritchie's The Covenant",
+      "year": 2023,
+      "url": "https://boxd.it/xjcK",
+      "rating": 3.5,
+      "ratedOn": "2025-04-12",
+      "watchedOn": "2025-04-11"
+    },
+    {
+      "title": "The Grand Budapest Hotel",
+      "year": 2014,
+      "url": "https://boxd.it/3ZqO",
+      "rating": 4.0,
+      "ratedOn": "2025-04-19",
+      "watchedOn": "2025-04-18"
+    },
+    {
+      "title": "The Prestige",
+      "year": 2006,
+      "url": "https://boxd.it/293w",
+      "rating": 4.0,
+      "ratedOn": "2025-04-22",
+      "watchedOn": "2025-04-21"
+    },
+    {
+      "title": "A Minecraft Movie",
+      "year": 2025,
+      "url": "https://boxd.it/zRro",
+      "rating": 3.0,
+      "ratedOn": "2025-04-22",
+      "watchedOn": "2025-04-21"
+    },
+    {
+      "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "year": 2003,
+      "url": "https://boxd.it/70G",
+      "rating": 4.0,
+      "ratedOn": "2025-04-22",
+      "watchedOn": "2025-04-21"
+    },
+    {
+      "title": "Inglourious Basterds",
+      "year": 2009,
+      "url": "https://boxd.it/1JzG",
+      "rating": 4.0,
+      "ratedOn": "2025-04-26",
+      "watchedOn": "2025-04-25"
+    },
+    {
+      "title": "Conclave",
+      "year": 2024,
+      "url": "https://boxd.it/AO8q",
+      "rating": 4.0,
+      "ratedOn": "2025-05-10",
+      "watchedOn": "2025-05-10"
+    },
+    {
+      "title": "The Killer",
+      "year": 2023,
+      "url": "https://boxd.it/u6WE",
+      "rating": 3.5,
+      "ratedOn": "2025-05-14",
+      "watchedOn": "2025-05-13"
+    },
+    {
+      "title": "The Weekend Away",
+      "year": 2022,
+      "url": "https://boxd.it/vHXw",
+      "rating": 4.0,
+      "ratedOn": "2025-05-20",
+      "watchedOn": "2025-05-19"
+    },
+    {
+      "title": "Fight Club",
+      "year": 1999,
+      "url": "https://boxd.it/2a9q",
+      "rating": 4.0,
+      "ratedOn": "2025-05-23",
+      "watchedOn": "2025-05-22"
+    },
+    {
+      "title": "Saltburn",
+      "year": 2023,
+      "url": "https://boxd.it/z4eg",
+      "rating": 3.5,
+      "ratedOn": "2025-05-27",
+      "watchedOn": "2025-05-26"
+    },
+    {
+      "title": "Mission: Impossible – The Final Reckoning",
+      "year": 2025,
+      "url": "https://boxd.it/l7A2",
+      "rating": 3.5,
+      "ratedOn": "2025-06-07",
+      "watchedOn": "2025-06-06"
+    },
+    {
+      "title": "Crazy, Stupid, Love.",
+      "year": 2011,
+      "url": "https://boxd.it/D9A",
+      "rating": 3.5,
+      "ratedOn": "2025-06-14",
+      "watchedOn": "2025-06-13"
+    },
+    {
+      "title": "Now You See Me",
+      "year": 2013,
+      "url": "https://boxd.it/2Bsu",
+      "rating": 4.0,
+      "ratedOn": "2025-06-20",
+      "watchedOn": "2025-06-20"
+    },
+    {
+      "title": "The Intern",
+      "year": 2015,
+      "url": "https://boxd.it/7AOE",
+      "rating": 3.5,
+      "ratedOn": "2025-06-30",
+      "watchedOn": "2025-06-29"
+    },
+    {
+      "title": "How to Train Your Dragon",
+      "year": 2025,
+      "url": "https://boxd.it/F7Je",
+      "rating": 4.0,
+      "ratedOn": "2025-07-07",
+      "watchedOn": "2025-07-06"
+    },
+    {
+      "title": "Red Eye",
+      "year": 2005,
+      "url": "https://boxd.it/1TNy",
+      "rating": 3.5,
+      "ratedOn": "2025-07-11",
+      "watchedOn": "2025-07-10"
+    },
+    {
+      "title": "I Know What You Did Last Summer",
+      "year": 2025,
+      "url": "https://boxd.it/EY8y",
+      "rating": 3.0,
+      "ratedOn": "2025-07-22",
+      "watchedOn": "2025-07-21"
+    },
+    {
+      "title": "The Two Popes",
+      "year": 2019,
+      "url": "https://boxd.it/k8Xk",
+      "rating": 4.5,
+      "ratedOn": "2025-07-29",
+      "watchedOn": "2025-07-28"
+    },
+    {
+      "title": "The Theory of Everything",
+      "year": 2014,
+      "url": "https://boxd.it/7YtA",
+      "rating": 3.5,
+      "ratedOn": "2025-08-04",
+      "watchedOn": "2025-08-03"
+    },
+    {
+      "title": "I Care a Lot",
+      "year": 2020,
+      "url": "https://boxd.it/mcHk",
+      "rating": 3.0,
+      "ratedOn": "2025-08-06",
+      "watchedOn": "2025-08-05"
+    },
+    {
+      "title": "Rebecca",
+      "year": 2020,
+      "url": "https://boxd.it/ighW",
+      "rating": 3.0,
+      "ratedOn": "2025-08-08",
+      "watchedOn": "2025-08-07"
+    },
+    {
+      "title": "Mission: Impossible – Ghost Protocol",
+      "year": 2011,
+      "url": "https://boxd.it/psI",
+      "rating": 3.5,
+      "ratedOn": "2025-08-10",
+      "watchedOn": "2025-08-09"
+    },
+    {
+      "title": "The Green Mile",
+      "year": 1999,
+      "url": "https://boxd.it/2agG",
+      "rating": 4.5,
+      "ratedOn": "2025-09-02",
+      "watchedOn": "2025-09-01"
+    },
+    {
+      "title": "The Notebook",
+      "year": 2004,
+      "url": "https://boxd.it/1UNE",
+      "rating": 4.5,
+      "ratedOn": "2025-10-15",
+      "watchedOn": "2025-10-14"
+    },
+    {
+      "title": "This Is Where I Leave You",
+      "year": 2014,
+      "url": "https://boxd.it/73kQ",
+      "rating": 3.0,
+      "ratedOn": "2025-10-16",
+      "watchedOn": "2025-10-15"
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "year": 1994,
+      "url": "https://boxd.it/2aHi",
+      "rating": 4.0,
+      "ratedOn": "2025-10-16",
+      "watchedOn": "2025-10-15"
+    },
+    {
+      "title": "The Thursday Murder Club",
+      "year": 2025,
+      "url": "https://boxd.it/rXju",
+      "rating": 3.5,
+      "ratedOn": "2025-10-18",
+      "watchedOn": "2025-10-17"
+    },
+    {
+      "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+      "year": 2025,
+      "url": "https://boxd.it/O1GQ",
+      "rating": 3.5,
+      "ratedOn": "2025-10-22",
+      "watchedOn": "2025-09-21"
+    },
+    {
+      "title": "The Negotiator",
+      "year": 1998,
+      "url": "https://boxd.it/1YbO",
+      "rating": 4.0,
+      "ratedOn": "2025-11-20",
+      "watchedOn": "2025-11-19"
+    },
+    {
+      "title": "Now You See Me: Now You Don't",
+      "year": 2025,
+      "url": "https://boxd.it/f3i2",
+      "rating": 4.0,
+      "ratedOn": "2025-11-24",
+      "watchedOn": "2025-11-23"
+    },
+    {
+      "title": "Frankenstein",
+      "year": 2025,
+      "url": "https://boxd.it/Ecsg",
+      "rating": 4.0,
+      "ratedOn": "2025-11-26",
+      "watchedOn": "2025-11-25"
+    },
+    {
+      "title": "Wicked: For Good",
+      "year": 2025,
+      "url": "https://boxd.it/AyfK",
+      "rating": 3.5,
+      "ratedOn": "2025-11-30",
+      "watchedOn": "2025-11-29"
+    },
+    {
+      "title": "Champagne Problems",
+      "year": 2025,
+      "url": "https://boxd.it/OwgO",
+      "rating": 3.5,
+      "ratedOn": "2025-11-30",
+      "watchedOn": "2025-11-29"
+    },
+    {
+      "title": "tick, tick... BOOM!",
+      "year": 2021,
+      "url": "https://boxd.it/jz2e",
+      "rating": 3.5,
+      "ratedOn": "2025-11-30",
+      "watchedOn": "2025-11-29"
+    },
+    {
+      "title": "Wake Up Dead Man",
+      "year": 2025,
+      "url": "https://boxd.it/uAKS",
+      "rating": 3.5,
+      "ratedOn": "2025-12-15",
+      "watchedOn": "2025-12-14"
+    },
+    {
+      "title": "Avatar: Fire and Ash",
+      "year": 2025,
+      "url": "https://boxd.it/2W7s",
+      "rating": 4.0,
+      "ratedOn": "2025-12-23",
+      "watchedOn": "2025-12-22"
+    },
+    {
+      "title": "The Trial of the Chicago 7",
+      "year": 2020,
+      "url": "https://boxd.it/kn3w",
+      "rating": 4.0,
+      "ratedOn": "2026-01-02",
+      "watchedOn": "2026-01-01"
+    },
+    {
+      "title": "Marty Supreme",
+      "year": 2025,
+      "url": "https://boxd.it/Off0",
+      "rating": 3.5,
+      "ratedOn": "2026-01-14",
+      "watchedOn": "2026-01-02"
+    },
+    {
+      "title": "The Age of Disclosure",
+      "year": 2025,
+      "url": "https://boxd.it/SCjs",
+      "rating": 3.0,
+      "ratedOn": "2026-01-07",
+      "watchedOn": "2026-01-06"
+    },
+    {
+      "title": "The Housemaid",
+      "year": 2025,
+      "url": "https://boxd.it/QFEO",
+      "rating": 3.0,
+      "ratedOn": "2026-01-14",
+      "watchedOn": "2026-01-06"
+    },
+    {
+      "title": "Sinners",
+      "year": 2025,
+      "url": "https://boxd.it/KQMM",
+      "rating": 3.5,
+      "ratedOn": "2026-01-14",
+      "watchedOn": "2026-01-13"
+    },
+    {
+      "title": "Spiderhead",
+      "year": 2022,
+      "url": "https://boxd.it/mLsO",
+      "rating": 3.0,
+      "ratedOn": "2026-01-30",
+      "watchedOn": "2026-01-29"
+    },
+    {
+      "title": "How to Lose a Guy in 10 Days",
+      "year": 2003,
+      "url": "https://boxd.it/1XwG",
+      "rating": 3.5,
+      "ratedOn": "2026-02-15",
+      "watchedOn": "2026-02-14"
+    },
+    {
+      "title": "Friends with Benefits",
+      "year": 2011,
+      "url": "https://boxd.it/DoK",
+      "rating": 3.0,
+      "ratedOn": "2026-03-16",
+      "watchedOn": null
+    },
+    {
+      "title": "Nuremberg",
+      "year": 2025,
+      "url": "https://boxd.it/K6qU",
+      "rating": 3.5,
+      "ratedOn": "2026-03-18",
+      "watchedOn": "2026-03-17"
+    },
+    {
+      "title": "Project Hail Mary",
+      "year": 2026,
+      "url": "https://boxd.it/pEeQ",
+      "rating": 4.0,
+      "ratedOn": "2026-04-06",
+      "watchedOn": "2026-04-05"
+    },
+    {
+      "title": "Michael",
+      "year": 2026,
+      "url": "https://boxd.it/zi5M",
+      "rating": 3.5,
+      "ratedOn": "2026-05-11",
+      "watchedOn": "2026-05-10"
+    },
+    {
+      "title": "Backrooms",
+      "year": 2026,
+      "url": "https://boxd.it/EY6W",
+      "rating": 3.0,
+      "ratedOn": "2026-06-01",
+      "watchedOn": "2026-05-31"
+    },
+    {
+      "title": "Bugonia",
+      "year": 2025,
+      "url": "https://boxd.it/qeWY",
+      "rating": 3.5,
+      "ratedOn": "2026-07-06",
+      "watchedOn": "2026-07-05"
+    },
+    {
+      "title": "The Odyssey",
+      "year": 2026,
+      "url": "https://boxd.it/QFQU",
+      "rating": 5.0,
+      "ratedOn": "2026-07-21",
+      "watchedOn": "2026-07-20"
+    },
+    {
+      "title": "Spider-Man: Brand New Day",
+      "year": 2026,
+      "url": "https://boxd.it/ACJE",
+      "rating": 3.5,
+      "ratedOn": "2026-08-01",
+      "watchedOn": "2026-07-31"
+    },
+    {
+      "title": "The Dink",
+      "year": 2026,
+      "url": "https://boxd.it/Qqse",
+      "rating": 3.0,
+      "ratedOn": "2026-08-03",
+      "watchedOn": "2026-08-02"
+    },
+    {
+      "title": "Bicycle Thieves",
+      "year": 1948,
+      "url": "https://boxd.it/23hW",
+      "rating": 3.5,
+      "ratedOn": "2026-09-01",
+      "watchedOn": "2026-08-31"
+    },
+    {
+      "title": "Unabomber",
+      "year": 2026,
+      "url": "https://boxd.it/VrWu",
+      "rating": 3.0,
+      "ratedOn": "2026-10-06",
+      "watchedOn": "2026-10-05"
+    }
+  ],
+  "booksImportedOn": "2026-11-23",
+  "books": [
+    {
+      "title": "Killer Chef",
+      "author": "Jeffrey J. Keyes, James Patterson",
+      "rating": 3.0,
+      "finishedOn": null
+    },
+    {
+      "title": "The Captain Class: The Hidden Force that Creates the World's Greatest Teams",
+      "author": "Sam Walker",
+      "rating": 3.5,
+      "finishedOn": "2025-08-26"
+    },
+    {
+      "title": "Funny Story",
+      "author": "Emily Henry",
+      "rating": 3.75,
+      "finishedOn": "2025-08-08"
+    },
+    {
+      "title": "The Ghostwriter",
+      "author": "Julie Clark",
+      "rating": 5.0,
+      "finishedOn": "2026-09-03"
+    },
+    {
+      "title": "The Children of Jocasta",
+      "author": "Natalie Haynes",
+      "rating": 4.0,
+      "finishedOn": "2024-12-24"
+    },
+    {
+      "title": "The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness",
+      "author": "Morgan Housel",
+      "rating": 2.75,
+      "finishedOn": "2026-09-15"
+    },
+    {
+      "title": "I Am Watching You",
+      "author": "Teresa Driscoll",
+      "rating": 4.0,
+      "finishedOn": "2024-01-15"
+    },
+    {
+      "title": "The Song of Achilles",
+      "author": "Madeline Miller",
+      "rating": 4.0,
+      "finishedOn": null
+    },
+    {
+      "title": "Alex Cross, Run",
+      "author": "James Patterson",
+      "rating": 4.0,
+      "finishedOn": null
+    },
+    {
+      "title": "A Flicker in the Dark",
+      "author": "Stacy Willingham",
+      "rating": 5.0,
+      "finishedOn": null
+    },
+    {
+      "title": "Murder at the Vicarage",
+      "author": "Agatha Christie",
+      "rating": 3.75,
+      "finishedOn": "2025-05-18"
+    },
+    {
+      "title": "The Housemaid",
+      "author": "Freida McFadden",
+      "rating": 5.0,
+      "finishedOn": "2024-09-02"
+    },
+    {
+      "title": "Think Again: The Power of Knowing What You Don't Know",
+      "author": "Adam Grant",
+      "rating": 4.0,
+      "finishedOn": null
+    },
+    {
+      "title": "Harry Potter and the Goblet of Fire",
+      "author": "J.K. Rowling",
+      "rating": 5.0,
+      "finishedOn": null
+    },
+    {
+      "title": "A Court of Thorns and Roses",
+      "author": "Sarah J. Maas",
+      "rating": 4.0,
+      "finishedOn": null
+    },
+    {
+      "title": "Chop Wood Carry Water: How to Fall In Love With the Process of Becoming Great",
+      "author": "Joshua Medcalf",
+      "rating": 4.0,
+      "finishedOn": "2026-08-24"
+    },
+    {
+      "title": "Magpie Murders",
+      "author": "Anthony Horowitz",
+      "rating": 5.0,
+      "finishedOn": null
+    },
+    {
+      "title": "Soccer iQ Presents Shutout Pizza: Smarter Soccer Defending for Players and Coaches",
+      "author": "Dan Blank",
+      "rating": 4.0,
+      "finishedOn": "2024-02-08"
+    },
+    {
+      "title": "Mythos: The Greek Myths Retold",
+      "author": "Stephen Fry",
+      "rating": 3.75,
+      "finishedOn": "2026-08-14"
+    },
+    {
+      "title": "Make Your Bed: Little Things That Can Change Your Life...and Maybe the World",
+      "author": "William H. McRaven",
+      "rating": 5.0,
+      "finishedOn": "2024-06-08"
+    },
+    {
+      "title": "The Captain Class: The Hidden Force that Creates the World's Greatest Teams",
+      "author": "Sam Walker",
+      "rating": null,
+      "finishedOn": null
+    },
+    {
+      "title": "The Man Who Died Twice",
+      "author": "Richard Osman",
+      "rating": 4.0,
+      "finishedOn": null
+    },
+    {
+      "title": "Legacy: What the All Blacks Can Teach Us About the Business of Life",
+      "author": "James Kerr",
+      "rating": 4.0,
+      "finishedOn": "2024-07-25"
+    },
+    {
+      "title": "Unsolved",
+      "author": "David Ellis, James Patterson",
+      "rating": 5.0,
+      "finishedOn": null
+    },
+    {
+      "title": "The Word Is Murder",
+      "author": "Anthony Horowitz",
+      "rating": 3.0,
+      "finishedOn": "2023-12-15"
+    },
+    {
+      "title": "We Solve Murders",
+      "author": "Richard Osman",
+      "rating": 4.0,
+      "finishedOn": "2025-03-09"
+    },
+    {
+      "title": "Ikigai: The Japanese Secret to a Long and Happy Life, The Little Book of Hygge, Lagom: The Swedish Art of Balanced Living",
+      "author": "Meik Wiking, Francesc Miralles, Héctor García, Linnea Dunne",
+      "rating": 4.0,
+      "finishedOn": "2024-06-08"
+    },
+    {
+      "title": "Greenlights",
+      "author": "Matthew McConaughey",
+      "rating": 3.0,
+      "finishedOn": null
+    },
+    {
+      "title": "The Secret of Secrets",
+      "author": "Dan Brown",
+      "rating": 3.75,
+      "finishedOn": "2026-07-19"
+    },
+    {
+      "title": "Circe",
+      "author": "Madeline Miller",
+      "rating": 3.75,
+      "finishedOn": "2026-02-09"
+    },
+    {
+      "title": "None of This Is True",
+      "author": "Lisa Jewell",
+      "rating": 5.0,
+      "finishedOn": "2024-02-18"
+    },
+    {
+      "title": "Escape",
+      "author": "James Patterson",
+      "rating": 4.0,
+      "finishedOn": null
+    },
+    {
+      "title": "Harry Potter and the Prisoner of Azkaban",
+      "author": "J.K. Rowling",
+      "rating": 5.0,
+      "finishedOn": "2024-02-07"
+    },
+    {
+      "title": "Red Queen",
+      "author": "Juan Gómez-Jurado",
+      "rating": 4.0,
+      "finishedOn": null
+    },
+    {
+      "title": "Then She Was Gone",
+      "author": "Lisa Jewell",
+      "rating": null,
+      "finishedOn": null
+    },
+    {
+      "title": "The Body in the Library",
+      "author": "Agatha Christie",
+      "rating": 3.25,
+      "finishedOn": "2025-06-24"
+    },
+    {
+      "title": "Dark Moon, Shallow Sea",
+      "author": "David R. Slayton",
+      "rating": 3.0,
+      "finishedOn": "2024-06-03"
+    },
+    {
+      "title": "The Bullet That Missed",
+      "author": "Richard Osman",
+      "rating": 4.0,
+      "finishedOn": "2024-06-30"
+    },
+    {
+      "title": "The Last Devil to Die",
+      "author": "Richard Osman",
+      "rating": 5.0,
+      "finishedOn": "2024-07-25"
+    },
+    {
+      "title": "The Thursday Murder Club",
+      "author": "Richard Osman",
+      "rating": 5.0,
+      "finishedOn": "2024-01-08"
+    },
+    {
+      "title": "Shoe Dog",
+      "author": "Phil Knight",
+      "rating": 5.0,
+      "finishedOn": "2023-07-25"
+    }
+  ]
+}

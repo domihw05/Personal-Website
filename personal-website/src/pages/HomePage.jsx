@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ExperienceCard from '../components/ExperienceCard'
+import HomeHero from '../components/HomeHero'
+import HomeInterests from '../components/HomeInterests'
 import ProjectCard from '../components/ProjectCard'
 import {
   experiences,
   featuredProjects,
   getExperienceId,
   heroImg,
-  homeInterests,
   strengths,
 } from '../data/siteContent'
 
@@ -14,42 +15,8 @@ function HomePage() {
   const sortedExperiences = [...experiences].sort((a, b) => b.sortOrder - a.sortOrder)
 
   return (
-    <main className="site-shell">
-      <section className="hero-panel">
-        <div className="hero-copy">
-          <div className="hero-status">
-            <p className="eyebrow">Student-athlete</p>
-          </div>
-          <h1>Dominic Hoar-Weiler</h1>
-          <p className="hero-lead">
-            I build software and data tools across machine learning, sports
-            analytics, and product teams.
-          </p>
-
-          <div className="hero-actions">
-            <Link to="/experience" className="secondary-link">
-              See experience
-            </Link>
-            <Link to="/projects" className="secondary-link">
-              Explore all projects
-            </Link>
-          </div>
-        </div>
-
-        <div className="hero-visual">
-          <div className="image-frame hero-image-frame">
-            <img
-              src={heroImg}
-              alt="Dominic Hoar-Weiler playing soccer"
-              fetchPriority="high"
-              decoding="async"
-            />
-          </div>
-          <div className="hero-visual-note">
-            Carnegie Mellon University / Varsity soccer
-          </div>
-        </div>
-      </section>
+    <main className="site-shell home-shell">
+      <HomeHero />
 
       <section className="section-grid" id="work">
         <div className="section-heading section-heading-row">
@@ -96,10 +63,10 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="about-panel" id="about">
+      <section className="about-panel home-spread" id="about" aria-labelledby="about-title">
         <div className="about-copy">
           <p className="eyebrow">A little more context</p>
-          <h2>I like hard problems and high standards.</h2>
+          <h2 id="about-title">I like hard problems and high standards.</h2>
           <p>
             I study Statistics and Machine Learning at Carnegie Mellon with a
             minor in Computer Science, and I captain the varsity men&apos;s soccer
@@ -112,45 +79,31 @@ function HomePage() {
               More on soccer and leadership
             </Link>
           </div>
-        </div>
 
-        <div className="strengths-panel">
-          <p className="strengths-title">Core strengths</p>
-          <ul>
-            {strengths.map((strength) => (
-              <li key={strength}>{strength}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="section-grid home-hobbies-section">
-        <div className="section-heading section-heading-row">
-          <div>
-            <p className="eyebrow">Away from the keyboard</p>
-            <h2>What keeps me curious.</h2>
+          <div className="strengths-panel about-strengths">
+            <p className="strengths-title">Core strengths</p>
+            <ul>
+              {strengths.map((strength) => (
+                <li key={strength}>{strength}</li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <div className="home-hobbies-list">
-          {homeInterests.map((interest) => (
-            <article className="home-hobby" key={interest.title}>
-              <div className="home-hobby-image">
-                <img
-                  src={interest.image}
-                  alt={interest.imageAlt}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div className="home-hobby-copy">
-                <p className="card-kicker">{interest.title}</p>
-                <p>{interest.caption}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <figure className="home-photo home-match-photo">
+          <div className="home-photo-frame">
+            <img
+              src={heroImg}
+              alt="Dominic Hoar-Weiler playing soccer for Carnegie Mellon"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <figcaption>Carnegie Mellon men&apos;s soccer</figcaption>
+        </figure>
       </section>
+
+      <HomeInterests />
 
       <section className="contact-banner" id="contact">
         <div>

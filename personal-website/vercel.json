@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/feeds/letterboxd.xml", "destination": "https://letterboxd.com/domhpdx/rss/" },
+    { "source": "/projects", "destination": "/index.html" },
+    { "source": "/experience", "destination": "/index.html" },
+    { "source": "/soccer", "destination": "/index.html" },
+    { "source": "/interests", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/feeds/letterboxd.xml",
+      "headers": [
+        { "key": "x-vercel-enable-rewrite-caching", "value": "1" },
+        { "key": "CDN-Cache-Control", "value": "max-age=900" },
+        { "key": "X-Robots-Tag", "value": "noindex" }
+      ]
+    }
+  ]
+}
