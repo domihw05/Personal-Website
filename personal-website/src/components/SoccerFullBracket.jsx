@@ -35,9 +35,7 @@ function BracketDiagram() {
   }))
 
   return (
-    <svg className="soccer-bracket-graphic" viewBox={`0 0 ${diagramWidth} ${diagramHeight}`} width={diagramWidth} height={diagramHeight} role="img" aria-labelledby="soccer-bracket-graphic-title soccer-bracket-graphic-desc">
-      <title id="soccer-bracket-graphic-title">2026 Division III men’s soccer tournament bracket</title>
-      <desc id="soccer-bracket-graphic-desc">The complete 64-team field. Carnegie Mellon’s highlighted path runs through Salem State, UMass Boston, Lynchburg, and Bowdoin, then to the National Semifinal against Cortland. Amherst and St. Olaf meet in the other semifinal. Neither semifinal has been played in this snapshot.</desc>
+    <svg className="soccer-bracket-graphic" viewBox={`0 0 ${diagramWidth} ${diagramHeight}`} width={diagramWidth} height={diagramHeight} aria-hidden="true">
       {labels.map((label, round) => (
         <text key={label} className="soccer-bracket-graphic-round" x={matchPoint(round, 0).x} y="25">{label}</text>
       ))}
@@ -63,18 +61,43 @@ function BracketDiagram() {
   )
 }
 
+function BracketRoundList() {
+  return (
+    <div className="soccer-bracket-round-list">
+      {bracketRounds.map((round, roundIndex) => (
+        <section key={labels[roundIndex]}>
+          <h4>{labels[roundIndex]}</h4>
+          <ol role="list">
+            {round.map((match) => (
+              <li key={match.names.join(' vs ')} className={match.names.includes(tartans) ? 'cmu-match' : undefined}>
+                {match.names.map((name, slot) => (
+                  <div key={name} className={name === tartans ? 'cmu-team' : slot === match.winner ? 'bracket-winner' : undefined}>
+                    <span>{name}</span>
+                    <span>{match.scores[slot] ?? '–'}</span>
+                  </div>
+                ))}
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))}
+    </div>
+  )
+}
+
 export default function SoccerFullBracket() {
   return (
-    <details className="soccer-full-bracket" open>
-      <summary>Full 64-team bracket</summary>
+    <section className="soccer-full-bracket" aria-labelledby="soccer-full-bracket-title">
+      <h3 id="soccer-full-bracket-title">Full 64-team bracket</h3>
       <div className="soccer-full-bracket-key">
         <p><span aria-hidden="true" /> Carnegie Mellon’s path</p>
-        <p>Scroll to explore · PK: penalties · OT: overtime</p>
+        <p>PK: penalties · OT: overtime</p>
       </div>
-      <div className="soccer-full-bracket-scroll" tabIndex={0} role="region" aria-label="Scrollable full NCAA tournament bracket">
+      <div className="soccer-full-bracket-diagram">
         <BracketDiagram />
       </div>
+      <BracketRoundList />
       <p className="soccer-full-bracket-source">Sources: <a href={ncaaBracketUrl}>NCAA bracket</a> · <a href={bracketResultsUrl}>Match-by-match results</a></p>
-    </details>
+    </section>
   )
 }

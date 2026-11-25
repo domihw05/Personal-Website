@@ -1,4 +1,5 @@
 import SoccerFullBracket from './SoccerFullBracket'
+import SoccerMatchGalleries from './SoccerMatchGalleries'
 import { cmuPlayerUrl, cmuScheduleUrls, coachesPollUrl, goalMatches, ncaaBracketUrl, ncaaRun, npiRankingsUrl } from '../data/soccerJourney'
 
 const matchDate = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })
@@ -54,6 +55,7 @@ function TournamentRun() {
         Pre-tournament national ranks: <a href={npiRankingsUrl}>NCAA NPI, Nov 8</a> · <a href={coachesPollUrl}>United Soccer Coaches, Nov 10</a>. NR = outside the coaches’ Top 25{ncaaRun.some(({ npi }) => npi == null) ? '; — = NPI rank not verified' : ''}.
       </p>
 
+      <SoccerMatchGalleries matches={ncaaRun} />
       <SoccerFullBracket />
     </section>
   )

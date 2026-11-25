@@ -1,4 +1,5 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { linkedInProfile } from '../data/siteContent'
 
 const navLinks = [
   { to: '/', label: 'Home', end: true },
@@ -66,7 +67,7 @@ function SiteLayout() {
           <nav className="footer-links" aria-label="Professional links">
             <a href="mailto:dhoarwei@andrew.cmu.edu">Email</a>
             <a
-              href="https://linkedin.com/in/dominichoarweiler"
+              href={linkedInProfile}
               target="_blank"
               rel="noreferrer"
             >

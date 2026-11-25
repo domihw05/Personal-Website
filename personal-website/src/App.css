@@ -1330,7 +1330,6 @@
 }
 
 .timeline-card > p,
-.timeline-attachment-preview,
 .timeline-links {
   grid-column: 3;
 }
@@ -1348,29 +1347,208 @@
   border: 1px solid var(--border-soft);
 }
 
-.timeline-attachment-preview {
-  width: 100%;
-  max-width: 24rem;
-  margin-top: 0.5rem;
-  object-fit: cover;
+.experience-page {
+  max-width: 66rem;
+  margin-inline: auto;
+}
+
+.experience-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+  padding-block: clamp(2.8rem, 7vw, 6rem) clamp(1.7rem, 4vw, 3rem);
+}
+
+.experience-header .eyebrow {
+  margin-bottom: 0.85rem;
+}
+
+.experience-header .page-title {
+  max-width: none;
+  font-size: clamp(3.1rem, 9vw, 7rem);
+}
+
+.experience-header .page-intro {
+  margin-top: 0.85rem;
+}
+
+.experience-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 44px;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.3rem;
+  background: var(--surface-strong);
+  color: var(--heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.experience-profile-link:hover {
+  border-color: var(--heading);
+  background: var(--heading);
+  color: var(--surface-strong);
+}
+
+.experience-work-history {
+  padding-inline: clamp(1rem, 4vw, 2.75rem);
+  border: 1px solid var(--border-soft);
+  border-radius: 0.4rem;
+  background: var(--surface-strong);
+}
+
+.experience-entry {
+  padding-block: clamp(1.4rem, 3vw, 2.35rem);
+  scroll-margin-top: 6rem;
+}
+
+.experience-entry + .experience-entry {
+  border-top: 1px solid var(--border-soft);
+}
+
+.experience-entry-header {
+  display: flex;
+  align-items: start;
+  gap: 0.85rem;
+}
+
+.experience-entry-logo {
+  flex: none;
+  box-sizing: border-box;
+  padding: 0.4rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 0.35rem;
+  background: #fff;
+  object-fit: contain;
+}
+
+.experience-entry h2 {
+  margin: 0;
+  font: 700 clamp(1.1rem, 2.5vw, 1.4rem)/1.24 var(--sans);
+  letter-spacing: -0.025em;
+}
+
+.experience-entry-company {
+  margin-top: 0.25rem;
+  color: var(--heading);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.experience-entry-period {
+  margin-top: 0.18rem;
+  color: var(--text);
+  font-size: 0.82rem;
+}
+
+.experience-entry-body {
+  margin: 1rem 0 0 3.85rem;
+}
+
+.experience-entry-body.has-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, 15rem);
+  align-items: start;
+  gap: 1.25rem clamp(1.35rem, 4vw, 3rem);
+}
+
+.experience-highlights {
+  max-width: 67ch;
+  margin: 0;
+  padding-inline-start: 1.12rem;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.experience-highlights li + li {
+  margin-top: 0.55rem;
+}
+
+.experience-photo {
+  width: min(100%, 15rem);
+  margin: 0;
+  text-align: center;
+}
+
+.experience-photo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 13.5rem;
+  margin-inline: auto;
+  border-radius: 0.35rem;
+  object-fit: contain;
+}
+
+.experience-photo figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 760px) {
+  .experience-entry-body.has-photo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-entry-body {
+    margin-inline-start: 0;
+  }
 }
 
 .soccer-panel {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
-  gap: clamp(3rem, 8vw, 7rem);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
   align-items: center;
-  border-top: 0;
+  margin-block: clamp(1rem, 3vw, 2.75rem) clamp(2.5rem, 6vw, 5rem);
+  padding: clamp(1.25rem, 4vw, 3.75rem);
+  border: 0;
+  background: var(--heading);
+  color: var(--surface-strong);
 }
 
-.soccer-points {
-  margin-top: 2.2rem;
+.soccer-panel .eyebrow {
+  color: #dfbd8e;
+}
+
+.soccer-panel .page-title {
+  max-width: 10ch;
+  color: inherit;
+  font-size: clamp(3rem, 6.3vw, 6.25rem);
+}
+
+.soccer-panel .page-intro {
+  max-width: 39ch;
+  color: #ddd9cf;
+}
+
+.soccer-hero-photo {
+  min-width: 0;
+  margin: 0;
 }
 
 .soccer-image-frame {
-  min-height: 34rem;
-  aspect-ratio: 0.92;
-  box-shadow: 1.5rem 1.5rem 0 #d9d1c1;
+  aspect-ratio: 5 / 4;
+  border-radius: 0.2rem;
+  background: #151714;
+}
+
+.soccer-image-frame img {
+  object-position: 74% center;
+}
+
+.soccer-hero-photo figcaption {
+  margin-top: 0.65rem;
+  color: #c7c2b6;
+  font-size: 0.78rem;
 }
 
 .soccer-tournament,
@@ -1545,21 +1723,181 @@
   text-underline-offset: 0.22em;
 }
 
+.soccer-match-galleries {
+  margin-block: clamp(2.2rem, 5vw, 4rem);
+}
+
+.soccer-match-galleries h3 {
+  margin: 0 0 1rem;
+  color: var(--heading);
+  font: 600 clamp(1.35rem, 2.5vw, 1.85rem)/1.15 var(--display);
+}
+
+.soccer-match-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.soccer-match-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  background: none;
+  color: var(--heading);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.soccer-match-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 0.4rem;
+  object-fit: cover;
+  object-position: center 56%;
+}
+
+.soccer-match-card-label,
+.soccer-match-dialog-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.soccer-match-card-label {
+  padding-block: 0.9rem;
+}
+
+.soccer-match-name {
+  display: block;
+  margin-top: 0.23rem;
+  font: 600 clamp(1.2rem, 2.25vw, 1.65rem)/1.15 var(--display);
+}
+
+.soccer-match-count {
+  color: var(--accent);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.soccer-match-card:hover .soccer-match-count {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.soccer-match-playback {
+  min-height: 44px;
+  padding: 0.35rem 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.soccer-match-playback:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.soccer-match-dialog {
+  width: min(calc(100% - 1rem), 70rem);
+  max-height: calc(100dvh - 1rem);
+  margin: auto;
+  padding: clamp(0.65rem, 2vw, 1.15rem);
+  border: 1px solid #41464a;
+  border-radius: 0.55rem;
+  background: #141719;
+  color: #f4f4f3;
+  overscroll-behavior: contain;
+}
+
+.soccer-match-dialog::backdrop {
+  background: rgb(0 0 0 / 78%);
+}
+
+.soccer-match-dialog h4,
+.soccer-match-dialog figure {
+  margin: 0;
+}
+
+.soccer-match-dialog figure img {
+  display: block;
+  width: 100%;
+  height: min(68dvh, 66vw);
+  margin-block: 0.65rem;
+  background: #0a0c0d;
+  object-fit: contain;
+}
+
+.soccer-match-dialog figcaption {
+  color: #e5e7e8;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.soccer-match-number {
+  margin-right: 0.35rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.soccer-match-controls {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.soccer-match-dialog button {
+  min-width: 44px;
+  min-height: 44px;
+  padding-inline: 0.65rem;
+  border: 1px solid #61676c;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.soccer-match-dialog button:hover {
+  background: #303539;
+}
+
+.soccer-match-dialog button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .soccer-match-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .soccer-match-dialog figcaption {
+    flex-wrap: wrap;
+  }
+
+  .soccer-match-controls {
+    margin-left: auto;
+  }
+}
+
 .soccer-full-bracket {
   margin-top: 1.45rem;
   border-block: 1px solid var(--border-strong);
 }
 
-.soccer-full-bracket summary {
+.soccer-full-bracket h3 {
+  margin: 0;
   padding-block: 0.9rem;
   color: var(--heading);
-  font-size: 0.92rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.soccer-full-bracket summary::marker {
-  color: var(--accent);
+  font: 600 clamp(1.35rem, 2.5vw, 1.85rem)/1.15 var(--display);
 }
 
 .soccer-full-bracket-key {
@@ -1578,19 +1916,17 @@
   vertical-align: 0.2em;
 }
 
-.soccer-full-bracket-scroll {
-  overflow: auto;
-  max-height: min(33rem, 68vh);
-  overscroll-behavior: contain;
+.soccer-full-bracket-diagram {
   border: 1px solid var(--border-soft);
   background: var(--surface);
 }
 
 .soccer-bracket-graphic {
   display: block;
-  flex: none;
+  width: 100%;
+  height: auto;
   font-family: var(--sans);
-  font-size: 11.5px;
+  font-size: 12px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -1631,6 +1967,81 @@
 .soccer-bracket-match .cmu-team {
   fill: var(--accent);
   font-weight: 700;
+}
+
+.soccer-bracket-round-list {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+@media (max-width: 1000px) {
+  .soccer-full-bracket-diagram {
+    display: none;
+  }
+
+  .soccer-bracket-round-list {
+    position: static;
+    display: grid;
+    width: auto;
+    height: auto;
+    gap: 1.5rem;
+    padding-block: 0.5rem;
+    overflow: visible;
+    clip-path: none;
+  }
+
+  .soccer-bracket-round-list h4 {
+    margin: 0 0 0.55rem;
+    color: var(--heading);
+    font-size: 0.87rem;
+  }
+
+  .soccer-bracket-round-list ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .soccer-bracket-round-list li {
+    padding: 0.5rem 0.65rem;
+    border: 1px solid var(--border-soft);
+    background: var(--surface-strong);
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  .soccer-bracket-round-list li > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.55rem;
+  }
+
+  .soccer-bracket-round-list li span:last-child {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .soccer-bracket-round-list .bracket-winner {
+    color: var(--heading);
+    font-weight: 700;
+  }
+
+  .soccer-bracket-round-list .cmu-match {
+    border-color: var(--accent);
+    background: #faede3;
+  }
+
+  .soccer-bracket-round-list .cmu-team {
+    color: var(--accent);
+    font-weight: 700;
+  }
 }
 
 .soccer-full-bracket-source {
@@ -1698,20 +2109,23 @@
 }
 
 .soccer-awards-grid {
-  border-top: 1px solid var(--border-strong);
+  column-gap: clamp(1.5rem, 5vw, 4rem);
 }
 
 .soccer-award-card {
   display: grid;
+  align-content: start;
   gap: 1rem;
-  padding: 2rem 2rem 2rem 0;
-  border-bottom: 1px solid var(--border-soft);
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--border-soft);
 }
 
-.soccer-award-card:nth-child(even) {
-  padding-right: 0;
-  padding-left: 2rem;
-  border-left: 1px solid var(--border-soft);
+.soccer-award-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.soccer-award-card > p {
+  max-width: 60ch;
 }
 
 .soccer-award-header {
@@ -1737,38 +2151,75 @@
   gap: 0.35rem;
 }
 
-.soccer-award-source {
-  justify-self: start;
+.soccer-award-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  align-self: end;
 }
 
 .soccer-gallery-carousel {
-  display: grid;
-  justify-items: center;
-  margin-top: 3rem;
+  width: min(100%, 72rem);
+  margin: clamp(1.5rem, 4vw, 3rem) auto 0;
+  background: var(--heading);
+  color: var(--surface-strong);
 }
 
 .soccer-gallery-frame {
-  width: min(100%, 72rem);
+  position: relative;
+  width: 100%;
   aspect-ratio: 3 / 2;
-  background: #e4dfd3;
-  box-shadow: 0 24px 60px rgba(28, 29, 25, 0.13);
+  max-height: 72svh;
+  background: #161713;
 }
 
 .soccer-gallery-frame img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
 .soccer-gallery-controls {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-  pointer-events: none;
+  gap: 0.5rem;
+  padding: 0.55rem clamp(0.6rem, 2vw, 1.15rem);
+  border-top: 1px solid rgb(255 255 255 / 16%);
+}
+
+.soccer-gallery-controls button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.25rem 0.45rem;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.soccer-gallery-controls button:hover,
+.soccer-gallery-controls button:focus-visible {
+  border-color: #dfbd8e;
+  color: #dfbd8e;
+  outline-color: #dfbd8e;
+}
+
+.soccer-gallery-controls .soccer-gallery-playback {
+  justify-self: start;
+  color: #dfbd8e;
+  font-size: 0.78rem;
+  text-align: left;
+}
+
+.soccer-gallery-arrows {
+  display: flex;
+  justify-self: end;
 }
 
 .project-carousel-button {
@@ -1791,14 +2242,9 @@
 }
 
 .soccer-gallery-status {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  padding: 0.42rem 0.65rem;
-  color: var(--heading);
-  background: rgba(255, 253, 248, 0.9);
+  color: #ddd9cf;
   font-size: 0.78rem;
-  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 .motion-ready .motion-reveal {
@@ -2004,13 +2450,8 @@
     font-size: clamp(2.9rem, 11.7vw, 5.5rem);
   }
 
-  .soccer-image-frame {
-    min-height: 26rem;
-  }
-
   .section-grid,
-  .about-panel,
-  .soccer-panel {
+  .about-panel {
     padding: 4.5rem 0;
   }
 
@@ -2059,19 +2500,8 @@
 
   .timeline-content,
   .timeline-card > p,
-  .timeline-attachment-preview,
   .timeline-links {
     grid-column: 2;
-  }
-
-  .soccer-award-card,
-  .soccer-award-card:nth-child(even) {
-    padding: 1.75rem 0;
-    border-left: 0;
-  }
-
-  .soccer-gallery-frame img {
-    max-height: none;
   }
 
   .soccer-gallery-frame {

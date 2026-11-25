@@ -4,13 +4,7 @@ function ExperienceCard({
   experience,
   id,
   linkTo,
-  showAttachmentPreview = false,
 }) {
-  const canPreviewAttachment =
-    showAttachmentPreview &&
-    experience.attachment &&
-    /\.(png|jpe?g|gif|webp|svg)$/i.test(experience.attachment)
-
   const card = (
     <article className="info-card timeline-card" id={id}>
       <div className="timeline-side">
@@ -22,7 +16,7 @@ function ExperienceCard({
         <h3>{experience.title}</h3>
       </div>
 
-      <p>{experience.description}</p>
+      <p>{experience.highlights[0]}</p>
 
       {experience.image ? (
         <div className="timeline-logo-wrap">
@@ -36,15 +30,6 @@ function ExperienceCard({
         </div>
       ) : null}
 
-      {canPreviewAttachment ? (
-        <img
-          src={experience.attachment}
-          alt={experience.attachmentLabel || `${experience.title} attachment`}
-          className="timeline-attachment-preview"
-          loading="lazy"
-          decoding="async"
-        />
-      ) : null}
     </article>
   )
 

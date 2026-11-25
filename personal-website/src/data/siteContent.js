@@ -3,11 +3,13 @@ import nflDataBowlPdf from '../assets/NFLDataBowlExplor.pdf'
 import timbersPreview from '../assets/optimized/total-timbers-preview.jpg'
 import cmuLogo from '../assets/cmu_logo.png'
 import tartanLogo from '../assets/tartan_logo.png'
+import uaaHonors2023 from '../assets/soccer-awards/2023-uaa-mens-soccer-honors.pdf'
+import uaaHonors2025 from '../assets/soccer-awards/2025-uaa-mens-soccer-honors.pdf'
 import metaLogo from '../assets/meta_logo.png'
 import aramarkLogo from '../assets/aramarkLogo.png'
-import metaselfie from '../assets/metaselfie.jpeg'
+import metaPhoto from '../assets/optimized/meta-experience.jpg'
 import NFLBigDataBowl from "../assets/NFLBigDataBowl.png"
-import aramarkSelfies from '../assets/aramark_selfies.jpeg'
+import aramarkPhoto from '../assets/optimized/aramark-experience.jpg'
 import fightingIrishPreview from '../assets/optimized/fighting-irish-preview.jpg'
 import coffeeBooksFilm from '../assets/hobbies/coffee-books-film.jpg'
 import travellingImg from '../assets/hobbies/travelling.jpeg'
@@ -25,7 +27,9 @@ const soccerGalleryImages = import.meta.glob(
   },
 )
 
-export { heroImg, aramarkSelfies, fightingIrishPreview}
+export { heroImg, fightingIrishPreview }
+
+export const linkedInProfile = 'https://linkedin.com/in/dominichoarweiler'
 
 export function getExperienceId(experience) {
   return `experience-${experience.title
@@ -135,63 +139,51 @@ export const experiences = [
     sortOrder: 2024,
     title: 'IT and Data Science Intern',
     category: 'Aramark',
-    description:
-      'Worked as a Technology and Data Science Intern for Aramark, who operates\
-       the hospitality services at the Nike World Headquarters. Helped build\
-        and analyze databases to identify trends to improve service. Assisted\
-         with the development and introduction of a mobile app for ordering\
-          services around the Nike campus.',
+    highlights: [
+      'Helped build and analyze databases to identify ways to improve Aramark’s hospitality services at Nike World Headquarters.',
+      'Helped develop and introduce a mobile app for ordering services around the Nike campus.',
+    ],
     image: aramarkLogo,
     imageAlt: 'Aramark Logo',
-    attachment: '',
-    attachmentLabel: '',
   },
   {
-    period: 'Jan-Sep 2025',
+    period: 'Jan–Sep 2025',
     sortOrder: 2025.5,
     title: 'Machine Learning Research Assistant',
     category: 'CMU Cognitive Neuroscience Lab (CAOs)',
-    description:
-      'Developed machine learning models using brain data to further\
-       neuroscience discoveries in the Cognitive Neuroscience Lab (CAOs)\
-        at CMU. Modeled brain associations to specific words using\
-         functional MRI data.',
+    highlights: [
+      'Developed machine learning models using functional MRI data to study how the brain represents specific words.',
+    ],
     image: cmuLogo,
     imageAlt: 'Carnegie Mellon University Logo',
-    attachment: '',
-    attachmentLabel: '',
   },
   {
     period: 'Summer 2025',
     sortOrder: 2025.6,
     title: 'AI Specialist and Data Science Intern',
     category: 'Aramark Headquarters',
-    description:
-      "Engineered and deployed Aramark’s AI assistant “Sage” ability to\
-       dynamically submit PTO/vacation requests—integrating natural language\
-        processing, Kronos and calendar APIs, and Aisera’s AI platform to\
-         eliminate manual HR steps. Built agentic AI data interfaces in \
-         Snowflake and Aisera–leveraging LLM-driven capabilities to enable \
-         non-technical users to query hospitality metrics via natural language.\
-          Developed and maintained Workflow and Hyperflow modules in Aisera’s\
-           AI Platform to orchestrate end-to-end decision flows—automating\
-            service processes and reducing manual handoffs.",
+    highlights: [
+      'Shipped a feature that let Aramark’s AI assistant, Sage, submit time-off requests using natural language, Kronos and calendar APIs, and Aisera.',
+      'Built interfaces in Snowflake and Aisera so nontechnical users could query hospitality metrics in plain language.',
+      'Built and maintained Aisera Workflow and Hyperflow modules to automate service processes and reduce manual handoffs.',
+    ],
     image: aramarkLogo,
     imageAlt: 'Aramark Logo',
-    attachment: aramarkSelfies,
-    attachmentLabel: 'Aramark Selfie',
+    photo: { src: aramarkPhoto, width: 1024, height: 768, alt: 'Dominic with colleagues in front of the Aramark wall sign', caption: 'With the team at Aramark headquarters' },
   },
   {
-    period: 'May-Aug 2026',
+    period: 'May–Aug 2026',
     sortOrder: 2026.5,
     title: 'Software Engineering Intern',
     category: 'Meta',
-    description:
-      'Shipped five Facebook Marketplace desktop features through 100+ production code changes, closing mobile-web parity gaps and launching A/B tests to hundreds of thousands of users. Built an AI-powered parity agent to automate mobile-to-web feature porting, projected to save 1,300 engineering hours across the summer, and created a dashboard to surface features and trigger headless FaaS runs of the agent.',
+    highlights: [
+      'Shipped five Facebook Marketplace desktop features across 100+ production code changes, closing mobile-to-web gaps and launching A/B tests to hundreds of thousands of users.',
+      'Built an AI agent to port mobile features to the web, with a projected savings of 1,300 engineering hours over the summer.',
+      'Created a dashboard to identify features that needed porting and trigger headless FaaS runs of the agent.',
+    ],
     image: metaLogo,
     imageAlt: 'Meta Logo',
-    attachment: metaselfie,
-    attachmentLabel: 'Meta Selfie',
+    photo: { src: metaPhoto, width: 1071, height: 1428, alt: 'Dominic standing in front of the Meta sign', caption: 'AI at Meta Hackathon' },
   },
 ]
 
@@ -225,12 +217,6 @@ export const homeInterests = [
   },
 ]
 
-export const soccerHighlights = [
-  'Experience performing in high-pressure situations across ECNL, NCAA DIII, and USL League Two.',
-  'Leadership experience as a 3-year captain at CMU.',
-  'Personal growth experience overcoming adversity and injury setbacks.',
-]
-
 export const soccerGallery = Object.entries(soccerGalleryImages)
   .sort(([firstPath], [secondPath]) => firstPath.localeCompare(secondPath))
   .map(([, image], index) => ({
@@ -240,38 +226,69 @@ export const soccerGallery = Object.entries(soccerGalleryImages)
 
 export const soccerAwards = [
   {
-    title: 'UAA First Team All-Conference (2026)',
+    title: 'CSC Academic All-District',
+    years: '2024, 2026',
+    description: 'Named to the NCAA Division III men’s soccer Academic All-District team by College Sports Communicators and advanced to the 2026 Academic All-America ballot.',
+    logo: cmuLogo,
+    logoAlt: 'Carnegie Mellon University Logo',
+    sources: [
+      { url: 'https://s3.amazonaws.com/sidearm.sites/cosidaallamerican.sidearmsports.com/documents/2024/11/19/24Acad_MSOC.pdf', label: '2024 CSC team (PDF)' },
+      { url: 'https://academicallamerica.com/documents/2026/11/24//2026_27_AAD_MSOC.pdf?id=5705', label: '2026 CSC team (PDF)' },
+    ],
+  },
+  {
+    title: 'UAA Men’s Soccer Offensive Athlete of the Week',
+    years: '2026',
+    description: 'Recognized on November 23, 2026, after scoring the winner against Lynchburg and adding a goal against Bowdoin as Carnegie Mellon reached the NCAA Final Four.',
+    logo: tartanLogo,
+    logoAlt: 'Tartan Athletics Logo',
+    sources: [
+      { url: 'https://uaasports.info/sports/2023/8/15/information-aow-aow2021.aspx', label: 'UAA weekly honors' },
+    ],
+  },
+  {
+    title: 'UAA First Team All-Conference',
+    years: '2026',
     description: 'Named to the 2026 UAA Men’s Soccer All-Association First Team as a defender for Carnegie Mellon.',
     logo: tartanLogo,
     logoAlt: 'Tartan Athletics Logo',
-    source: 'https://uaasports.info/documents/2026/11/16//26_MSoc_All_Assoc.pdf?id=1216',
-    sourceLabel: '2026 UAA honors (PDF)',
+    sources: [
+      { url: 'https://uaasports.info/documents/2026/11/16//26_MSoc_All_Assoc.pdf?id=1216', label: '2026 UAA honors (PDF)' },
+    ],
   },
   {
-    title: "UAA Honorable Mention ('23, '25)",
+    title: 'UAA Honorable Mention',
+    years: '2023, 2025',
     description:
       'Conference recognition for outstanding performance.',
     logo: tartanLogo,
     logoAlt: 'Tartan Athletics Logo',
+    sources: [
+      { url: uaaHonors2023, label: '2023 UAA honors (PDF)' },
+      { url: uaaHonors2025, label: '2025 UAA honors (PDF)' },
+    ],
   },
   {
-    title: "CMU Men’s Soccer Midfielder of the Year ('23, '24)",
+    title: 'CMU Men’s Soccer Midfielder of the Year',
+    years: '2023, 2024',
     description:
       'Intra-team award given to the best-performing midfielder each season.',
     logo: tartanLogo,
     logoAlt: 'Tartan Athletics Logo',
   },
   {
-    title: "Dean’s List - High Honors ('23-'26)",
+    title: 'Dean’s List – High Honors',
+    years: '2023–2026',
     description:
       'Award for achieving high academic success.',
     logo: cmuLogo,
     logoAlt: 'Carnegie Mellon University Logo',
   },
   {
-    title: "CMU Men's Soccer Most Valuable Player ('25)",
+    title: 'CMU Men’s Soccer Most Valuable Player',
+    years: '2025',
     description:
-      'Intra-team award for oustanding performance and leadership on the field and in the locker room. Recognizes the player whose contributions are among the most impactful to the team\'s success.',
+      'Intra-team award for outstanding performance and leadership on the field and in the locker room. Recognizes the player whose contributions are among the most impactful to the team’s success.',
     logo: tartanLogo,
     logoAlt: 'Tartan Athletics Logo',
   },
