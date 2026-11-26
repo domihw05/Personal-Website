@@ -37,7 +37,7 @@ function ProjectLinks({ project, className = '' }) {
   )
 }
 
-function ProjectCard({ project, variant = 'card', useSummary = false }) {
+function ProjectCard({ project, variant = 'card', useSummary = false, headingLevel = 2 }) {
   const projectDescription =
     useSummary && project.summary ? project.summary : project.description
   const imageFitClassName =
@@ -73,11 +73,12 @@ function ProjectCard({ project, variant = 'card', useSummary = false }) {
   }
 
   if (variant === 'feature') {
+    const Heading = headingLevel === 3 ? 'h3' : 'h2'
     return (
       <article className="project-feature" key={project.title}>
         <div className="project-feature-copy">
           <p className="card-kicker">{project.category}</p>
-          <h2>{project.title}</h2>
+          <Heading>{project.title}</Heading>
           <p>{projectDescription}</p>
           <ProjectSkills skills={project.skills} />
 

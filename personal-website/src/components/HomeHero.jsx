@@ -21,8 +21,8 @@ export default function HomeHero() {
             Dominic <span>Hoar-Weiler</span>
           </h1>
           <p className="hero-lead">
-            I build software and data tools for machine learning and sports
-            analytics, and captain Carnegie Mellon men&apos;s soccer.
+            I build software and data tools for machine learning and sports analytics.
+            I also captain Carnegie Mellon men&apos;s soccer.
           </p>
 
           <div className="hero-actions">

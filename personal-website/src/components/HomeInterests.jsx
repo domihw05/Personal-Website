@@ -69,10 +69,21 @@ export default function HomeInterests() {
           <article className="journal-chapter home-spread" key={interest.title}>
             <div className="journal-copy">
               <h3>{interest.title}</h3>
-              {interest.description && <p>{interest.description}</p>}
               {interest.entries && (
                 <ul>
                   {interest.entries.map((entry) => <li key={entry}>{entry}</li>)}
+                </ul>
+              )}
+              {interest.teams && (
+                <ul className="journal-teams" role="list">
+                  {interest.teams.map(({ name, logo, detail, darkBadge }) => (
+                    <li key={name}>
+                      <span className={darkBadge ? 'journal-team-mark journal-team-mark-dark' : 'journal-team-mark'}>
+                        <img src={logo} alt="" width="32" height="32" loading="lazy" decoding="async" />
+                      </span>
+                      <span>{name}{detail && <small>{detail}</small>}</span>
+                    </li>
+                  ))}
                 </ul>
               )}
             </div>

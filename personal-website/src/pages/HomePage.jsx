@@ -35,6 +35,7 @@ function HomePage() {
               project={project}
               key={project.title}
               variant="feature"
+              headingLevel={3}
               useSummary
             />
           ))}
@@ -65,13 +66,12 @@ function HomePage() {
 
       <section className="about-panel home-spread" id="about" aria-labelledby="about-title">
         <div className="about-copy">
-          <p className="eyebrow">A little more context</p>
-          <h2 id="about-title">I like hard problems and high standards.</h2>
+          <p className="eyebrow">About</p>
+          <h2 id="about-title">A bit about me</h2>
           <p>
             I study Statistics and Machine Learning at Carnegie Mellon with a
             minor in Computer Science, and I captain the varsity men&apos;s soccer
-            team. My work sits where analytical rigor, production software, and
-            team performance overlap.
+            team.
           </p>
 
           <div className="section-actions">

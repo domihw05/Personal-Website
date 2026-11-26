@@ -14,6 +14,13 @@ import fightingIrishPreview from '../assets/optimized/fighting-irish-preview.jpg
 import coffeeBooksFilm from '../assets/hobbies/coffee-books-film.jpg'
 import travellingImg from '../assets/hobbies/travelling.jpeg'
 import watchingSoccerImg from '../assets/hobbies/watchingsoccer.jpeg'
+import bearsLogo from '../assets/hobbies/teams/bears.png'
+import notreDameLogo from '../assets/hobbies/teams/notre-dame.png'
+import timbersLogo from '../assets/hobbies/teams/timbers.png'
+import thornsLogo from '../assets/hobbies/teams/thorns.png'
+import bayernLogo from '../assets/hobbies/teams/bayern.png'
+import redsLogo from '../assets/hobbies/teams/reds.png'
+import blazersLogo from '../assets/hobbies/teams/blazers.png'
 import handwritten_digits from '../assets/handwritten_digits.png'
 import deeplearning_transformer from '../assets/deeplearning_img.png'
 import player_visualizer from '../assets/optimized/player-visualization.jpg'
@@ -197,7 +204,6 @@ export const strengths = [
 export const homeInterests = [
   {
     title: 'Coffee, books & movies',
-    description: 'A cup of coffee, a mystery novel, or a movie I’m still thinking about the next morning.',
     image: coffeeBooksFilm,
     imageAlt: 'A cup of coffee, an open book, and a strip of film on a wooden table',
   },
@@ -210,7 +216,16 @@ export const homeInterests = [
   },
   {
     title: 'Teams I follow',
-    entries: ['Bayern Munich', 'Portland Timbers', 'Portland Trail Blazers', 'Chicago Bears'],
+    teams: [
+      { name: 'Chicago Bears', logo: bearsLogo },
+      { name: 'Notre Dame Fighting Irish', detail: 'Football', logo: notreDameLogo },
+      { name: 'Portland Timbers', logo: timbersLogo },
+      { name: 'Portland Thorns', logo: thornsLogo },
+      { name: 'Bayern Munich', logo: bayernLogo },
+      { name: 'Cincinnati Reds', logo: redsLogo },
+      { name: 'Portland Trail Blazers', logo: blazersLogo, darkBadge: true },
+      { name: 'Carnegie Mellon University', logo: tartanLogo },
+    ],
     image: watchingSoccerImg,
     imageAlt: 'A Portland Timbers match seen from the stands at Providence Park',
     photoCredit: 'Providence Park · Portland, Oregon',

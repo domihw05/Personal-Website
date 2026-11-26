@@ -10,6 +10,27 @@ const photos = import.meta.glob('../assets/soccer-matches/*/*.jpg', {
 
 const galleries = [
   {
+    id: 'salem-state',
+    opponent: 'Salem State',
+    intervalMs: 5600,
+    frames: [
+      ['DSC07662', 'No. 8 strikes the ball in Carnegie Mellon’s white kit.', 'center 70%'],
+      ['DSC09198', 'No. 8 stands in front of goal wearing the captain’s armband.'],
+      ['DSC08910', 'No. 8 runs upfield with the ball ahead of him.'],
+      ['DSC08833', 'No. 8 runs alongside a Salem State player as a teammate moves toward the ball.'],
+    ],
+  },
+  {
+    id: 'umass-boston',
+    opponent: 'UMass Boston',
+    intervalMs: 6800,
+    frames: [
+      ['DSC00158', 'The Tartans huddle in their black kits.'],
+      ['DSC09680', 'No. 8 jogs away from the camera with UMass Boston players in the background.'],
+      ['DSC00896', 'The Tartans pose behind the NCAA Division III championship banner.'],
+    ],
+  },
+  {
     id: 'lynchburg',
     opponent: 'Lynchburg',
     intervalMs: 5000,
