@@ -1,0 +1,71 @@
+// Public city/island centers, not exact trip locations.
+// Entries are [name, longitude, latitude, country override, starred].
+export const travelRegions = [
+  {
+    name: 'North America',
+    country: 'United States',
+    places: [
+      ['Vancouver, BC, Canada', -123.12, 49.28, 'Canada'],
+      ['Vancouver, WA', -122.67, 45.63],
+      ['Cabo San Lucas, Mexico', -109.92, 22.89, 'Mexico'],
+      ['Portland, OR', -122.68, 45.52, null, true],
+      ['Seattle, WA', -122.33, 47.61],
+      ['San Francisco, CA', -122.42, 37.77],
+      ['Los Angeles, CA', -118.24, 34.05],
+      ['San Diego, CA', -117.16, 32.72],
+      ['Chicago, IL', -87.63, 41.88],
+      ['Denver, CO', -104.99, 39.74],
+      ['Colorado Springs, CO', -104.82, 38.83],
+      ['Boise, ID', -116.20, 43.62],
+      ['Bend, OR', -121.31, 44.06],
+      ['New York, NY', -74.01, 40.71],
+      ['New London, CT', -72.10, 41.36],
+      ['Washington, DC', -77.04, 38.91],
+      ['South Bend, IN', -86.25, 41.68],
+      ['Columbus, OH', -83.00, 39.96],
+      ['Pittsburgh, PA', -80.00, 40.44, null, true],
+      ['Rochester, NY', -77.61, 43.16],
+      ['Atlanta, GA', -84.39, 33.75],
+      ['Miami, FL', -80.19, 25.76],
+      ['Orlando, FL', -81.38, 28.54],
+      ['New Orleans, LA', -90.07, 29.95],
+      ['Las Vegas, NV', -115.14, 36.17],
+      ['Phoenix, AZ', -112.07, 33.45],
+      ['Charlotte, NC', -80.84, 35.23],
+      ['Boston, MA', -71.06, 42.36],
+      ['St. Louis, MO', -90.20, 38.63],
+      ['Cleveland, OH', -81.69, 41.50],
+    ],
+  },
+  {
+    name: 'Europe',
+    places: [
+      ['London, UK', -0.13, 51.51, 'United Kingdom'],
+      ['Amsterdam, Netherlands', 4.90, 52.37, 'Netherlands'],
+      ['Düsseldorf, Germany', 6.78, 51.22, 'Germany'],
+      ['Berlin, Germany', 13.41, 52.52, 'Germany'],
+      ['Frankfurt am Main, Germany', 8.68, 50.12, 'Germany'],
+      ['Oviedo, Spain', -5.85, 43.36, 'Spain'],
+      ['Madrid, Spain', -3.70, 40.42, 'Spain'],
+      ['Toledo, Spain', -4.02, 39.86, 'Spain'],
+      ['Barcelona, Spain', 2.17, 41.39, 'Spain'],
+      ['Verona, Italy', 10.98, 45.44, 'Italy'],
+      ['Venice, Italy', 12.34, 45.44, 'Italy'],
+      ['Rome, Italy', 12.50, 41.90, 'Italy'],
+      ['Athens, Greece', 23.73, 37.98, 'Greece'],
+      ['Santorini, Greece', 25.43, 36.42, 'Greece'],
+    ],
+  },
+  {
+    name: 'Hawaiʻi',
+    mapView: 'World',
+    country: 'United States',
+    places: [
+      ['Kāʻanapali, Hawaiʻi', -156.69, 20.93],
+    ],
+  },
+]
+
+export const visitedCountries = [...new Set(travelRegions.flatMap(
+  ({ country, places }) => places.map(([, , , override]) => override ?? country),
+))].sort()

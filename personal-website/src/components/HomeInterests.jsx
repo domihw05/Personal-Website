@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { homeInterests } from '../data/siteContent'
+import HomeTravelMap from './HomeTravelMap'
 
 export default function HomeInterests() {
   const journalRef = useRef(null)
@@ -65,20 +66,15 @@ export default function HomeInterests() {
       </header>
 
       <div className="journal-chapters">
-        {homeInterests.map((interest) => (
+        {homeInterests.map((interest) => interest.kind === 'travel' ? <HomeTravelMap key={interest.title} /> : (
           <article className="journal-chapter home-spread" key={interest.title}>
             <div className="journal-copy">
               <h3>{interest.title}</h3>
-              {interest.entries && (
-                <ul>
-                  {interest.entries.map((entry) => <li key={entry}>{entry}</li>)}
-                </ul>
-              )}
               {interest.teams && (
                 <ul className="journal-teams" role="list">
-                  {interest.teams.map(({ name, logo, detail, darkBadge }) => (
+                  {interest.teams.map(({ name, logo, detail, shield }) => (
                     <li key={name}>
-                      <span className={darkBadge ? 'journal-team-mark journal-team-mark-dark' : 'journal-team-mark'}>
+                      <span className={shield ? 'journal-team-mark journal-team-mark-shield' : 'journal-team-mark'}>
                         <img src={logo} alt="" width="32" height="32" loading="lazy" decoding="async" />
                       </span>
                       <span>{name}{detail && <small>{detail}</small>}</span>
