@@ -87,8 +87,16 @@ function BracketRoundList() {
 
 export default function SoccerFullBracket() {
   return (
-    <section className="soccer-full-bracket" aria-labelledby="soccer-full-bracket-title">
-      <h3 id="soccer-full-bracket-title">Full 64-team bracket</h3>
+    <details className="soccer-full-bracket" open>
+      <summary className="soccer-full-bracket-toggle">
+        <h3>
+          Full 64-team bracket
+          <span className="soccer-full-bracket-action" aria-hidden="true">
+            <span className="soccer-bracket-show">Show</span>
+            <span className="soccer-bracket-hide">Hide</span>
+          </span>
+        </h3>
+      </summary>
       <div className="soccer-full-bracket-key">
         <p><span aria-hidden="true" /> Carnegie Mellon’s path</p>
         <p>PK: penalties · OT: overtime</p>
@@ -98,6 +106,6 @@ export default function SoccerFullBracket() {
       </div>
       <BracketRoundList />
       <p className="soccer-full-bracket-source">Sources: <a href={ncaaBracketUrl}>NCAA bracket</a> · <a href={bracketResultsUrl}>Match-by-match results</a></p>
-    </section>
+    </details>
   )
 }

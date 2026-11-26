@@ -2285,10 +2285,58 @@
 }
 
 .soccer-full-bracket h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   margin: 0;
   padding-block: 0.9rem;
   color: var(--heading);
   font: 600 clamp(1.35rem, 2.5vw, 1.85rem)/1.15 var(--display);
+}
+
+.soccer-full-bracket-toggle {
+  display: block;
+  list-style: none;
+  cursor: pointer;
+}
+
+.soccer-full-bracket-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.soccer-full-bracket-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--muted-strong);
+  font: 600 0.8rem/1 var(--sans);
+}
+
+.soccer-full-bracket-action::after {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  content: '';
+}
+
+.soccer-full-bracket[open] .soccer-full-bracket-action::after {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.soccer-full-bracket:not([open]) .soccer-bracket-hide,
+.soccer-full-bracket[open] .soccer-bracket-show {
+  display: none;
+}
+
+.soccer-full-bracket-toggle:hover .soccer-full-bracket-action {
+  color: var(--accent);
+}
+
+.soccer-full-bracket-toggle:focus-visible {
+  outline-offset: 3px;
 }
 
 .soccer-full-bracket-key {
