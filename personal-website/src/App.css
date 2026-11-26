@@ -733,19 +733,19 @@
   padding-bottom: 0;
 }
 
-.journal-copy .journal-teams {
+.interest-teams {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 1.15rem 0 0;
   padding: 0;
   list-style: none;
   gap: 0.7rem 0.85rem;
-  color: var(--journal-ink);
+  color: var(--text);
   font-size: 0.875rem;
   line-height: 1.25;
 }
 
-.journal-teams li {
+.interest-teams li {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
@@ -770,11 +770,67 @@
   clip-path: polygon(23.9% 12.2%, 76.1% 12.2%, 76.1% 42%, 74.5% 53%, 71% 64%, 66% 74%, 59% 83%, 50% 90.6%, 41% 83%, 34% 74%, 29% 64%, 25.5% 53%, 23.9% 42%);
 }
 
-.journal-teams small {
+.interest-teams small {
   display: block;
   margin-top: 0.2rem;
-  color: var(--journal-muted);
+  color: var(--muted-strong);
   font-size: 0.75rem;
+}
+
+.home-travel-summary {
+  min-width: 0;
+}
+
+.home-travel-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem 0.65rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  color: var(--journal-muted);
+  font-size: 0.85rem;
+  list-style: none;
+}
+
+@media (max-width: 480px) {
+  .home-travel-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.home-travel-summary strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--journal-ink);
+  font: 500 clamp(2rem, 4vw, 3.25rem)/1 var(--display);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.home-travel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgb(241 232 219 / 35%);
+  border-radius: 0.25rem;
+  color: var(--journal-ink);
+  font-size: 0.85rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.home-travel-link:hover {
+  border-color: var(--hero-gold);
+  color: var(--hero-gold);
+}
+
+.home-sports-preview .interest-teams {
+  margin: 0 0 1rem;
+  color: var(--journal-ink);
+}
+
+.home-sports-preview .interest-teams small {
+  color: var(--journal-muted);
 }
 
 .travel-heading {
@@ -786,28 +842,61 @@
   margin-bottom: clamp(0.9rem, 2.5vw, 1.5rem);
 }
 
-.travel-heading h3 {
-  max-width: none;
-}
-
 .travel-count {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 0.55rem;
   margin: 0;
-  color: var(--journal-muted);
+  color: var(--muted-strong);
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
 }
 
 .travel-count strong {
-  color: var(--hero-gold);
+  color: var(--heading);
   font-weight: 600;
+}
+
+.travel-country-strip {
+  margin-top: 1.15rem;
+  padding-block: 0.75rem;
+  border-block: 1px solid var(--border-soft);
+}
+
+.travel-country-strip h3 {
+  margin: 0 0 0.65rem;
+  color: var(--heading);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.travel-country-strip ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.travel-country-strip li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text);
+  font-size: 0.82rem;
+}
+
+.travel-country-flag {
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1;
 }
 
 .travel-places {
   margin-top: 0.75rem;
-  color: var(--journal-muted);
+  color: var(--muted-strong);
   font-size: 0.875rem;
 }
 
@@ -824,7 +913,7 @@
 
 .travel-places h4 {
   margin: 0.75rem 0 0.25rem;
-  color: var(--journal-ink);
+  color: var(--heading);
 }
 
 .travel-places ul {
@@ -886,22 +975,22 @@
 .travel-places button {
   min-height: 2rem;
   padding: 0.2rem 0.55rem;
-  border: 1px solid rgb(241 232 219 / 25%);
+  border: 1px solid var(--border-strong);
   border-radius: 0.25rem;
   background: transparent;
-  color: var(--journal-ink);
+  color: var(--text);
   font: inherit;
   font-size: 0.8rem;
   cursor: pointer;
 }
 
 .travel-places button[aria-pressed='true'] {
-  background: var(--hero-gold);
-  color: var(--journal-bg);
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--heading);
 }
 
-.travel-map :focus-visible,
-.travel-places :focus-visible {
+.travel-map :focus-visible {
   outline-color: var(--hero-gold);
 }
 
@@ -1062,9 +1151,12 @@
   to { opacity: 1; translate: 0 0; }
 }
 
-.travel-list-star,
 .travel-legend span {
   color: #ffd47f;
+}
+
+.travel-list-star {
+  color: var(--accent);
 }
 
 .travel-places button[aria-pressed='true'] .travel-list-star {
@@ -1114,10 +1206,6 @@
   background: #30261e;
 }
 
-.journal-chapter:nth-child(3) .journal-photo img {
-  object-position: center 62%;
-}
-
 @media (prefers-reduced-motion: no-preference) and (min-width: 861px) {
   .journal-photo img {
     inset: -18px 0 auto;
@@ -1144,7 +1232,8 @@
 .interest-intro h1,
 .interest-highlights h2,
 .interest-ranking h2,
-.interest-shelf h2 {
+.interest-shelf h2,
+.interest-topic h2 {
   margin: 0;
   font-family: var(--display);
   font-weight: 500;
@@ -1162,6 +1251,195 @@
   color: var(--text);
   font-size: clamp(0.96rem, 1.35vw, 1.1rem);
   line-height: 1.65;
+}
+
+.interest-section-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 0.65rem;
+}
+
+.interest-topic {
+  padding-block: clamp(1.6rem, 4vw, 3rem);
+  border-top: 1px solid var(--border-strong);
+  scroll-margin-top: 5rem;
+}
+
+.interest-topic h2 {
+  font-size: clamp(2rem, 3.7vw, 3.15rem);
+  line-height: 1;
+}
+
+.interest-travel {
+  --hero-gold: #e5c98e;
+  /* The map is 9:5; leave vertical room for its title, controls and caption. */
+  max-width: 56rem;
+  max-width: clamp(16rem, calc(180svh - 25.2rem), 56rem);
+  margin-inline: auto;
+}
+
+.interest-sports-photo {
+  aspect-ratio: 16 / 10;
+}
+
+.interest-sports-photo img {
+  object-position: center 62%;
+}
+
+.interest-topic .home-photo figcaption {
+  color: var(--muted-strong);
+}
+
+.trophy-cabinet {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.trophy-cabinet-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 0.9rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.trophy-cabinet h3 {
+  margin: 0 0 0.35rem;
+  font: 500 clamp(1.6rem, 3vw, 2.35rem)/1.05 var(--display);
+}
+
+.trophy-cabinet-header p {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: 0.85rem;
+}
+
+.trophy-cabinet-header .trophy-case-count {
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.trophy-case {
+  padding: clamp(0.75rem, 2.5vw, 1.65rem);
+  border: 1px solid #473e34;
+  border-radius: 0.7rem;
+  background: #221e19;
+  color: #f2e8d8;
+}
+
+.trophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem), 1fr));
+  gap: clamp(0.5rem, 1.5vw, 0.95rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 540px) {
+  .trophy-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem), 1fr));
+  }
+}
+
+.trophy-grid li {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #51463a;
+  border-radius: 0.4rem;
+  background: #2b251f;
+}
+
+.trophy-stage {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  padding: 0.55rem;
+}
+
+.trophy-stage > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.trophy-archive-mark {
+  color: #d5c3a9;
+  font-size: 0.625rem;
+  letter-spacing: 0.05em;
+}
+
+.trophy-card-caption {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+  padding: 0.7rem 0.75rem 0.85rem;
+  border-top: 1px solid #51463a;
+}
+
+.trophy-grid time {
+  color: #f4dbad;
+  font: 500 1.4rem/1.1 var(--display);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.trophy-card-caption h4 {
+  margin: 0;
+  color: inherit;
+  font-size: 0.87rem;
+  line-height: 1.3;
+}
+
+.trophy-card-team {
+  display: grid;
+  grid-template-columns: 1.125rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  color: #d6c7b3;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
+.trophy-card-team img {
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  object-fit: contain;
+}
+
+.trophy-case-notes {
+  margin-top: 0.85rem;
+  color: var(--muted-strong);
+  font-size: 0.8rem;
+}
+
+.trophy-case-notes summary {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.trophy-case-notes a {
+  color: inherit;
+  text-underline-offset: 0.14em;
+}
+
+.trophy-photo-credits {
+  padding-left: 1.25rem;
+}
+
+.trophy-case-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-top: 0.55rem;
 }
 
 .interest-highlights {

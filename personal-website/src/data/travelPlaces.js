@@ -1,5 +1,5 @@
 // Public city/island centers, not exact trip locations.
-// Entries are [name, longitude, latitude, country override, starred].
+// Entries are [name, longitude, latitude, country override, home city].
 export const travelRegions = [
   {
     name: 'North America',
@@ -24,6 +24,7 @@ export const travelRegions = [
       ['South Bend, IN', -86.25, 41.68],
       ['Columbus, OH', -83.00, 39.96],
       ['Pittsburgh, PA', -80.00, 40.44, null, true],
+      ['Philadelphia, PA', -75.17, 39.95],
       ['Rochester, NY', -77.61, 43.16],
       ['Atlanta, GA', -84.39, 33.75],
       ['Miami, FL', -80.19, 25.76],
@@ -35,6 +36,7 @@ export const travelRegions = [
       ['Boston, MA', -71.06, 42.36],
       ['St. Louis, MO', -90.20, 38.63],
       ['Cleveland, OH', -81.69, 41.50],
+      ['Bethany, WV', -80.56, 40.20],
     ],
   },
   {
@@ -66,6 +68,34 @@ export const travelRegions = [
   },
 ]
 
-export const visitedCountries = [...new Set(travelRegions.flatMap(
-  ({ country, places }) => places.map(([, , , override]) => override ?? country),
-))].sort()
+const destinations = travelRegions.flatMap(({ country, places }) => (
+  places.map(([name, , , override, starred]) => ({ name, country: override ?? country, starred }))
+))
+
+export const visitedCountries = [...new Set(destinations.map(({ country }) => country))].sort()
+
+// U.S. destination labels end in a postal code, or use Hawaiʻi's local spelling.
+export const visitedStates = [...new Set(destinations
+  .filter(({ country }) => country === 'United States')
+  .map(({ name }) => name.split(', ').at(-1))
+  .map(state => state === 'Hawaiʻi' ? 'HI' : state)
+  .filter(state => /^[A-Z]{2}$/.test(state) && state !== 'DC'))].sort()
+
+export const travelStats = [
+  { label: 'Countries', count: visitedCountries.length },
+  { label: 'U.S. states', count: visitedStates.length },
+  { label: 'Destinations', count: destinations.length },
+  { label: 'Home cities', count: destinations.filter(({ starred }) => starred).length },
+]
+
+export const countryFlags = {
+  Canada: '🇨🇦',
+  Germany: '🇩🇪',
+  Greece: '🇬🇷',
+  Italy: '🇮🇹',
+  Mexico: '🇲🇽',
+  Netherlands: '🇳🇱',
+  Spain: '🇪🇸',
+  'United Kingdom': '🇬🇧',
+  'United States': '🇺🇸',
+}

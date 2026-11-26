@@ -201,33 +201,28 @@ export const strengths = [
   'Creative Problem Solving',
 ]
 
-export const homeInterests = [
-  {
-    title: 'Coffee, books & movies',
-    image: coffeeBooksFilm,
-    imageAlt: 'A cup of coffee, an open book, and a strip of film on a wooden table',
-  },
-  {
-    title: 'Places I’ve visited',
-    kind: 'travel',
-  },
-  {
-    title: 'Teams I follow',
-    teams: [
-      { name: 'Chicago Bears', logo: bearsLogo },
-      { name: 'Notre Dame Fighting Irish', detail: 'Football', logo: notreDameLogo },
-      { name: 'Portland Timbers', logo: timbersLogo },
-      { name: 'Portland Thorns', logo: thornsLogo },
-      { name: 'Bayern Munich', logo: bayernLogo },
-      { name: 'Cincinnati Reds', logo: redsLogo },
-      { name: 'Portland Trail Blazers', logo: blazersLogo },
-      { name: 'Carnegie Mellon University', logo: carnegieMellonShield, shield: true },
-    ],
-    image: watchingSoccerImg,
-    imageAlt: 'A Portland Timbers match seen from the stands at Providence Park',
-    photoCredit: 'Providence Park · Portland, Oregon',
-  },
-]
+export const homeLibrary = {
+  title: 'Coffee, books & movies',
+  image: coffeeBooksFilm,
+  imageAlt: 'A cup of coffee, an open book, and a strip of film on a wooden table',
+}
+
+export const sportsInterests = {
+  title: 'Teams I follow',
+  teams: [
+    { id: 'bears', name: 'Chicago Bears', logo: bearsLogo },
+    { id: 'notreDame', name: 'Notre Dame Fighting Irish', detail: 'Football', logo: notreDameLogo },
+    { id: 'timbers', name: 'Portland Timbers', logo: timbersLogo },
+    { id: 'thorns', name: 'Portland Thorns', logo: thornsLogo },
+    { id: 'bayern', name: 'Bayern Munich', logo: bayernLogo },
+    { id: 'reds', name: 'Cincinnati Reds', logo: redsLogo },
+    { id: 'blazers', name: 'Portland Trail Blazers', logo: blazersLogo },
+    { id: 'cmu', name: 'Carnegie Mellon University', logo: carnegieMellonShield, shield: true },
+  ],
+  image: watchingSoccerImg,
+  imageAlt: 'A Portland Timbers match seen from the stands at Providence Park',
+  photoCredit: 'Providence Park · Portland, Oregon',
+}
 
 export const soccerGallery = Object.entries(soccerGalleryImages)
   .sort(([firstPath], [secondPath]) => firstPath.localeCompare(secondPath))

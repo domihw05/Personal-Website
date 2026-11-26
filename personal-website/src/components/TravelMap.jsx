@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import worldMap from '../assets/hobbies/travel/world.svg'
 import northAmericaMap from '../assets/hobbies/travel/north-america.svg'
 import europeMap from '../assets/hobbies/travel/europe.svg'
-import { travelRegions, visitedCountries } from '../data/travelPlaces'
+import { countryFlags, travelRegions, visitedCountries, visitedStates } from '../data/travelPlaces'
 import { height, mapPoint, nearestMarker, width } from '../data/travelProjection'
 
 const basemaps = { World: worldMap, 'North America': northAmericaMap, Europe: europeMap }
@@ -16,6 +16,8 @@ const offsets = {
   'Colorado Springs, CO': [9, 4],
   'Chicago, IL': [-5, 0],
   'South Bend, IN': [5, 0],
+  'Bethany, WV': [-8, 9],
+  'Pittsburgh, PA': [8, -5],
   'Madrid, Spain': [8, -7],
   'Toledo, Spain': [-8, 7],
 }
@@ -44,7 +46,7 @@ const worldRegions = [
   count: travelRegions.find(({ name }) => name === region.name).places.length,
 }))
 
-export default function HomeTravelMap() {
+export default function TravelMap() {
   const [view, setView] = useState('World')
   const [selected, setSelected] = useState(null)
   const [hovered, setHovered] = useState(null)
@@ -66,11 +68,13 @@ export default function HomeTravelMap() {
   }
 
   return (
-    <article className="journal-chapter journal-travel">
+    <section className="interest-topic interest-travel" id="travel" aria-labelledby="travel-title">
       <header className="travel-heading">
-        <h3>Places I’ve visited</h3>
+        <h2 id="travel-title">Places I’ve visited</h2>
         <p className="travel-count">
           <span><strong>{visitedCountries.length}</strong> countries</span>
+          <span aria-hidden="true">·</span>
+          <span><strong>{visitedStates.length}</strong> U.S. states</span>
           <span aria-hidden="true">·</span>
           <span><strong>{places.length}</strong> destinations</span>
         </p>
@@ -119,7 +123,7 @@ export default function HomeTravelMap() {
                 data-starred={marker.starred || undefined}
                 data-active={active?.name === marker.name || undefined}
                 style={position(marker)}
-                aria-label={marker.starred ? `${marker.name} (starred)` : marker.name}
+                aria-label={marker.starred ? `${marker.name} (home city)` : marker.name}
                 aria-pressed={selected === marker.name}
                 onFocus={event => { if (event.currentTarget.matches(':focus-visible')) setFocused(marker.name) }}
                 onBlur={() => setFocused(null)}
@@ -133,7 +137,7 @@ export default function HomeTravelMap() {
                 ) : <span className="travel-marker-dot" aria-hidden="true" />}
                 {active?.name === marker.name && (
                   <span className="travel-tooltip" data-align={marker.x > width * 0.73 ? 'right' : marker.x < width * 0.27 ? 'left' : 'center'} data-below={marker.y < height * 0.18} aria-hidden="true">
-                    {marker.name}
+                    {marker.starred ? `${marker.name} · Home city` : marker.name}
                   </span>
                 )}
               </button>
@@ -142,10 +146,21 @@ export default function HomeTravelMap() {
         </div>
         <figcaption>
           <span aria-live="polite">{selected ?? 'Hover or tap a pin to see the city.'}</span>
-          <span className="travel-legend"><span aria-hidden="true">★</span> Starred places</span>
+          <span className="travel-legend"><span aria-hidden="true">★</span> Home cities</span>
           <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a>
         </figcaption>
       </figure>
+      <div className="travel-country-strip">
+        <h3 id="travel-countries-title">Countries visited</h3>
+        <ul role="list" aria-labelledby="travel-countries-title">
+          {visitedCountries.map(country => (
+            <li key={country}>
+              {countryFlags[country] && <span className="travel-country-flag" aria-hidden="true">{countryFlags[country]}</span>}
+              <span>{country}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
       <details className="travel-places">
         <summary>Browse destinations</summary>
         <div className="travel-place-groups">
@@ -155,7 +170,7 @@ export default function HomeTravelMap() {
               <ul role="list">
                 {[...places].sort(([a], [b]) => a.localeCompare(b)).map(([place, , , , starred]) => (
                   <li key={place}>
-                    <button type="button" aria-pressed={selected === place} onClick={() => showView(mapView, selected === place ? null : place)}>
+                    <button type="button" aria-label={starred ? `${place} (home city)` : undefined} aria-pressed={selected === place} onClick={() => showView(mapView, selected === place ? null : place)}>
                       {starred && <span className="travel-list-star" aria-hidden="true">★ </span>}{place}
                     </button>
                   </li>
@@ -165,6 +180,6 @@ export default function HomeTravelMap() {
           ))}
         </div>
       </details>
-    </article>
+    </section>
   )
 }

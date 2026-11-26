@@ -15,6 +15,8 @@ function MotionEffects() {
   useEffect(() => {
     if (!location.hash) {
       window.scrollTo(0, 0)
+    } else if (location.pathname === '/interests') {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: 'start' })
     }
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')

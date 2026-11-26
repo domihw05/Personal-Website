@@ -5,6 +5,11 @@ import trialOfTheChicago7 from '../assets/interests/trial-of-the-chicago-7.jpg'
 import bicycleThieves from '../assets/interests/bicycle-thieves.jpg'
 import spiderManBrandNewDay from '../assets/interests/spider-man-brand-new-day.jpg'
 import InterestHighlights from '../components/InterestHighlights'
+import TravelMap from '../components/TravelMap'
+import TeamList from '../components/TeamList'
+import { sportsInterests } from '../data/siteContent'
+import { sportsHonours } from '../data/sportsHonours'
+import { getTrophyPhoto, trophyPhotoCredits } from '../data/trophyPhotos'
 import library from '../data/interestLibrary.json'
 import {
   letterboxdFeedPath,
@@ -13,7 +18,7 @@ import {
   parseLetterboxdFeed,
 } from '../data/letterboxd'
 
-const pageSize = 8
+const pageSize = 6
 const dateFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeZone: 'UTC' })
 const rankingPosters = {
   'The Odyssey|2026': odyssey,
@@ -163,6 +168,92 @@ function InterestShelf({ id, title, entries, sort, source }) {
   )
 }
 
+function TrophyArtwork({ photo }) {
+  return (
+    <div className="trophy-stage">
+      {photo ? (
+        <img src={photo.src} alt={photo.alt} width="390" height="390" loading="lazy" decoding="async" />
+      ) : (
+        <span className="trophy-archive-mark">No trophy photo</span>
+      )}
+    </div>
+  )
+}
+
+function TrophyCabinet({ teams }) {
+  const cabinetTeams = teams.filter(team => sportsHonours[team.id])
+  const trophies = cabinetTeams.flatMap(team => sportsHonours[team.id].timeline.flatMap(
+    ([year, titles]) => titles.map(title => ({ year, title, team })),
+  )).sort((a, b) => a.year - b.year || a.team.name.localeCompare(b.team.name) || a.title.localeCompare(b.title))
+  const [first] = trophies
+  const last = trophies.at(-1)
+
+  return (
+    <section className="trophy-cabinet" aria-labelledby="trophy-cabinet-title">
+      <header className="trophy-cabinet-header">
+        <div>
+          <h3 id="trophy-cabinet-title">Trophy cabinet</h3>
+          <p>Championships and cups, oldest to newest.</p>
+        </div>
+        <p className="trophy-case-count">{trophies.length} titles <span aria-hidden="true">·</span> {first.year}–{last.year}</p>
+      </header>
+
+      <div className="trophy-case">
+        <ol className="trophy-grid" role="list">
+          {trophies.map(({ year, title, team }) => {
+            const photo = getTrophyPhoto(title)
+            return (
+              <li key={`${team.id}-${year}-${title}`}>
+                <TrophyArtwork photo={photo} />
+                <div className="trophy-card-caption">
+                  <time dateTime={String(year)}>{year}</time>
+                  <h4>{title}</h4>
+                  <p className="trophy-card-team">
+                    <img src={team.logo} alt="" width="18" height="18" loading="lazy" decoding="async" />
+                    <span>{team.name}</span>
+                  </p>
+                </div>
+              </li>
+            )
+          })}
+        </ol>
+      </div>
+      <details className="trophy-case-notes">
+        <summary>Records and photo credits</summary>
+        <p>Years refer to the title season. The modern CFP and World Series trophies represent every title in their respective competitions, including wins before those designs were introduced.</p>
+        <div className="trophy-case-sources">
+          {cabinetTeams.flatMap(team => sportsHonours[team.id].sources).map(([label, href]) => <a key={href} href={href}>{label}</a>)}
+        </div>
+        <ul className="trophy-photo-credits">
+          {trophyPhotoCredits.map(({ label, href, author, license, licenseUrl, edits = 'background removed and resized' }) => (
+            <li key={href}><a href={href}>{label}</a> · {author}{license && <> · <a href={licenseUrl}>{license}</a></>} · {edits}</li>
+          ))}
+        </ul>
+      </details>
+    </section>
+  )
+}
+
+function SportsInterests() {
+  const { title, teams, image, imageAlt, photoCredit } = sportsInterests
+
+  return (
+    <section className="interest-topic home-spread" id="sports" aria-labelledby="sports-title">
+      <div>
+        <h2 id="sports-title">{title}</h2>
+        <TeamList teams={teams} />
+      </div>
+      <figure className="home-photo">
+        <div className="home-photo-frame interest-sports-photo">
+          <img src={image} alt={imageAlt} loading="lazy" decoding="async" />
+        </div>
+        <figcaption>{photoCredit}</figcaption>
+      </figure>
+      <TrophyCabinet teams={teams} />
+    </section>
+  )
+}
+
 export default function InterestsPage() {
   const [films, setFilms] = useState(library.films)
   const [sort, setSort] = useState('rating')
@@ -190,7 +281,14 @@ export default function InterestsPage() {
           <p className="eyebrow">Interests</p>
           <h1 id="interests-title">Off the clock.</h1>
         </div>
-        <p className="interest-lead">What I’ve been watching and reading, with my ratings from Letterboxd and StoryGraph.</p>
+        <div>
+          <p className="interest-lead">What I watch and read, where I’ve been, and who I root for.</p>
+          <nav className="interest-section-links" aria-label="On this page">
+            <a className="interest-jump" href="#interest-library">Film &amp; book log</a>
+            <a className="interest-jump" href="#travel">Travel</a>
+            <a className="interest-jump" href="#sports">Sports</a>
+          </nav>
+        </div>
       </section>
 
       <InterestHighlights films={films} books={library.books} />
@@ -230,6 +328,8 @@ export default function InterestsPage() {
           />
         </div>
       </section>
+      <TravelMap />
+      <SportsInterests />
     </main>
   )
 }

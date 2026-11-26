@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { homeInterests } from '../data/siteContent'
-import HomeTravelMap from './HomeTravelMap'
+import { homeLibrary, sportsInterests } from '../data/siteContent'
+import { travelStats } from '../data/travelPlaces'
+import TeamList from './TeamList'
 
 export default function HomeInterests() {
   const journalRef = useRef(null)
@@ -62,35 +63,36 @@ export default function HomeInterests() {
     <section className="home-journal" id="off-the-clock" aria-labelledby="journal-title" ref={journalRef}>
       <header className="journal-heading">
         <h2 id="journal-title">Off the clock.</h2>
-        <Link to="/interests" className="journal-library-link">View my film and reading log <span aria-hidden="true">→</span></Link>
+        <Link to="/interests" className="journal-library-link">Explore my interests <span aria-hidden="true">→</span></Link>
       </header>
 
       <div className="journal-chapters">
-        {homeInterests.map((interest) => interest.kind === 'travel' ? <HomeTravelMap key={interest.title} /> : (
-          <article className="journal-chapter home-spread" key={interest.title}>
-            <div className="journal-copy">
-              <h3>{interest.title}</h3>
-              {interest.teams && (
-                <ul className="journal-teams" role="list">
-                  {interest.teams.map(({ name, logo, detail, shield }) => (
-                    <li key={name}>
-                      <span className={shield ? 'journal-team-mark journal-team-mark-shield' : 'journal-team-mark'}>
-                        <img src={logo} alt="" width="32" height="32" loading="lazy" decoding="async" />
-                      </span>
-                      <span>{name}{detail && <small>{detail}</small>}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+        <article className="journal-chapter home-spread">
+          <h3>{homeLibrary.title}</h3>
+          <figure className="home-photo">
+            <div className="home-photo-frame journal-photo">
+              <img src={homeLibrary.image} alt={homeLibrary.imageAlt} loading="lazy" decoding="async" />
             </div>
-            <figure className="home-photo">
-              <div className="home-photo-frame journal-photo">
-                <img src={interest.image} alt={interest.imageAlt} loading="lazy" decoding="async" />
-              </div>
-              {interest.photoCredit && <figcaption>{interest.photoCredit}</figcaption>}
-            </figure>
-          </article>
-        ))}
+          </figure>
+        </article>
+        <article className="journal-chapter home-spread">
+          <h3>Travel</h3>
+          <div className="home-travel-summary">
+            <ul className="home-travel-stats" role="list" aria-label="Travel stats">
+              {travelStats.map(({ label, count }) => (
+                <li key={label}><strong>{count}</strong> {label}</li>
+              ))}
+            </ul>
+            <Link className="home-travel-link" to="/interests#travel">View the travel map <span aria-hidden="true">→</span></Link>
+          </div>
+        </article>
+        <article className="journal-chapter home-spread">
+          <h3>{sportsInterests.title}</h3>
+          <div className="home-sports-preview">
+            <TeamList teams={sportsInterests.teams} />
+            <Link className="home-travel-link" to="/interests#sports">Explore sports <span aria-hidden="true">→</span></Link>
+          </div>
+        </article>
       </div>
     </section>
   )
